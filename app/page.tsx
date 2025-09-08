@@ -99,15 +99,19 @@ export default async function Home() {
               <ul className="space-y-4 text-gray-700">
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-cyan-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  <span>各国の工場機・プラント・土木向け販売実績から、様々な製品・高品質製品・安価製品のデータを蓄積しています。</span>
+                  <span>各国の工場様・プラント・土木向け販売実績から、様々な製品・高品質製品・安価製品のデータを蓄積しています。求められるご要望に最適な製品を提案します。</span>
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-cyan-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  <span>特に鉄鋼製品の海外調達、製造管理を得意としています。</span>
+                  <span>特に鉄鋼製品の海外調達、製造管理を得意としています。海外工場選定、材料選定、製造方法、JIS規格相当の試験を徹底し、高品質で安価な製品を提案します。</span>
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-cyan-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  <span>海外拠点による海外調達・海外営業・マーケティングで豊富な実績があります。</span>
+                  <span>海外拠点による海外調達・海外営業マーケティングで豊富な実績があります。日本メーカー様と協力し、販売代理店として製品をPR・拡販します。</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-cyan-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span>組織全体の9割以上が現地のスタッフです。海外の製造工場・顧客ユーザーに完全にコミットした体制をとっています。</span>
                 </li>
               </ul>
             </div>
@@ -176,18 +180,15 @@ export default async function Home() {
               <h4 className="font-bold mb-4 text-cyan-400">グローバルオフィス</h4>
               <ul className="space-y-2 text-gray-300 text-sm">
                 <li>日本本社</li>
-                <li>Kouei Vietnam Trading</li>
-                <li>Kouei Myanmar Branch</li>
-                <li>Kouei Bangladesh Office</li>
+                <li>ベトナム拠点</li>
+                <li>ミャンマー拠点</li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-bold mb-4 text-cyan-400">お問い合わせ</h4>
               <div className="text-gray-300 text-sm space-y-1">
-                <p>TEL: 03-3803-7871</p>
-                <p>Email: info@kjt.co.jp</p>
-                <p>平日 9:00-18:00</p>
+                <p>Email: kouei.contact@kjt.co.jp</p>
                 <Link href="/contact" className="inline-block mt-3 text-cyan-400 hover:text-cyan-300 transition-colors">
                   お問い合わせフォーム →
                 </Link>

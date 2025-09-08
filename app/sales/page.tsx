@@ -159,18 +159,15 @@ export default async function SalesPage() {
               <h4 className="font-bold mb-4 text-cyan-400">グローバルオフィス</h4>
               <ul className="space-y-2 text-gray-300 text-sm">
                 <li>日本本社</li>
-                <li>Kouei Vietnam Trading</li>
-                <li>Kouei Myanmar Branch</li>
-                <li>Kouei Bangladesh Office</li>
+                <li>ベトナム拠点</li>
+                <li>ミャンマー拠点</li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-bold mb-4 text-cyan-400">お問い合わせ</h4>
               <div className="text-gray-300 text-sm space-y-1">
-                <p>TEL: 03-3803-7871</p>
-                <p>Email: info@kjt.co.jp</p>
-                <p>平日 9:00-18:00</p>
+                <p>Email: kouei.contact@kjt.co.jp</p>
                 <Link href="/contact" className="inline-block mt-3 text-cyan-400 hover:text-cyan-300 transition-colors">
                   お問い合わせフォーム →
                 </Link>

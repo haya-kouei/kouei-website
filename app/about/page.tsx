@@ -36,7 +36,10 @@ export default async function AboutPage() {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">企業理念</h2>
           <div className="bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold text-cyan-600 mb-6 text-center">ミッション</h3>
+            <h3 className="text-2xl font-semibold text-cyan-600 mb-6 text-center">Vision</h3>
+            <p className="text-gray-700 text-xl mb-8 text-center leading-relaxed">{company.vision}</p>
+            
+            <h3 className="text-2xl font-semibold text-cyan-600 mb-6 text-center">Mission</h3>
             <p className="text-gray-700 text-xl mb-8 text-center leading-relaxed">{company.mission}</p>
             
             <p className="text-gray-700 text-lg leading-relaxed text-center">
@@ -105,12 +108,16 @@ export default async function AboutPage() {
                   <p className="text-lg">{company.address.prefecture}{company.address.city}{company.address.street}</p>
                   <p className="text-lg">{company.address.building}</p>
                   <div className="pt-4 space-y-2">
-                    <p>
-                      <span className="text-cyan-600 font-medium">TEL:</span> {company.address.phone}
-                    </p>
-                    <p>
-                      <span className="text-cyan-600 font-medium">FAX:</span> {company.address.fax}
-                    </p>
+                    {company.address.phone && (
+                      <p>
+                        <span className="text-cyan-600 font-medium">TEL:</span> {company.address.phone}
+                      </p>
+                    )}
+                    {company.address.fax && (
+                      <p>
+                        <span className="text-cyan-600 font-medium">FAX:</span> {company.address.fax}
+                      </p>
+                    )}
                     <p>
                       <span className="text-cyan-600 font-medium">Email:</span> 
                       <a href={`mailto:${company.address.email}`} className="text-cyan-600 hover:text-cyan-700 transition-colors">
@@ -250,18 +257,15 @@ export default async function AboutPage() {
               <h4 className="font-bold mb-4 text-cyan-400">グローバルオフィス</h4>
               <ul className="space-y-2 text-gray-300 text-sm">
                 <li>日本本社</li>
-                <li>Kouei Vietnam Trading</li>
-                <li>Kouei Myanmar Branch</li>
-                <li>Kouei Bangladesh Office</li>
+                <li>ベトナム拠点</li>
+                <li>ミャンマー拠点</li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-bold mb-4 text-cyan-400">お問い合わせ</h4>
               <div className="text-gray-300 text-sm space-y-1">
-                <p>TEL: 03-3803-7871</p>
-                <p>Email: info@kjt.co.jp</p>
-                <p>平日 9:00-18:00</p>
+                <p>Email: kouei.contact@kjt.co.jp</p>
                 <Link href="/contact" className="inline-block mt-3 text-cyan-400 hover:text-cyan-300 transition-colors">
                   お問い合わせフォーム →
                 </Link>

@@ -1,33 +1,34 @@
 company:
   name: "恒栄トレーディング株式会社"
-  name_en: "Kouei Japan Trading Co., Ltd."
-  established: "1987年"
-  capital: "5,000万円"
-  employees: 28
-  president: "代表取締役 鈴木 恒夫"
+  name_en: "KOUEI JAPAN TRADING CO., LTD."
+  established: "2016年5月20日"
+  capital: "10,000,000円"
+  employees: 32
+  president: "代表取締役社長 小西 隼人"
   
   address:
-    postal_code: "116-0013"
-    prefecture: "東京都"
-    city: "荒川区"
-    street: "西日暮里5-7-8"
-    building: "第二豊田ビル2F"
-    phone: "03-3803-7871"
-    fax: "03-3803-7872"
-    email: "info@kjt.co.jp"
+    postal_code: "639-0223"
+    prefecture: "奈良県"
+    city: "香芝市"
+    street: "真美ヶ丘1-13-35"
+    building: "No.02"
+    phone: ""
+    fax: ""
+    email: "kouei.contact@kjt.co.jp"
     website: "https://www.kjt.co.jp"
   
   business_description: |
-    鉄鋼製品、機械工具、プラント設備機器、建設・土木機材の販売を行っている商社です。
-    日本・ベトナム・ミャンマー・バングラデシュの拠点で連携し、アジアを中心とした世界各国で営業活動を行なっています。
+    KOUEIは鉄鋼製品、工場向け機械工具、プラント向け設備機器、建設土木向け機材を販売している商社です。
+    日本・ベトナム・ミャンマーの拠点で連携し、世界各国で営業活動を行なっています。
   
-  mission: "アジアの製造現場において、最も役に立つ商社となる"
+  mission: "高品質な製品を提供し、アジアの発展に貢献する"
+  vision: "アジアの製造現場において、最も役に立つ商社となる"
   
   values:
-    - "高品質製品の提供"
-    - "信頼できるパートナーシップ"
-    - "アジア市場への深い理解"
-    - "迅速で確実な対応"
+    - "各国の工場様・プラント・土木向け販売実績から、様々な製品・高品質製品・安価製品のデータを蓄積しています。求められるご要望に最適な製品を提案します。"
+    - "特に鉄鋼製品の海外調達、製造管理を得意としています。海外工場選定、材料選定、製造方法、JIS規格相当の試験を徹底し、高品質で安価な製品を提案します。"
+    - "海外拠点による海外調達・海外営業マーケティングで豊富な実績があります。日本メーカー様と協力し、販売代理店として製品をPR・拡販します。"
+    - "組織全体の9割以上が現地のスタッフです。海外の製造工場・顧客ユーザーに完全にコミットした体制をとっています。"
     
   services:
     - name: "鉄鋼製品販売"
@@ -41,54 +42,52 @@ company:
 
   offices:
     - name: "日本本社"
-      location: "東京都荒川区"
-      established: "1987年"
-      address: "〒116-0013 東京都荒川区西日暮里5-7-8 第二豊田ビル2F"
-      phone: "03-3803-7871"
+      location: "奈良県香芝市"
+      established: "2016年"
+      address: "〒639-0223 奈良県香芝市真美ヶ丘1-13-35 No.02"
+      phone: ""
       description: "本社機能および日本国内営業拠点"
       
-    - name: "Kouei Vietnam Trading Co., Ltd."
-      location: "ベトナム ホーチミン市"
-      established: "2010年"
-      address: "Ho Chi Minh City, Vietnam"
-      description: "ベトナム現地法人。東南アジア市場の重要拠点"
+    - name: "ベトナム拠点"
+      location: "ベトナム"
+      established: ""
+      address: "Vietnam"
+      description: "ベトナムでの営業活動・調達拠点"
       
-    - name: "Kouei Myanmar Branch"
-      location: "ミャンマー ヤンゴン"
-      established: "2020年"
-      address: "Yangon, Myanmar"
-      description: "ミャンマー支店。新興市場開拓の拠点"
-      
-    - name: "Kouei Bangladesh Office"
-      location: "バングラデシュ ダッカ"
-      established: "2024年"
-      address: "Dhaka, Bangladesh"
-      description: "バングラデシュ事務所。南アジア市場への展開拠点"
+    - name: "ミャンマー拠点"
+      location: "ミャンマー"
+      established: ""
+      address: "Myanmar"
+      description: "ミャンマーでの営業活動・調達拠点"
 
   history:
-    - year: "1987年"
+    - year: "2016年"
       event: "恒栄トレーディング株式会社設立"
-      description: "東京都荒川区に本社を設立、鉄鋼製品・機械工具の販売業務を開始"
-    - year: "1995年"
-      event: "事業拡大"
-      description: "プラント設備機器、建設・土木機材の販売を開始し、事業領域を拡大"
-    - year: "2005年"
+      description: "奈良県香芝市に本社を設立、鉄鋼製品・機械工具・プラント設備機器・建設土木機材の販売業務を開始"
+    - year: "2017年"
       event: "海外展開開始"
       description: "アジア市場への本格的な海外展開を開始"
-    - year: "2010年"
-      event: "Kouei Vietnam Trading設立"
-      description: "ベトナム ホーチミン市に現地法人を設立、東南アジア市場の拠点を確立"
-    - year: "2015年"
-      event: "事業実績の拡大"
-      description: "アジア各国での取引実績が大幅に拡大"
+    - year: "2018年"
+      event: "ベトナム拠点設立"
+      description: "ベトナムに拠点を設立、東南アジア市場での営業活動を本格化"
+    - year: "2019年"
+      event: "ミャンマー拠点設立"
+      description: "ミャンマーに拠点を設立、新興市場への展開を加速"
     - year: "2020年"
-      event: "Kouei Myanmar Branch開設"
-      description: "ミャンマー ヤンゴンに支店を開設、新興市場への展開を加速"
-    - year: "2024年"
-      event: "Kouei Bangladesh Office設立"
-      description: "バングラデシュ ダッカに事務所を設立、南アジア市場への展開を強化"
+      event: "事業拡大"
+      description: "アジア各国での取引実績が大幅に拡大、海外調達・製造管理の体制を強化"
+
+  additional_info:
+    corporate_number: "9120001198425"
+    qualified_invoice_number: "T9-1200-0119-8425"
+    antique_dealer_license: "奈良県公安委員会許可　第64118000383号"
+    main_banks:
+      - "みずほ銀行 難波支店"
+      - "りそな銀行 難波支店"
+    related_companies:
+      - "株式会社コニー"
 
   certifications:
-    - name: "ISO 9001:2015"
-      description: "品質マネジメントシステムの国際標準認証"
-      acquired: "2023年"
+    - name: "古物商許可証"
+      description: "奈良県公安委員会許可"
+      acquired: "第64118000383号"

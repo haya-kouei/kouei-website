@@ -81,11 +81,19 @@ export interface CompanyInfo {
   }
   business_description: string
   mission: string
+  vision: string
   values: string[]
   services: Service[]
   offices: Office[]
   history: HistoryEvent[]
   certifications: Certification[]
+  additional_info?: {
+    corporate_number: string
+    qualified_invoice_number: string
+    antique_dealer_license: string
+    main_banks: string[]
+    related_companies: string[]
+  }
 }
 
 export async function getTopics(): Promise<Topic[]> {
