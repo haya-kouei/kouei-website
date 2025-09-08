@@ -63,37 +63,59 @@ organizations:
       - "展示会サポートなど包括的なサービス"
 
   japan:
-    name: "恒栄トレーディング"
+    name: "株式会社恒栄トレーディング"
     name_en: "Kouei Japan Trading Co., Ltd."
     name_local: "株式会社恒栄トレーディング"
-    description: "1994年設立の日本本社。グローバル貿易事業の中心として、世界各国との商品取引を統括しています。"
+    description: "KOUEIは鉄鋼製品、工場向け機械工具、プラント向け設備機器、建設土木向け機材を販売している商社です。日本・ベトナム・ミャンマーの拠点で連携し、世界各国で営業活動を行なっています。"
     
     overview:
       type: "日本本社"
-      location: "東京都中央区"
+      location: "奈良県香芝市"
       coverage: "グローバル"
-      established: "1994年"
-      representative: "代表取締役社長"
-      employees: 50
+      established: "2016年5月20日"
+      representative: "小西 隼人"
+      employees: 32
+      capital: "10,000,000円"
       languages: ["日本語", "英語"]
     
     business_activities:
-      - title: "グローバル貿易統括"
-        description: "世界各国との商品取引を統括管理しています。"
-      - title: "製品調達・品質管理"
-        description: "高品質な製品の調達と徹底した品質管理を実施。"
-      - title: "海外拠点管理"
-        description: "ベトナム・ミャンマー・バングラデシュ拠点の統括管理。"
-      - title: "日本国内販売"
-        description: "国内製造業向けの製品・機器販売。"
+      - title: "鉄鋼製品・機械工具・設備機器の販売"
+        description: "鉄鋼製品、工場向け機械工具、プラント向け設備機器、建設土木向け機材の商社業務。"
+      - title: "海外調達・製造管理"
+        description: "特に鉄鋼製品の海外調達、製造管理を得意とし、海外工場選定、材料選定、製造方法、JIS規格相当の試験を徹底。"
+      - title: "販売実績データ蓄積・製品提案"
+        description: "各国の工場様・プラント・土木向け販売実績から、様々な製品・高品質製品・安価製品のデータを蓄積し、最適な製品を提案。"
+      - title: "海外拠点による海外営業・マーケティング"
+        description: "海外拠点による海外調達・海外営業マーケティングで豊富な実績を保有。"
+      - title: "日本メーカー様の販売代理店業務"
+        description: "日本メーカー様と協力し、販売代理店として製品をPR・拡販。"
+      - title: "現地コミット型営業体制"
+        description: "組織全体の9割以上が現地のスタッフで、海外の製造工場・顧客ユーザーに完全にコミットした体制。"
+    
+    company_info:
+      corporate_number: "9120001198425"
+      qualified_invoice_number: "T9-1200-0119-8425"
+      antique_dealer_license: "奈良県公安委員会許可　第64118000383号"
+      main_banks: ["みずほ銀行 難波支店", "りそな銀行 難波支店"]
+      related_companies: ["株式会社コニー"]
     
     contact_info:
       headquarters:
-        name: "東京本社"
-        address: "東京都中央区日本橋小網町6-7 第二山万ビル2階"
-        phone: "+81-3-5614-4311"
+        name: "本社"
+        address: "〒639-0223 奈良県香芝市真美ヶ丘1-13−35 No.02"
+        phone: ""
         email: "kouei.contact@kjt.co.jp"
+        website: "https://www.kjt.co.jp"
         languages: ["日本語", "英語"]
+    
+    strengths:
+      - "各国の工場様・プラント・土木向け販売実績から、様々な製品データを蓄積"
+      - "求められるご要望に最適な製品を提案する豊富な経験"
+      - "鉄鋼製品の海外調達・製造管理の専門性"
+      - "海外工場選定、材料選定、JIS規格相当試験の徹底管理"
+      - "海外拠点による豊富な海外調達・営業マーケティング実績"
+      - "日本メーカー様との協力による販売代理店としてのPR・拡販力"
+      - "組織全体の9割以上が現地スタッフによる現地コミット体制"
 
   myanmar:
     name: "恒栄トレーディング ミャンマー支店"

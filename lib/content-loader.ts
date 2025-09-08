@@ -110,6 +110,14 @@ export interface ExhibitionSupport {
   year: string
 }
 
+export interface CompanyAdditionalInfo {
+  corporate_number: string
+  qualified_invoice_number: string
+  antique_dealer_license: string
+  main_banks: string[]
+  related_companies: string[]
+}
+
 export interface OrganizationInfo {
   name: string
   name_en: string
@@ -120,6 +128,7 @@ export interface OrganizationInfo {
   partner_manufacturers?: string[]
   exhibition_support?: ExhibitionSupport[]
   payment_conditions?: string[]
+  company_info?: CompanyAdditionalInfo
   contact_info: {
     headquarters: ContactInfo & { website?: string }
   }
