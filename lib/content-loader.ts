@@ -80,6 +80,60 @@ export interface OverseasSales {
   regions: OverseasRegion[]
 }
 
+export interface BusinessActivity {
+  title: string
+  description: string
+}
+
+export interface ContactInfo {
+  name: string
+  address: string
+  phone: string | string[]
+  email: string
+  languages: string[]
+}
+
+export interface OrganizationOverview {
+  type: string
+  location: string
+  coverage: string
+  established: string
+  representative: string
+  employees: number
+  languages: string[]
+}
+
+export interface ExhibitionSupport {
+  event: string
+  description: string
+  year: string
+}
+
+export interface OrganizationInfo {
+  name: string
+  name_en: string
+  name_local: string
+  description: string
+  overview: OrganizationOverview
+  business_activities: BusinessActivity[]
+  partner_manufacturers?: string[]
+  exhibition_support?: ExhibitionSupport[]
+  contact_info: {
+    headquarters: ContactInfo
+  }
+  social_media?: {
+    instagram?: string
+  }
+  strengths?: string[]
+}
+
+export interface Organizations {
+  vietnam: OrganizationInfo
+  japan: OrganizationInfo
+  myanmar: OrganizationInfo
+  bangladesh: OrganizationInfo
+}
+
 export interface CompanyInfo {
   name: string
   name_en: string
@@ -173,6 +227,28 @@ export async function getOverseasSales(): Promise<OverseasSales | null> {
     return data.overseas_sales
   } catch (error) {
     console.error('Error loading overseas sales:', error)
+    return null
+  }
+}
+
+export async function getOrganizations(): Promise<Organizations | null> {
+  try {
+    const filePath = path.join(contentDirectory, 'organizations.yaml')
+    const fileContents = fs.readFileSync(filePath, 'utf8')
+    const data = yaml.load(fileContents) as { organizations: Organizations }
+    return data.organizations
+  } catch (error) {
+    console.error('Error loading organizations:', error)
+    return null
+  }
+}
+
+export async function getOrganization(orgKey: keyof Organizations): Promise<OrganizationInfo | null> {
+  try {
+    const organizations = await getOrganizations()
+    return organizations?.[orgKey] || null
+  } catch (error) {
+    console.error(`Error loading organization ${orgKey}:`, error)
     return null
   }
 }

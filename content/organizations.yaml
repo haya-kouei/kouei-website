@@ -1,0 +1,158 @@
+organizations:
+  vietnam:
+    name: "恒栄ベトナムトレーディング"
+    name_en: "Kouei Vietnam Trading Co., Ltd."
+    name_local: "KOUEI VIETNAM TRADING CO., LTD."
+    description: "KOUEIベトナムはベトナムローカルの法人です。ローカル法人の為、ベトナム市場において多種多様な製品の輸入販売が可能です。ホーチミンの拠点からベトナム全域を営業しています。"
+    
+    overview:
+      type: "ベトナム現地法人"
+      location: "ホーチミン市"
+      coverage: "ベトナム全域"
+      established: "2016年3月28日"
+      representative: "Phan Nha Vy"
+      employees: 14
+      languages: ["日本語", "英語", "ベトナム語"]
+    
+    business_activities:
+      - title: "ベトナム工場様向け輸入販売"
+        description: "ベトナムの製造業向けに各種工具・機械の輸入販売を行っています。"
+      - title: "ベトナム製造品の輸出"
+        description: "ベトナム製品の海外輸出業務を担当しています。"
+      - title: "日本メーカー製品の販売代理"
+        description: "TONE、KITO、EXEN、Eagle Jack、寺岡製作所、宮川工業、旭ウェルデックス等の販売代理業務。"
+      - title: "恒栄トレーディング（日本）のオペレーション委託業務"
+        description: "日本本社からの業務委託を受けて現地オペレーションを実施。"
+      - title: "グローバル調達品手配"
+        description: "世界各国からの製品調達・手配業務。"
+      - title: "グローバルマーケティング"
+        description: "海外市場向けマーケティング活動の実施。"
+      - title: "ウェブサイト・システムの開発・運用"
+        description: "IT関連業務の開発・運用サポート。"
+    
+    partner_manufacturers:
+      - "TONE"
+      - "KITO" 
+      - "EXEN"
+      - "Eagle Jack"
+      - "寺岡製作所"
+      - "宮川工業"
+      - "旭ウェルデックス"
+    
+    exhibition_support:
+      - event: "METALEX VIETNAM 2023"
+        description: "株式会社今野製作所様の展示会サポート・案内業務"
+        year: "2023"
+    
+    contact_info:
+      headquarters:
+        name: "ホーチミン本社"
+        address: "5th Floor, 4 Nguyen Thi Minh Khai, Sai Gon Ward, Ho Chi Minh City, Vietnam"
+        phone: ["+84 (0) 989 808 467", "+84 (0) 777 808 467"]
+        email: "kouei.contact@kjt.co.jp"
+        languages: ["日本語", "英語", "ベトナム語"]
+    
+    social_media:
+      instagram: "@kouei_vietnam"
+    
+    strengths:
+      - "ベトナム現地法人として多様な輸入販売が可能"
+      - "ホーチミンからベトナム全域をカバー"
+      - "日本メーカーとの強固なパートナーシップ"
+      - "多言語対応（日本語・英語・ベトナム語）"
+      - "展示会サポートなど包括的なサービス"
+
+  japan:
+    name: "恒栄トレーディング"
+    name_en: "Kouei Japan Trading Co., Ltd."
+    name_local: "株式会社恒栄トレーディング"
+    description: "1994年設立の日本本社。グローバル貿易事業の中心として、世界各国との商品取引を統括しています。"
+    
+    overview:
+      type: "日本本社"
+      location: "東京都中央区"
+      coverage: "グローバル"
+      established: "1994年"
+      representative: "代表取締役社長"
+      employees: 50
+      languages: ["日本語", "英語"]
+    
+    business_activities:
+      - title: "グローバル貿易統括"
+        description: "世界各国との商品取引を統括管理しています。"
+      - title: "製品調達・品質管理"
+        description: "高品質な製品の調達と徹底した品質管理を実施。"
+      - title: "海外拠点管理"
+        description: "ベトナム・ミャンマー・バングラデシュ拠点の統括管理。"
+      - title: "日本国内販売"
+        description: "国内製造業向けの製品・機器販売。"
+    
+    contact_info:
+      headquarters:
+        name: "東京本社"
+        address: "東京都中央区日本橋小網町6-7 第二山万ビル2階"
+        phone: "+81-3-5614-4311"
+        email: "kouei.contact@kjt.co.jp"
+        languages: ["日本語", "英語"]
+
+  myanmar:
+    name: "恒栄ミャンマー"
+    name_en: "Kouei Japan Trading Co., Ltd. Myanmar Branch"
+    name_local: "Kouei Japan Trading Co., Ltd. Myanmar Branch"
+    description: "ミャンマーの新興市場において戦略的な事業展開を図る成長拠点です。"
+    
+    overview:
+      type: "ミャンマー支社"
+      location: "ヤンゴン"
+      coverage: "ミャンマー全域"
+      established: "2015年"
+      representative: "支社長"
+      employees: 8
+      languages: ["日本語", "英語", "ミャンマー語"]
+    
+    business_activities:
+      - title: "ミャンマー市場開拓"
+        description: "新興市場での事業機会の探索と開拓。"
+      - title: "現地パートナー開拓"
+        description: "ミャンマーの現地企業とのパートナーシップ構築。"
+      - title: "製品輸入販売"
+        description: "日本・アジア製品のミャンマー市場への導入。"
+    
+    contact_info:
+      headquarters:
+        name: "ヤンゴン支社"
+        address: "Yangon, Myanmar"
+        phone: "+95-xxx-xxx-xxxx"
+        email: "kouei.myanmar@kjt.co.jp"
+        languages: ["日本語", "英語", "ミャンマー語"]
+
+  bangladesh:
+    name: "恒栄バングラデシュ"
+    name_en: "Kouei Japan Trading Co., Ltd. Bangladesh Office"
+    name_local: "Kouei Japan Trading Co., Ltd. Bangladesh Office"
+    description: "バングラデシュの繊維・製造業市場での事業拡大を目指す新興拠点です。"
+    
+    overview:
+      type: "バングラデシュ事務所"
+      location: "ダッカ"
+      coverage: "バングラデシュ全域"
+      established: "2020年"
+      representative: "事務所長"
+      employees: 5
+      languages: ["日本語", "英語", "ベンガル語"]
+    
+    business_activities:
+      - title: "繊維業界向けサービス"
+        description: "バングラデシュの主要産業である繊維業界への機械・工具供給。"
+      - title: "製造業支援"
+        description: "新興製造業への技術・製品サポート。"
+      - title: "市場調査"
+        description: "バングラデシュ市場の動向調査とビジネス機会の発掘。"
+    
+    contact_info:
+      headquarters:
+        name: "ダッカ事務所"
+        address: "Dhaka, Bangladesh"
+        phone: "+880-xxx-xxx-xxxx"
+        email: "kouei.bangladesh@kjt.co.jp"
+        languages: ["日本語", "英語", "ベンガル語"]
