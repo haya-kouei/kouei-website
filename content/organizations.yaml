@@ -96,35 +96,59 @@ organizations:
         languages: ["日本語", "英語"]
 
   myanmar:
-    name: "恒栄ミャンマー"
-    name_en: "Kouei Japan Trading Co., Ltd. Myanmar Branch"
-    name_local: "Kouei Japan Trading Co., Ltd. Myanmar Branch"
-    description: "ミャンマーの新興市場において戦略的な事業展開を図る成長拠点です。"
+    name: "恒栄トレーディング ミャンマー支店"
+    name_en: "Kouei Japan Trading Co., Ltd. Myanmar Branch Office"
+    name_local: "Kouei Japan Trading Co., Ltd. Myanmar Branch Office"
+    description: "恒栄トレーディング（日本）のミャンマー支店です。ミャンマーにおける橋梁・土木・港湾等のインフラ案件、現地工場様向けに、機械工具・工場設備・ボルト類の販売をしております。USD・MMK支払、CIF Yangon、DDP Yangon、CIF Myawaddy 条件の見積対応可能です。"
     
     overview:
-      type: "ミャンマー支社"
+      type: "ミャンマー支店"
       location: "ヤンゴン"
       coverage: "ミャンマー全域"
-      established: "2015年"
-      representative: "支社長"
-      employees: 8
+      established: "2017年5月26日"
+      representative: "Konishi Hayato"
+      employees: 15
+      capital: "50,000 USD"
       languages: ["日本語", "英語", "ミャンマー語"]
     
     business_activities:
-      - title: "ミャンマー市場開拓"
-        description: "新興市場での事業機会の探索と開拓。"
-      - title: "現地パートナー開拓"
-        description: "ミャンマーの現地企業とのパートナーシップ構築。"
-      - title: "製品輸入販売"
-        description: "日本・アジア製品のミャンマー市場への導入。"
+      - title: "ミャンマー国内工場様・現場様向け営業・販売活動"
+        description: "橋梁・土木・港湾等のインフラ案件、現地工場様向けの機械工具・工場設備・ボルト類の販売。"
+      - title: "パーツ・消耗品の在庫・販売"
+        description: "現地で必要なパーツや消耗品の在庫管理と販売業務。"
+      - title: "測定器などの修理・校正対応"
+        description: "測定機器の修理・校正サービスの提供。"
+      - title: "エンジニアのアテンド、メーカー様アテンド・同行営業"
+        description: "技術者の現地サポートとメーカー様の営業同行業務。"
+      - title: "恒栄トレーディング（日本）のオペレーション委託業務"
+        description: "日本本社からの業務委託を受けて現地オペレーションを実施。"
+      - title: "その他ウェブサイト、システムの運用"
+        description: "IT関連業務の開発・運用サポート。"
+    
+    payment_conditions:
+      - "USD・MMK支払対応"
+      - "CIF Yangon条件"
+      - "DDP Yangon条件"
+      - "CIF Myawaddy条件"
     
     contact_info:
       headquarters:
-        name: "ヤンゴン支社"
+        name: "ミャンマー支店"
         address: "Yangon, Myanmar"
-        phone: "+95-xxx-xxx-xxxx"
-        email: "kouei.myanmar@kjt.co.jp"
-        languages: ["日本語", "英語", "ミャンマー語"]
+        phone: "09406587181"
+        email: "kouei.contact@kjt.co.jp"
+        website: "koueitrading.com/global/"
+        languages: ["ミャンマー語", "英語"]
+    
+    social_media:
+      facebook: "Kouei Trading Myanmar"
+    
+    strengths:
+      - "橋梁・土木・港湾等のインフラ案件への対応"
+      - "USD・MMK支払いとCIF/DDP条件での柔軟な取引"
+      - "パーツ・消耗品の現地在庫対応"
+      - "測定器の修理・校正サービス"
+      - "エンジニア・メーカーアテンド業務"
 
   bangladesh:
     name: "恒栄バングラデシュ"

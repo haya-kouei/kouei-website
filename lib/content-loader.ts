@@ -100,6 +100,7 @@ export interface OrganizationOverview {
   established: string
   representative: string
   employees: number
+  capital?: string
   languages: string[]
 }
 
@@ -118,11 +119,13 @@ export interface OrganizationInfo {
   business_activities: BusinessActivity[]
   partner_manufacturers?: string[]
   exhibition_support?: ExhibitionSupport[]
+  payment_conditions?: string[]
   contact_info: {
-    headquarters: ContactInfo
+    headquarters: ContactInfo & { website?: string }
   }
   social_media?: {
     instagram?: string
+    facebook?: string
   }
   strengths?: string[]
 }
