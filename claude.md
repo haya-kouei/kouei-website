@@ -25,6 +25,7 @@ kouei-website/
 ├── content/               # YAML CMS データ
 │   ├── company-info.yaml
 │   ├── manufacturers.yaml
+│   ├── organizations.yaml    # 組織詳細データ
 │   ├── overseas-sales.yaml
 │   ├── sales-countries.yaml
 │   └── topics.yaml
@@ -96,6 +97,20 @@ overseas_sales:
         - name: "ベトナム"
           flag: "🇻🇳"
           companies: 366
+```
+
+#### 4. 組織詳細データ (`content/organizations.yaml`)
+```yaml
+organizations:
+  vietnam:
+    name: "恒栄ベトナムトレーディング"
+    name_en: "Kouei Vietnam Trading Co., Ltd."
+    description: "KOUEIベトナムはベトナムローカルの法人です..."
+    business_activities:
+      - title: "ベトナム工場様向け輸入販売"
+        description: "ベトナムの製造業向けに各種工具・機械の輸入販売..."
+    partner_manufacturers: ["TONE", "KITO", "EXEN"]
+    strengths: ["ベトナム現地法人として多様な輸入販売が可能"]
 ```
 
 ## デザインシステム
@@ -264,10 +279,27 @@ const HeavyComponent = dynamic(() => import('./HeavyComponent'), {
 vercel --prod
 ```
 
+## 実装済み機能
+
+### 完了した機能 ✅
+- [x] **組織詳細ページ（全4拠点完了）**
+  - [x] ベトナム拠点詳細ページ (/about/vietnam)
+  - [x] ミャンマー支店詳細ページ (/about/myanmar)
+  - [x] 日本本社詳細ページ (/about/japan)
+  - [x] バングラデシュ事務所詳細ページ (/about/bangladesh)
+- [x] **YAML-based組織管理システム**
+  - [x] organizations.yaml による4組織の詳細データ管理
+  - [x] TypeScript型定義による型安全性確保
+  - [x] 動的ページ生成とデータバインディング
+- [x] **各組織カラーテーマ**
+  - [x] ベトナム: 緑色テーマ
+  - [x] ミャンマー: 紫色テーマ
+  - [x] 日本本社: 青色テーマ
+  - [x] バングラデシュ: オレンジ色テーマ
+
 ## 今後の拡張予定
 
 ### 予定機能
-- [ ] 各組織詳細ページ (/about/{organization})
 - [ ] お問い合わせフォーム実装
 - [ ] 多言語対応 (日/英)
 - [ ] 検索機能
@@ -286,8 +318,43 @@ vercel --prod
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/)
 - [Vercel Docs](https://vercel.com/docs)
 
+## 組織詳細ページ実装詳細
+
+### 各組織の特徴
+- **ベトナム拠点** (/about/vietnam)
+  - パートナーメーカー: TONE、KITO、EXEN等7社
+  - 展示会サポート実績: METALEX VIETNAM 2023
+  - Instagram連携: @kouei_vietnam
+  
+- **ミャンマー支店** (/about/myanmar)
+  - 設立: 2017年5月26日、資本金50,000 USD
+  - 取引条件: USD・MMK支払い、CIF/DDP対応
+  - Facebook連携: Kouei Trading Myanmar
+  
+- **日本本社** (/about/japan)
+  - 法人情報: 法人番号、適格請求書番号、古物商許可証
+  - 主要銀行: みずほ銀行、りそな銀行
+  - 関連会社: 株式会社コニー
+  
+- **バングラデシュ事務所** (/about/bangladesh)
+  - 販売実績: 現地企業様約10社
+  - 取引条件: L/C取引対応、CIF/CIP条件
+  - インフラ案件特化: 橋梁・土木・港湾
+
+### YAML管理による利点
+- **データ整合性**: 型安全なTypeScriptインターフェース
+- **更新容易性**: YAMLファイル編集のみで即座に反映
+- **拡張性**: 新しいフィールド追加が簡単
+- **保守性**: Gitによるバージョン管理
+
 ---
 
 **最終更新**: 2024年9月
 **管理者**: Claude Code AI Assistant
 **プロジェクト**: KOUEI Trading Corporate Website
+
+## 重要な実装ノート
+- 全4組織の詳細ページ実装完了
+- YAML-based組織管理システム構築済み
+- 各組織カラーテーマによる視覚的区別
+- レスポンシブデザイン完全対応
