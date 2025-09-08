@@ -99,7 +99,7 @@ export interface OrganizationOverview {
   coverage: string
   established: string
   representative: string
-  employees: number
+  employees: number | string
   capital?: string
   languages: string[]
 }
@@ -128,6 +128,7 @@ export interface OrganizationInfo {
   partner_manufacturers?: string[]
   exhibition_support?: ExhibitionSupport[]
   payment_conditions?: string[]
+  sales_performance?: string[]
   company_info?: CompanyAdditionalInfo
   contact_info: {
     headquarters: ContactInfo & { website?: string }

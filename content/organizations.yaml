@@ -173,32 +173,46 @@ organizations:
       - "エンジニア・メーカーアテンド業務"
 
   bangladesh:
-    name: "恒栄バングラデシュ"
+    name: "恒栄トレーディング バングラデシュ事務所"
     name_en: "Kouei Japan Trading Co., Ltd. Bangladesh Office"
     name_local: "Kouei Japan Trading Co., Ltd. Bangladesh Office"
-    description: "バングラデシュの繊維・製造業市場での事業拡大を目指す新興拠点です。"
+    description: "恒栄トレーディング（日本）のバングラデシュ事務所です。バングラデシュにおける橋梁・土木・港湾等のインフラ案件、現地工場様向けに、KOUEIの案内をいたします。現地企業様、約10社に販売実績がございます。"
     
     overview:
       type: "バングラデシュ事務所"
       location: "ダッカ"
       coverage: "バングラデシュ全域"
-      established: "2020年"
-      representative: "事務所長"
-      employees: 5
-      languages: ["日本語", "英語", "ベンガル語"]
+      established: "2023年4月26日"
+      representative: "Konishi Hayato"
+      employees: ""
+      capital: "50,000 USD"
+      languages: ["英語", "ベンガル語"]
     
     business_activities:
-      - title: "繊維業界向けサービス"
-        description: "バングラデシュの主要産業である繊維業界への機械・工具供給。"
-      - title: "製造業支援"
-        description: "新興製造業への技術・製品サポート。"
-      - title: "市場調査"
-        description: "バングラデシュ市場の動向調査とビジネス機会の発掘。"
+      - title: "バングラデシュ国内工場様・現場様向けにKOUEI取扱製品の案内"
+        description: "橋梁・土木・港湾等のインフラ案件、現地工場様向けに、KOUEI製品の提案・案内業務を実施。"
+    
+    payment_conditions:
+      - "USD支払対応"
+      - "CIF Chittagong条件"
+      - "CIP Dhaka条件"
+      - "L/C取引対応"
+    
+    sales_performance:
+      - "現地企業様、約10社に販売実績"
     
     contact_info:
       headquarters:
-        name: "ダッカ事務所"
+        name: "バングラデシュ事務所"
         address: "Dhaka, Bangladesh"
-        phone: "+880-xxx-xxx-xxxx"
-        email: "kouei.bangladesh@kjt.co.jp"
-        languages: ["日本語", "英語", "ベンガル語"]
+        phone: ""
+        email: "kouei.sales@kjt.co.jp"
+        website: "koueitrading.com/global/"
+        languages: ["英語", "ベンガル語"]
+    
+    strengths:
+      - "バングラデシュのインフラ案件（橋梁・土木・港湾）への対応"
+      - "現地企業様約10社への販売実績"
+      - "USD支払い、CIF/CIP条件での柔軟な取引"
+      - "L/C取引対応による安全な国際取引"
+      - "KOUEI取扱製品の現地案内・提案力"
