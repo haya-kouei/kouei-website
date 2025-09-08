@@ -25,13 +25,174 @@ export default async function AboutPage() {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-light text-gray-800 mb-6">会社概要</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            私たちの歴史、ミッション、そして未来への取り組み
-          </p>
+      {/* ヘッダー画像 */}
+      <div className="h-48 bg-gradient-to-r from-indigo-100 to-indigo-200 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div className="container mx-auto px-4 h-full flex items-center relative z-10">
+          <h1 className="text-4xl font-bold text-gray-800">会社概要</h1>
         </div>
+      </div>
+
+      <main className="container mx-auto px-4 py-12">
+        {/* 組織選択メニュー */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {/* 恒栄トレーディング (日本本社) */}
+          <div className="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-8">
+              <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">恒栄トレーディング</h3>
+              <p className="text-blue-100 text-lg">(Kouei Japan Trading Co., Ltd.)</p>
+              <p className="text-blue-200 text-sm mt-2">日本本社 - 東京</p>
+            </div>
+            <div className="p-8">
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                1994年設立の日本本社。グローバル貿易事業の中心として、世界各国との商品取引を統括しています。
+              </p>
+              <Link href="/about/japan" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-lg">
+                詳細を見る
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+
+          {/* 恒栄ベトナム */}
+          <div className="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="bg-gradient-to-br from-green-600 to-green-700 p-8">
+              <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">恒栄ベトナム</h3>
+              <p className="text-green-100 text-lg">(Kouei Vietnam Trading Co., Ltd.)</p>
+              <p className="text-green-200 text-sm mt-2">ベトナム拠点 - ホーチミン</p>
+            </div>
+            <div className="p-8">
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                ベトナムの急成長する製造業市場において、現地に根ざした事業展開を行う重要拠点です。
+              </p>
+              <Link href="/about/vietnam" className="inline-flex items-center text-green-600 hover:text-green-700 font-medium text-lg">
+                詳細を見る
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+
+          {/* 恒栄ミャンマー */}
+          <div className="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="bg-gradient-to-br from-purple-600 to-purple-700 p-8">
+              <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">恒栄ミャンマー</h3>
+              <p className="text-purple-100 text-lg">(Kouei Japan Trading Co., Ltd. Myanmar Branch)</p>
+              <p className="text-purple-200 text-sm mt-2">ミャンマー支社 - ヤンゴン</p>
+            </div>
+            <div className="p-8">
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                ミャンマーの新興市場において戦略的な事業展開を図る成長拠点です。
+              </p>
+              <Link href="/about/myanmar" className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium text-lg">
+                詳細を見る
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+
+          {/* 恒栄バングラデシュ */}
+          <div className="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="bg-gradient-to-br from-orange-600 to-orange-700 p-8">
+              <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">恒栄バングラデシュ</h3>
+              <p className="text-orange-100 text-lg">(Kouei Japan Trading Co., Ltd. Bangladesh Office)</p>
+              <p className="text-orange-200 text-sm mt-2">バングラデシュ事務所 - ダッカ</p>
+            </div>
+            <div className="p-8">
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                バングラデシュの繊維・製造業市場での事業拡大を目指す新興拠点です。
+              </p>
+              <Link href="/about/bangladesh" className="inline-flex items-center text-orange-600 hover:text-orange-700 font-medium text-lg">
+                詳細を見る
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* グループ概要セクション */}
+        <section className="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">KOUEIグループについて</h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">グループビジョン</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                {company.vision}
+              </p>
+              
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">グループミッション</h3>
+              <p className="text-gray-700 leading-relaxed">
+                {company.mission}
+              </p>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">グループ実績</h3>
+              <div className="space-y-4">
+                <div className="bg-white p-4 rounded-lg">
+                  <div className="text-2xl font-bold text-cyan-600">700+</div>
+                  <p className="text-gray-600">取引企業数</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg">
+                  <div className="text-2xl font-bold text-cyan-600">50+</div>
+                  <p className="text-gray-600">展開国数</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg">
+                  <div className="text-2xl font-bold text-cyan-600">30+</div>
+                  <p className="text-gray-600">年の実績</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 沿革セクション */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">沿革</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-8">
+              {company.history.map((event, index) => (
+                <div key={index} className="flex items-start space-x-6">
+                  <div className="flex-shrink-0 w-20 text-right">
+                    <span className="text-xl font-bold text-cyan-600">{event.year}</span>
+                  </div>
+                  <div className="flex-shrink-0 w-4 h-4 bg-cyan-500 rounded-full mt-1"></div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">{event.event}</h3>
+                    <p className="text-gray-600">{event.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">企業理念</h2>
@@ -212,21 +373,16 @@ export default async function AboutPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-lg">
-          <div className="container mx-auto px-4 text-center">
-            <div className="bg-white/95 backdrop-blur-sm max-w-md mx-auto p-8 rounded-lg shadow-xl">
-              <h3 className="text-2xl font-bold text-cyan-600 mb-4">お問い合わせ</h3>
-              <p className="text-gray-700 mb-6">
-                事業に関するご質問やご相談がございましたら、お気軽にお問い合わせください。
-              </p>
-              <Link 
-                href="/contact" 
-                className="btn-primary inline-block px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105"
-              >
-                お問い合わせフォーム
-              </Link>
-            </div>
-          </div>
+        {/* CTA セクション */}
+        <section className="text-center bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-lg p-12 text-white">
+          <h2 className="text-3xl font-bold mb-4">お問い合わせ</h2>
+          <p className="text-xl mb-8 text-indigo-100">各拠点の詳細情報やビジネスに関するご相談はお気軽にどうぞ</p>
+          <Link 
+            href="/contact" 
+            className="inline-block bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105"
+          >
+            お問い合わせフォーム
+          </Link>
         </section>
       </main>
 
