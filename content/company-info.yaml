@@ -1,0 +1,94 @@
+company:
+  name: "恒栄トレーディング株式会社"
+  name_en: "Kouei Japan Trading Co., Ltd."
+  established: "1987年"
+  capital: "5,000万円"
+  employees: 28
+  president: "代表取締役 鈴木 恒夫"
+  
+  address:
+    postal_code: "116-0013"
+    prefecture: "東京都"
+    city: "荒川区"
+    street: "西日暮里5-7-8"
+    building: "第二豊田ビル2F"
+    phone: "03-3803-7871"
+    fax: "03-3803-7872"
+    email: "info@kjt.co.jp"
+    website: "https://www.kjt.co.jp"
+  
+  business_description: |
+    鉄鋼製品、機械工具、プラント設備機器、建設・土木機材の販売を行っている商社です。
+    日本・ベトナム・ミャンマー・バングラデシュの拠点で連携し、アジアを中心とした世界各国で営業活動を行なっています。
+  
+  mission: "アジアの製造現場において、最も役に立つ商社となる"
+  
+  values:
+    - "高品質製品の提供"
+    - "信頼できるパートナーシップ"
+    - "アジア市場への深い理解"
+    - "迅速で確実な対応"
+    
+  services:
+    - name: "鉄鋼製品販売"
+      description: "各種鉄鋼製品の調達・販売"
+    - name: "機械工具販売"
+      description: "工場向け機械工具の販売"
+    - name: "プラント設備機器"
+      description: "プラント向け設備機器の販売"
+    - name: "建設・土木機材"
+      description: "建設・土木向け機材の販売"
+
+  offices:
+    - name: "日本本社"
+      location: "東京都荒川区"
+      established: "1987年"
+      address: "〒116-0013 東京都荒川区西日暮里5-7-8 第二豊田ビル2F"
+      phone: "03-3803-7871"
+      description: "本社機能および日本国内営業拠点"
+      
+    - name: "Kouei Vietnam Trading Co., Ltd."
+      location: "ベトナム ホーチミン市"
+      established: "2010年"
+      address: "Ho Chi Minh City, Vietnam"
+      description: "ベトナム現地法人。東南アジア市場の重要拠点"
+      
+    - name: "Kouei Myanmar Branch"
+      location: "ミャンマー ヤンゴン"
+      established: "2020年"
+      address: "Yangon, Myanmar"
+      description: "ミャンマー支店。新興市場開拓の拠点"
+      
+    - name: "Kouei Bangladesh Office"
+      location: "バングラデシュ ダッカ"
+      established: "2024年"
+      address: "Dhaka, Bangladesh"
+      description: "バングラデシュ事務所。南アジア市場への展開拠点"
+
+  history:
+    - year: "1987年"
+      event: "恒栄トレーディング株式会社設立"
+      description: "東京都荒川区に本社を設立、鉄鋼製品・機械工具の販売業務を開始"
+    - year: "1995年"
+      event: "事業拡大"
+      description: "プラント設備機器、建設・土木機材の販売を開始し、事業領域を拡大"
+    - year: "2005年"
+      event: "海外展開開始"
+      description: "アジア市場への本格的な海外展開を開始"
+    - year: "2010年"
+      event: "Kouei Vietnam Trading設立"
+      description: "ベトナム ホーチミン市に現地法人を設立、東南アジア市場の拠点を確立"
+    - year: "2015年"
+      event: "事業実績の拡大"
+      description: "アジア各国での取引実績が大幅に拡大"
+    - year: "2020年"
+      event: "Kouei Myanmar Branch開設"
+      description: "ミャンマー ヤンゴンに支店を開設、新興市場への展開を加速"
+    - year: "2024年"
+      event: "Kouei Bangladesh Office設立"
+      description: "バングラデシュ ダッカに事務所を設立、南アジア市場への展開を強化"
+
+  certifications:
+    - name: "ISO 9001:2015"
+      description: "品質マネジメントシステムの国際標準認証"
+      acquired: "2023年"

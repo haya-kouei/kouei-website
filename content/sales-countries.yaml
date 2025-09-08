@@ -1,0 +1,72 @@
+sales_countries:
+  - region: "東南アジア"
+    countries:
+      - name: "ベトナム"
+        flag: "/images/flags/vn.png"
+        companies: 366
+        code: "VN"
+        description: "2010年に現地法人を設立。鉄鋼製品、機械工具を中心に幅広い業界との取引を展開"
+      - name: "ミャンマー"
+        flag: "/images/flags/mm.png"
+        companies: 45
+        code: "MM"
+        description: "2020年に支店を開設。新興市場として注目し、積極的な事業展開を推進中"
+      - name: "タイ"
+        flag: "/images/flags/th.png"
+        companies: 89
+        code: "TH"
+        description: "製造業を中心とした安定した取引関係を長年にわたって構築"
+      - name: "インドネシア"
+        flag: "/images/flags/id.png"
+        companies: 67
+        code: "ID"
+        description: "プラント設備機器、建設土木機材の需要が高く、継続的に取引を拡大"
+      - name: "マレーシア"
+        flag: "/images/flags/my.png"
+        companies: 34
+        code: "MY"
+        description: "先進的な産業基盤を活かした高品質製品の供給を行っている"
+      - name: "シンガポール"
+        flag: "/images/flags/sg.png"
+        companies: 28
+        code: "SG"
+        description: "東南アジアのハブとして重要な戦略拠点との位置づけ"
+
+  - region: "南アジア"
+    countries:
+      - name: "バングラデシュ"
+        flag: "/images/flags/bd.png"
+        companies: 78
+        code: "BD"
+        description: "2024年に事務所を設立。人口増加と経済発展により市場開拓を本格化"
+      - name: "インド"
+        flag: "/images/flags/in.png"
+        companies: 156
+        code: "IN"
+        description: "急成長する製造業、インフラ分野での取引実績を拡大中"
+
+  - region: "東アジア"
+    countries:
+      - name: "中国"
+        flag: "/images/flags/cn.png"
+        companies: 234
+        code: "CN"
+        description: "大手製造業を中心に長期的な信頼関係を構築し、継続取引を維持"
+      - name: "韓国"
+        flag: "/images/flags/kr.png"
+        companies: 89
+        code: "KR"
+        description: "技術力の高い企業との取引を通じて相互発展を目指している"
+      - name: "台湾"
+        flag: "/images/flags/tw.png"
+        companies: 67
+        code: "TW"
+        description: "ハイテク産業、精密機械分野での協力関係を深化"
+
+  - region: "その他地域"
+    countries:
+      - name: "日本"
+        flag: "/images/flags/jp.png"
+        companies: 189
+        code: "JP"
+        description: "本社所在地として国内市場での基盤を活かした事業展開"

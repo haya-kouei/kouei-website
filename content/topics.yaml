@@ -1,0 +1,31 @@
+topics:
+  - id: 1
+    date: "2024-03-15"
+    title: "恒栄トレーディング（バングラデシュ事務所）を設立"
+    description: "グローバル展開の一環として、バングラデシュ ダッカに新しい事務所を設立いたしました。南アジア市場への本格参入を開始します。"
+    published: true
+  - id: 2
+    date: "2023-10-15"
+    title: "ISO 9001:2015認証取得"
+    description: "品質管理システムの国際標準であるISO 9001:2015認証を取得いたしました。"
+    published: true
+  - id: 3
+    date: "2022-12-01"
+    title: "アジア地域での取引拡大"
+    description: "東南アジア、南アジア、東アジア地域での取引先企業数が大幅に拡大し、事業基盤を強化いたしました。"
+    published: true
+  - id: 4
+    date: "2020-03-25"
+    title: "Kouei Myanmar Branch開設"
+    description: "ミャンマー ヤンゴンに支店を開設し、新興市場への展開を加速いたします。"
+    published: true
+  - id: 5
+    date: "2015-06-10"
+    title: "海外事業の本格展開"
+    description: "アジア各国での取引実績が大幅に拡大し、海外事業の基盤を確立いたしました。"
+    published: true
+  - id: 6
+    date: "2010-04-01"
+    title: "Kouei Vietnam Trading設立"
+    description: "ベトナム ホーチミン市に現地法人を設立し、東南アジア市場での事業基盤を確立いたします。"
+    published: true
