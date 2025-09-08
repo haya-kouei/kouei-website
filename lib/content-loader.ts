@@ -61,6 +61,25 @@ export interface HistoryEvent {
   description: string
 }
 
+export interface OverseasCountry {
+  name: string
+  flag: string
+  companies: number
+}
+
+export interface OverseasRegion {
+  name: string
+  countries: OverseasCountry[]
+}
+
+export interface OverseasSales {
+  header: {
+    title: string
+    subtitle: string
+  }
+  regions: OverseasRegion[]
+}
+
 export interface CompanyInfo {
   name: string
   name_en: string
@@ -142,6 +161,18 @@ export async function getCompanyInfo(): Promise<CompanyInfo | null> {
     return data.company
   } catch (error) {
     console.error('Error loading company info:', error)
+    return null
+  }
+}
+
+export async function getOverseasSales(): Promise<OverseasSales | null> {
+  try {
+    const filePath = path.join(contentDirectory, 'overseas-sales.yaml')
+    const fileContents = fs.readFileSync(filePath, 'utf8')
+    const data = yaml.load(fileContents) as { overseas_sales: OverseasSales }
+    return data.overseas_sales
+  } catch (error) {
+    console.error('Error loading overseas sales:', error)
     return null
   }
 }

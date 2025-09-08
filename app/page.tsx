@@ -1,9 +1,10 @@
 import Link from 'next/link'
-import { getTopics, getSalesCountries } from '@/lib/content-loader'
+import { getTopics, getSalesCountries, getOverseasSales } from '@/lib/content-loader'
 
 export default async function Home() {
   const topics = await getTopics()
   const salesData = await getSalesCountries()
+  const overseasSales = await getOverseasSales()
   
   // 統計データの計算
   const totalCompanies = salesData.reduce((total, region) => 
@@ -118,6 +119,38 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      {/* 海外販売先 */}
+      {overseasSales && (
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold text-gray-800 mb-1">{overseasSales.header.title}</h2>
+              <p className="text-sm text-gray-600">{overseasSales.header.subtitle}</p>
+            </div>
+            
+            <div className="space-y-8">
+              {overseasSales.regions.map((region, regionIndex) => (
+                <div key={regionIndex}>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">{region.name}</h3>
+                  <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9 xl:grid-cols-12 gap-x-8 gap-y-3">
+                    {region.countries.map((country, countryIndex) => (
+                      <div key={countryIndex} className="flex items-center space-x-2">
+                        <span className="text-base">{country.flag}</span>
+                        <span className="text-gray-800 text-sm">{country.name}</span>
+                        <div className="flex items-baseline">
+                          <span className="text-xl font-bold text-gray-900">{country.companies}</span>
+                          <span className="text-gray-600 text-xs ml-0.5">社</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* トピックス */}
       <section className="py-16 bg-gray-50">
