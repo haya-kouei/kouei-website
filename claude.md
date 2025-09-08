@@ -1,0 +1,293 @@
+# CLAUDE.md - Claude Code AI Assistant 設定・コマンド集
+
+## プロジェクト概要
+このプロジェクトは株式会社恒栄トレーディングのコーポレートウェブサイトを Next.js + TypeScript + Tailwind CSS で構築したものです。
+
+## 開発環境
+
+### 技術スタック
+- **Frontend**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v3
+- **CMS**: YAML-based file system
+- **Deployment**: Vercel
+- **AI Assistant**: Claude Code
+
+### ディレクトリ構成
+```
+kouei-website/
+├── app/                    # Next.js 14 App Router
+│   ├── page.tsx           # トップページ
+│   ├── sales/page.tsx     # 販売事業ページ
+│   ├── manufacturers/page.tsx # 取扱メーカーページ
+│   ├── about/page.tsx     # 会社概要ページ
+│   └── contact/page.tsx   # お問い合わせページ
+├── content/               # YAML CMS データ
+│   ├── company-info.yaml
+│   ├── manufacturers.yaml
+│   ├── overseas-sales.yaml
+│   ├── sales-countries.yaml
+│   └── topics.yaml
+├── lib/                   # ユーティリティ
+│   └── content-loader.ts  # YAML データローダー
+├── styles/                # グローバルスタイル
+│   └── globals.css
+└── public/                # 静的アセット
+```
+
+## よく使うコマンド
+
+### 開発サーバー起動
+```bash
+npm run dev
+```
+→ http://localhost:3000 でアクセス
+
+### ビルド
+```bash
+npm run build
+```
+
+### 型チェック
+```bash
+npm run type-check
+```
+
+### Linting
+```bash
+npm run lint
+```
+
+## YAML CMS 管理
+
+### コンテンツ更新手順
+1. 該当YAMLファイルを編集
+2. 変更をコミット・プッシュ
+3. Vercel自動デプロイ
+
+### 主要データファイル
+
+#### 1. 会社情報 (`content/company-info.yaml`)
+```yaml
+company:
+  name: "株式会社恒栄トレーディング"
+  name_en: "Kouei Japan Trading Co., Ltd."
+  established: "1994年"
+  # ...その他企業情報
+```
+
+#### 2. 取扱メーカー (`content/manufacturers.yaml`)
+```yaml
+manufacturers:
+  categories:
+    - name: "作業工具"
+      companies:
+        - name: "株式会社ダイア"
+          name_en: "DAIA CORPORATION"
+          has_partnership: true
+```
+
+#### 3. 海外販売先 (`content/overseas-sales.yaml`)
+```yaml
+overseas_sales:
+  regions:
+    - name: "東南アジア"
+      countries:
+        - name: "ベトナム"
+          flag: "🇻🇳"
+          companies: 366
+```
+
+## デザインシステム
+
+### カラーパレット
+- **Primary**: `text-cyan-500` / `bg-cyan-500`
+- **Secondary**: `text-gray-700` / `bg-gray-50`
+- **Accent Colors**: 各セクション別（青・緑・紫・オレンジ等）
+
+### よく使うTailwindクラス
+```css
+/* カードコンポーネント */
+.card-hover {
+  @apply hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2;
+}
+
+/* ブランドロゴ */
+.brand-logo {
+  @apply font-bold tracking-wider;
+}
+
+/* 統計数値 */
+.stat-number {
+  @apply text-4xl font-bold text-cyan-600;
+}
+```
+
+## 頻出パターン・コンポーネント
+
+### 1. ページヘッダー
+```tsx
+{/* ヘッダー */}
+<header className="bg-gray-50 shadow-sm">
+  <div className="container mx-auto px-4 py-4">
+    <div className="flex justify-between items-center">
+      <Link href="/" className="brand-logo text-3xl">KOUEI</Link>
+      <nav className="hidden md:flex space-x-8">
+        {/* ナビゲーションリンク */}
+      </nav>
+    </div>
+  </div>
+</header>
+```
+
+### 2. ヘッダー画像
+```tsx
+{/* ヘッダー画像 */}
+<div className="h-48 bg-gradient-to-r from-cyan-100 to-cyan-200 relative overflow-hidden">
+  <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+  <div className="container mx-auto px-4 h-full flex items-center relative z-10">
+    <h1 className="text-4xl font-bold text-gray-800">ページタイトル</h1>
+  </div>
+</div>
+```
+
+### 3. カード型コンポーネント
+```tsx
+<div className="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+  <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-6">
+    {/* アイコン */}
+    <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+      <svg className="w-6 h-6 text-white">...</svg>
+    </div>
+    <h3 className="text-xl font-bold text-white mb-2">タイトル</h3>
+  </div>
+  <div className="p-6">
+    <p className="text-gray-600 mb-4">説明文</p>
+    <Link href="#" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+      詳細を見る
+      <svg className="w-4 h-4 ml-1">...</svg>
+    </Link>
+  </div>
+</div>
+```
+
+## Git ワークフロー
+
+### コミットメッセージ形式
+```
+feat: 新機能の追加
+fix: バグ修正  
+docs: ドキュメント更新
+style: スタイル調整
+refactor: リファクタリング
+```
+
+### よく使うGitコマンド
+```bash
+# ステージング
+git add .
+
+# コミット
+git commit -m "feat: 新しい機能を追加"
+
+# プッシュ
+git push origin main
+
+# ステータス確認
+git status
+
+# 差分確認
+git diff
+```
+
+## トラブルシューティング
+
+### 1. 開発サーバーが起動しない
+```bash
+# ポート確認
+lsof -ti:3000
+
+# プロセス終了
+kill -9 <PID>
+
+# 再起動
+npm run dev
+```
+
+### 2. TypeScriptエラー
+```bash
+# 型チェック
+npm run type-check
+
+# TypeScript再起動 (VS Code)
+Cmd+Shift+P → "TypeScript: Restart TS Server"
+```
+
+### 3. YAMLデータが読み込まれない
+- ファイルパス確認: `/content/*.yaml`
+- YAML構文確認: インデント・コロンの記述
+- content-loader.tsの型定義確認
+
+## パフォーマンス最適化
+
+### 1. 画像最適化
+```tsx
+import Image from 'next/image'
+
+<Image
+  src="/path/to/image.jpg"
+  alt="説明"
+  width={800}
+  height={600}
+  priority // 重要な画像のみ
+/>
+```
+
+### 2. 動的インポート
+```tsx
+import dynamic from 'next/dynamic'
+
+const HeavyComponent = dynamic(() => import('./HeavyComponent'), {
+  loading: () => <p>Loading...</p>,
+})
+```
+
+## デプロイ
+
+### Vercel自動デプロイ
+- GitHubプッシュで自動デプロイ
+- プレビューURL自動生成
+- 本番URL: https://kouei-website.vercel.app
+
+### 手動デプロイ
+```bash
+vercel --prod
+```
+
+## 今後の拡張予定
+
+### 予定機能
+- [ ] 各組織詳細ページ (/about/{organization})
+- [ ] お問い合わせフォーム実装
+- [ ] 多言語対応 (日/英)
+- [ ] 検索機能
+- [ ] サイトマップ生成
+
+### 技術的改善
+- [ ] パフォーマンス最適化
+- [ ] SEO強化
+- [ ] アクセシビリティ改善
+- [ ] PWA対応
+
+## 参考リンク
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
+- [Vercel Docs](https://vercel.com/docs)
+
+---
+
+**最終更新**: 2024年9月
+**管理者**: Claude Code AI Assistant
+**プロジェクト**: KOUEI Trading Corporate Website
