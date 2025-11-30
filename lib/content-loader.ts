@@ -25,14 +25,19 @@ export interface SalesRegion {
   countries: Country[]
 }
 
-export interface Manufacturer {
+export interface ManufacturerCompany {
   name: string
-  logo: string
-  category: string
-  description: string
-  products: string[]
-  established: string
-  website: string
+  name_en: string
+  has_partnership: boolean
+}
+
+export interface ManufacturerCategory {
+  name: string
+  companies: ManufacturerCompany[]
+}
+
+export interface ManufacturersData {
+  categories: ManufacturerCategory[]
 }
 
 export interface Office {
@@ -208,15 +213,15 @@ export async function getSalesCountries(): Promise<SalesRegion[]> {
   }
 }
 
-export async function getManufacturers(): Promise<Manufacturer[]> {
+export async function getManufacturers(): Promise<ManufacturersData> {
   try {
     const filePath = path.join(contentDirectory, 'manufacturers.yaml')
     const fileContents = fs.readFileSync(filePath, 'utf8')
-    const data = yaml.load(fileContents) as { manufacturers: Manufacturer[] }
+    const data = yaml.load(fileContents) as { manufacturers: ManufacturersData }
     return data.manufacturers
   } catch (error) {
     console.error('Error loading manufacturers:', error)
-    return []
+    return { categories: [] }
   }
 }
 
