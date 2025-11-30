@@ -257,14 +257,9 @@ export default async function SalesPage() {
                     {region.countries.map((country, countryIndex) => (
                       <div key={countryIndex} className="country-card bg-white p-6 rounded-lg border transition-all hover:shadow-lg">
                         <div className="flex items-center space-x-4 mb-4">
-                          <img 
-                            src={country.flag} 
-                            alt={`${country.name}の国旗`}
-                            className="w-16 h-12 object-cover rounded border shadow-sm"
-                            onError={(e) => {
-                              (e.target as HTMLImageElement).src = '/images/flags/placeholder.png'
-                            }}
-                          />
+                          <div className="text-5xl">
+                            {country.flag}
+                          </div>
                           <div>
                             <h4 className="text-lg font-semibold text-gray-800">{country.name}</h4>
                             <div className="stat-number text-2xl">
