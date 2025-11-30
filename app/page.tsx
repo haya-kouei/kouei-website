@@ -132,15 +132,19 @@ export default async function Home() {
             <div className="space-y-8">
               {overseasSales.regions.map((region, regionIndex) => (
                 <div key={regionIndex}>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">{region.name}</h3>
-                  <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9 xl:grid-cols-12 gap-x-8 gap-y-3">
+                  <h3 className="text-lg font-bold text-gray-900 mb-4">{region.name}</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
                     {region.countries.map((country, countryIndex) => (
-                      <div key={countryIndex} className="flex items-center space-x-2">
-                        <span className="text-base">{country.flag}</span>
-                        <span className="text-gray-800 text-sm">{country.name}</span>
-                        <div className="flex items-baseline">
-                          <span className="text-xl font-bold text-gray-900">{country.companies}</span>
-                          <span className="text-gray-600 text-xs ml-0.5">社</span>
+                      <div key={countryIndex} className="flex items-center bg-gray-50 p-3 rounded">
+                        <span className="text-2xl mr-3">{country.flag}</span>
+                        <div className="flex-1">
+                          <div className="flex items-baseline">
+                            <span className="text-gray-700 text-sm font-medium mr-2">{country.name}</span>
+                            <div className="flex items-baseline ml-auto">
+                              <span className="text-2xl font-bold text-gray-900">{country.companies}</span>
+                              <span className="text-gray-600 text-xs ml-0.5">社</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     ))}
