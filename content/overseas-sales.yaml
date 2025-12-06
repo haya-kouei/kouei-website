@@ -1,203 +1,206 @@
 overseas_sales:
   header:
-    title: "海外販売先"
-    subtitle: "※顧客登録（社内システム）と連動"
-
+    title: 海外販売先
+    subtitle: ※顧客登録（社内システム）と連動
   regions:
-    - name: "東南アジア"
+    - name: 東南アジア
       countries:
-        - name: "インドネシア"
-          flag: "🇮🇩"
-          companies: 49
-        - name: "カンボジア"
-          flag: "🇰🇭"
+        - name: インドネシア
+          flag: 🇮🇩
+          companies: 50
+        - name: カンボジア
+          flag: 🇰🇭
           companies: 2
-        - name: "シンガポール"
-          flag: "🇸🇬"
-          companies: 33
-        - name: "タイ"
-          flag: "🇹🇭"
-          companies: 16
-        - name: "フィリピン"
-          flag: "🇵🇭"
-          companies: 22
-        - name: "ベトナム"
-          flag: "🇻🇳"
+        - name: シンガポール
+          flag: 🇸🇬
+          companies: 35
+        - name: タイ
+          flag: 🇹🇭
+          companies: 17
+        - name: フィリピン
+          flag: 🇵🇭
+          companies: 26
+        - name: ベトナム
+          flag: 🇻🇳
           companies: 366
-        - name: "マレーシア"
-          flag: "🇲🇾"
-          companies: 21
-        - name: "ミャンマー"
-          flag: "🇲🇲"
+        - name: マレーシア
+          flag: 🇲🇾
+          companies: 25
+        - name: ミャンマー
+          flag: 🇲🇲
           companies: 44
-        - name: "ラオス"
-          flag: "🇱🇦"
+        - name: ラオス
+          flag: 🇱🇦
           companies: 1
-
-    - name: "南アジア・オセアニア"
+    - name: 南アジア・オセアニア
       countries:
-        - name: "インド"
-          flag: "🇮🇳"
-          companies: 28
-        - name: "オーストラリア"
-          flag: "🇦🇺"
+        - name: インド
+          flag: 🇮🇳
+          companies: 31
+        - name: オーストラリア
+          flag: 🇦🇺
           companies: 14
-        - name: "スリランカ"
-          flag: "🇱🇰"
+        - name: スリランカ
+          flag: 🇱🇰
           companies: 6
-        - name: "ニュージーランド"
-          flag: "🇳🇿"
+        - name: ニュージーランド
+          flag: 🇳🇿
           companies: 1
-        - name: "ネパール"
-          flag: "🇳🇵"
+        - name: ネパール
+          flag: 🇳🇵
           companies: 1
-        - name: "バングラデシュ"
-          flag: "🇧🇩"
-          companies: 9
-        - name: "パキスタン"
-          flag: "🇵🇰"
+        - name: パキスタン
+          flag: 🇵🇰
           companies: 4
-        - name: "パプアニューギニア"
-          flag: "🇵🇬"
+        - name: パプアニューギニア
+          flag: 🇵🇬
           companies: 1
-
-    - name: "中東"
+        - name: バングラデシュ
+          flag: 🇧🇩
+          companies: 10
+    - name: 中東
       countries:
-        - name: "UAE"
-          flag: "🇦🇪"
-          companies: 28
-        - name: "オマーン"
-          flag: "🇴🇲"
+        - name: UAE
+          flag: 🇦🇪
+          companies: 33
+        - name: オマーン
+          flag: 🇴🇲
           companies: 1
-        - name: "カタール"
-          flag: "🇶🇦"
-          companies: 4
-        - name: "クウェート"
-          flag: "🇰🇼"
+        - name: カタール
+          flag: 🇶🇦
+          companies: 5
+        - name: クウェート
+          flag: 🇰🇼
+          companies: 8
+        - name: サウジアラビア
+          flag: 🇸🇦
+          companies: 26
+        - name: バーレーン
+          flag: 🇧🇭
+          companies: 1
+        - name: ヨルダン
+          flag: 🇯🇴
+          companies: 1
+    - name: 東アジア・中央アジア
+      countries:
+        - name: アゼルバイジャン
+          flag: 🇦🇿
+          companies: 1
+        - name: ウズベキスタン
+          flag: 🇺🇿
+          companies: 1
+        - name: ジョージア
+          flag: 🇬🇪
+          companies: 1
+        - name: モンゴル
+          flag: 🇲🇳
+          companies: 1
+        - name: 韓国
+          flag: 🇰🇷
+          companies: 10
+        - name: 香港
+          flag: 🇭🇰
+          companies: 13
+        - name: 台湾
+          flag: 🇹🇼
+          companies: 6
+        - name: 中国
+          flag: 🇨🇳
+          companies: 5
+    - name: ヨーロッパ・南米
+      countries:
+        - name: UK
+          flag: 🇬🇧
+          companies: 8
+        - name: USA
+          flag: 🇺🇸
+          companies: 25
+        - name: アイルランド
+          flag: 🇮🇪
+          companies: 1
+        - name: イタリア
+          flag: 🇮🇹
+          companies: 2
+        - name: オーストリア
+          flag: 🇦🇹
+          companies: 1
+        - name: オランダ
+          flag: 🇳🇱
+          companies: 3
+        - name: カナダ
+          flag: 🇨🇦
           companies: 7
-        - name: "サウジアラビア"
-          flag: "🇸🇦"
-          companies: 24
-        - name: "トルコ"
-          flag: "🇹🇷"
-          companies: 5
-        - name: "バーレーン"
-          flag: "🇧🇭"
-          companies: 1
-        - name: "ヨルダン"
-          flag: "🇯🇴"
-          companies: 1
-
-    - name: "東アジア・中央アジア"
-      countries:
-        - name: "アゼルバイジャン"
-          flag: "🇦🇿"
-          companies: 1
-        - name: "ウズベキスタン"
-          flag: "🇺🇿"
-          companies: 1
-        - name: "モンゴル"
-          flag: "🇲🇳"
-          companies: 1
-        - name: "中国"
-          flag: "🇨🇳"
-          companies: 5
-        - name: "台湾"
-          flag: "🇹🇼"
-          companies: 5
-        - name: "韓国"
-          flag: "🇰🇷"
-          companies: 9
-        - name: "香港"
-          flag: "🇭🇰"
-          companies: 11
-
-    - name: "アメリカ・南米・ヨーロッパ"
-      countries:
-        - name: "UK"
-          flag: "🇬🇧"
-          companies: 6
-        - name: "USA"
-          flag: "🇺🇸"
-          companies: 21
-        - name: "アイルランド"
-          flag: "🇮🇪"
-          companies: 1
-        - name: "イタリア"
-          flag: "🇮🇹"
-          companies: 2
-        - name: "オランダ"
-          flag: "🇳🇱"
+        - name: ギリシャ
+          flag: 🇬🇷
           companies: 3
-        - name: "オーストリア"
-          flag: "🇦🇹"
-          companies: 1
-        - name: "カナダ"
-          flag: "🇨🇦"
-          companies: 6
-        - name: "ギリシャ"
-          flag: "🇬🇷"
-          companies: 3
-        - name: "コロンビア"
-          flag: "🇨🇴"
-          companies: 3
-        - name: "スウェーデン"
-          flag: "🇸🇪"
-          companies: 1
-        - name: "スペイン"
-          flag: "🇪🇸"
-          companies: 2
-        - name: "ハンガリー"
-          flag: "🇭🇺"
-          companies: 2
-        - name: "フランス"
-          flag: "🇫🇷"
-          companies: 6
-        - name: "ブラジル"
-          flag: "🇧🇷"
-          companies: 2
-        - name: "ブルガリア"
-          flag: "🇧🇬"
-          companies: 1
-        - name: "ベルギー"
-          flag: "🇧🇪"
-          companies: 1
-        - name: "ペルー"
-          flag: "🇵🇪"
-          companies: 1
-        - name: "ポルトガル"
-          flag: "🇵🇹"
+        - name: コロンビア
+          flag: 🇨🇴
           companies: 4
-        - name: "メキシコ"
-          flag: "🇲🇽"
-          companies: 4
-        - name: "ラトビア"
-          flag: "🇱🇻"
+        - name: スウェーデン
+          flag: 🇸🇪
           companies: 1
-        - name: "ルーマニア"
-          flag: "🇷🇴"
-          companies: 3
-
-    - name: "アフリカ"
-      countries:
-        - name: "アンゴラ"
-          flag: "🇦🇴"
+        - name: スペイン
+          flag: 🇪🇸
+          companies: 2
+        - name: チリ
+          flag: 🇨🇱
           companies: 1
-        - name: "ウガンダ"
-          flag: "🇺🇬"
-          companies: 1
-        - name: "エジプト"
-          flag: "🇪🇬"
-          companies: 4
-        - name: "ケニア"
-          flag: "🇰🇪"
-          companies: 1
-        - name: "タンザニア"
-          flag: "🇹🇿"
-          companies: 1
-        - name: "ナイジェリア"
-          flag: "🇳🇬"
+        - name: トルコ
+          flag: 🇹🇷
           companies: 5
-        - name: "南アフリカ"
-          flag: "🇿🇦"
+        - name: ハンガリー
+          flag: 🇭🇺
+          companies: 2
+        - name: ブラジル
+          flag: 🇧🇷
+          companies: 2
+        - name: フランス
+          flag: 🇫🇷
+          companies: 6
+        - name: ブルガリア
+          flag: 🇧🇬
+          companies: 1
+        - name: ペルー
+          flag: 🇵🇪
+          companies: 1
+        - name: ベルギー
+          flag: 🇧🇪
+          companies: 1
+        - name: ポルトガル
+          flag: 🇵🇹
+          companies: 4
+        - name: メキシコ
+          flag: 🇲🇽
+          companies: 4
+        - name: ラトビア
+          flag: 🇱🇻
+          companies: 1
+        - name: ルーマニア
+          flag: 🇷🇴
+          companies: 3
+    - name: アフリカ
+      countries:
+        - name: アルジェリア
+          flag: 🇩🇿
+          companies: 1
+        - name: アンゴラ
+          flag: 🇦🇴
+          companies: 1
+        - name: ウガンダ
+          flag: 🇺🇬
+          companies: 1
+        - name: エジプト
+          flag: 🇪🇬
+          companies: 4
+        - name: ケニア
+          flag: 🇰🇪
+          companies: 1
+        - name: タンザニア
+          flag: 🇹🇿
+          companies: 1
+        - name: ナイジェリア
+          flag: 🇳🇬
+          companies: 6
+        - name: 南アフリカ
+          flag: 🏳️
           companies: 1

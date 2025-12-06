@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { getTopics, getSalesCountries, getOverseasSales } from '@/lib/content-loader'
+import OrganizationChat from '@/components/OrganizationChat'
 
 export default async function Home() {
   const topics = await getTopics()
@@ -239,6 +240,9 @@ export default async function Home() {
           </div>
         </div>
       </footer>
+
+      {/* 組織案内AIチャット */}
+      <OrganizationChat />
     </div>
   )
 }

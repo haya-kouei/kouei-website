@@ -29,6 +29,7 @@ export interface ManufacturerCompany {
   name: string
   name_en: string
   has_partnership: boolean
+  link?: string
 }
 
 export interface ManufacturerCategory {
@@ -149,7 +150,6 @@ export interface Organizations {
   vietnam: OrganizationInfo
   japan: OrganizationInfo
   myanmar: OrganizationInfo
-  bangladesh: OrganizationInfo
 }
 
 export interface CompanyInfo {

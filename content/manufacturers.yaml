@@ -1,922 +1,300 @@
 manufacturers:
   categories:
-    - name: "作業工具"
+    - name: 作業工具
       companies:
-        - name: "株式会社ダイア"
-          name_en: "DAIA CORPORATION"
-          has_partnership: true
-        - name: "株式会社エクセン"
-          name_en: "Exen Corporation"
-          has_partnership: true
-        - name: "株式会社イチネンアクセス"
-          name_en: "ICHINEN AXESS Corporation"
-          has_partnership: true
-        - name: "株式会社IKK"
-          name_en: "IKK CO., LTD."
-          has_partnership: true
-        - name: "株式会社関西工具製作所"
-          name_en: "Kansai Kogu Manufacturing Co Ltd."
-          has_partnership: true
-        - name: "マックス株式会社"
-          name_en: "MAX Co.,Ltd"
+        - name: 不二空機株式会社
+          name_en: Fuji Tools
           has_partnership: false
-        - name: "株式会社マキタ"
-          name_en: "Makita Corporation"
-          has_partnership: false
-        - name: "株式会社丸信工業社"
-          name_en: "Marushin Kougyousha Co., Ltd"
-          has_partnership: false
-        - name: "株式会社松田精機"
-          name_en: "Matsuda Seiki Co., Ltd."
-          has_partnership: false
-        - name: "三笠産業株式会社"
-          name_en: "Mikasa Industry Co., Ltd."
-          has_partnership: false
-        - name: "宮川工業株式会社"
-          name_en: "Miyakawa Industry Co., Ltd."
+          link: https://www.fujitools.jp/
+        - name: ジロー株式会社
+          name_en: Jiro Co., Ltd.
           has_partnership: true
-        - name: "株式会社中谷機械製作所"
-          name_en: "Nakatani Co. Ltd."
-          has_partnership: true
-        - name: "日東工器株式会社"
-          name_en: "Nitto Kohki Co., Ltd."
+          link: https://www.jiro-kk.co.jp/
+        - name: KAWASAKI MACHINERY CO., LTD.
+          name_en: Kawasaki Machinery Co.,Ltd.
           has_partnership: false
-        - name: "株式会社オグラ"
-          name_en: "Ogura & Co., Ltd"
+          link: http://www.kawasaki-mac.co.jp/
+        - name: 株式会社山下工業研究所
+          name_en: Ko-ken Tool Co., Ltd.
           has_partnership: false
-        - name: "株式会社東日製作所"
-          name_en: "Tohnichi Manufacturing Co., Ltd."
+          link: https://www.koken-tool.co.jp/index.html
+        - name: 工機ホールディングス株式会社
+          name_en: Koki Holdings Co., Ltd
           has_partnership: false
-        - name: "TONE株式会社"
-          name_en: "Tone Co., Ltd."
-          has_partnership: true
-        - name: "トップ工業株式会社"
-          name_en: "Top Kogyo Company, Ltd."
+          link: https://www.hikoki-powertools.jp/
+        - name: 株式会社空研
+          name_en: Kuken Co., Ltd.
           has_partnership: false
-        - name: "トラスコ中山株式会社"
-          name_en: "Trusco Nakayama Co., Ltd."
-          has_partnership: true
-        - name: "株式会社ユタニ"
-          name_en: "Yutani Corporation"
-          has_partnership: true
-
-    - name: "荷役運搬機器"
+          link: https://www.kuken.co.jp/
+        - name: オーエッチ工業株式会社
+          name_en: O.H.Industrial Co.,Ltd.
+          has_partnership: false
+          link: https://www.ohnet.co.jp/
+        - name: 東空販売株式会社
+          name_en: Toku Pneumatic Co.,Ltd.
+          has_partnership: false
+          link: https://www.toku-net.co.jp/
+        - name: 株式会社山本製作所
+          name_en: Yamamoto Seisaku Co.,Ltd.
+          has_partnership: false
+          link: http://www.gun-yamamoto.co.jp/
+        - name: ヨコタ工業株式会社
+          name_en: Yokota Industrial Co., Ltd.
+          has_partnership: false
+          link: https://www.yokota-kogyo.co.jp/
+    - name: 荷役運搬機器
       companies:
-        - name: "株式会社菱小"
-          name_en: "Hishiko Co., Ltd."
+        - name: 福山鍛鋼造機株式会社
+          name_en: F.T. Industries Co.,Ltd.
           has_partnership: false
-        - name: "イーグル・クランプ株式会社"
-          name_en: "Eagle Clamp Co., Ltd."
-          has_partnership: true
-        - name: "象印チエンブロツク株式会社"
-          name_en: "Elephant Chain Block Co., Ltd."
+          link: http://www.ft-ind.co.jp/
+        - name: 浪速鉃工株式会社
+          name_en: Naniwa Iron Works Co., Ltd.
           has_partnership: false
-        - name: "遠藤工業株式会社"
-          name_en: "Endo Kogyo Co., Ltd."
-          has_partnership: true
-        - name: "ハンマーキャスター株式会社"
-          name_en: "Hammer Caster Co., Ltd."
+          link: https://www.naniwa-iron.com/
+        - name: 株式会社おくだ屋技研
+          name_en: Okudaya Giken CO., LTD.
           has_partnership: false
-        - name: "日本クランプ株式会社"
-          name_en: "Japan Clamp"
+          link: https://www.opk.co.jp/
+        - name: 大洋製器工業株式会社
+          name_en: Taiyo Seiki Kogyo Co., Ltd.
           has_partnership: false
-        - name: "カネテック株式会社"
-          name_en: "Kanetec Co., Ltd."
-          has_partnership: true
-        - name: "カツヤマキカイ株式会社"
-          name_en: "Katsuyama Kikai, Ltd."
+          link: https://www.taiyoseiki.co.jp/
+        - name: 東洋工機株式会社
+          name_en: Toyo Machinery & Metal Co., Ltd.
           has_partnership: false
-        - name: "株式会社キトー"
-          name_en: "Kito Corporation"
+          link: https://www.toyo-mm.co.jp/
+        - name: バイタル工業株式会社
+          name_en: Vital Chain Block Mfg. Co., Ltd.
           has_partnership: false
-        - name: "コンドーテック株式会社"
-          name_en: "Kondotec Inc."
-          has_partnership: true
-        - name: "株式会社今野製作所"
-          name_en: "Konno Corporation"
-          has_partnership: true
-        - name: "三木ネツレン株式会社"
-          name_en: "Miki Netsuren Industrial Co., Ltd."
+          link: http://www.vital.co.jp/index.html
+        - name: 株式会社ヤマカツ
+          name_en: Yamakatsu Co., Ltd.
           has_partnership: false
-        - name: "三鈴工機株式会社"
-          name_en: "Misuzu Koki Co., Ltd."
-          has_partnership: false
-        - name: "株式会社をくだ屋技研"
-          name_en: "Okudaya Giken Co.,Ltd"
-          has_partnership: true
-        - name: "株式会社三栄精機製作所"
-          name_en: "SAN-EI SEIKI SEISAKUSHO CO., LTD."
-          has_partnership: false
-        - name: "株式会社双和製作所"
-          name_en: "Sowa Seisakusyo Co., Ltd."
-          has_partnership: false
-        - name: "株式会社スーパーツール"
-          name_en: "Super Tool Co., Ltd."
-          has_partnership: false
-        - name: "株式会社テザック"
-          name_en: "Tesac Corporation"
-          has_partnership: false
-        - name: "東光産業株式会社"
-          name_en: "Toko Sangyo Co., Ltd."
-          has_partnership: true
-        - name: "東正車輌株式会社"
-          name_en: "Tosei Vehicle Co., Ltd."
-          has_partnership: false
-
-    - name: "測定機器"
+          link: http://www.yamakatsu1021.jp/
+    - name: 測定機器
       companies:
-        - name: "株式会社デイシー"
-          name_en: "DEICY Corporation"
-          has_partnership: true
-        - name: "フジツール株式会社"
-          name_en: "Fuji Tool Co., Ltd."
+        - name: ジャパンプローブ株式会社
+          name_en: JAPAN PROBE CO., LTD.
           has_partnership: false
-        - name: "長谷川電機工業株式会社"
-          name_en: "Hasegawa Electric Co., Ltd"
+          link: https://www.jp-probe.com/
+        - name: オガワ精機株式会社
+          name_en: Ogawa Seiki Co., Ltd.
           has_partnership: false
-        - name: "株式会社検査技術研究所"
-          name_en: "Inspection Technology Research Institute Co., Ltd."
-          has_partnership: true
-        - name: "ジャパンプローブ株式会社"
-          name_en: "Japan Probe Co, Ltd"
-          has_partnership: true
-        - name: "株式会社木幡計器製作所"
-          name_en: "KOBATA GAUGE MFG. CO., LTD."
-          has_partnership: true
-        - name: "株式会社ケツト科学研究所"
-          name_en: "Kett Electric Laboratory Co., Ltd."
-          has_partnership: true
-        - name: "ライン精機株式会社"
-          name_en: "Line Seiki Co., Ltd."
+          link: http://www.ogawaseiki.jpn.org/
+        - name: 理化工業株式会社
+          name_en: RKC Instrument Inc.
           has_partnership: false
-        - name: "美鈴印刷紙工株式会社"
-          name_en: "Misuz Insatsu Sikou co.,ltd"
-          has_partnership: true
-        - name: "株式会社ミツトヨ"
-          name_en: "Mitutoyo Corporation"
+          link: https://www.rkcinst.co.jp/
+        - name: サンハヤト株式会社
+          name_en: Sunhayato Corp.
           has_partnership: false
-        - name: "ムラテックKDS株式会社"
-          name_en: "Muratec-Kds Corp."
+          link: https://www.sunhayato.co.jp/
+        - name: 株式会社田中衡機工業所
+          name_en: Tanaka Scale Works Co., Ltd.
           has_partnership: false
-        - name: "長野計器株式会社"
-          name_en: "Nagano Keiki Co., Ltd."
+          link: https://www.tanaka-scale.co.jp/
+        - name: 東京計装株式会社
+          name_en: TOKYO KEISO CO., LTD.
           has_partnership: false
-        - name: "新潟精機株式会社"
-          name_en: "Niigata Seiki Co.,Ltd."
+          link: https://www.tokyokeiso.co.jp/
+        - name: 株式会社東京測振
+          name_en: Tokyo Sokushin Co., Ltd.
           has_partnership: false
-        - name: "日本金属電鋳株式会社"
-          name_en: "Nippon Kinzoku Co., Ltd."
-          has_partnership: false
-        - name: "株式会社大菱計器製作所"
-          name_en: "Obishi Keiki Seisakusho Co., Ltd."
-          has_partnership: false
-        - name: "株式会社尾崎製作所"
-          name_en: "Ozaki Mfg. Co., Ltd."
-          has_partnership: false
-        - name: "菱電湘南エレクトロニクス株式会社"
-          name_en: "Ryoden Shonan Electronics Co., Ltd."
-          has_partnership: false
-        - name: "株式会社サンコウ電子研究所"
-          name_en: "Sanko Electronic Laboratory Co., Ltd."
-          has_partnership: false
-        - name: "サンワサプライ株式会社"
-          name_en: "Sanwa Supply Co., Ltd."
-          has_partnership: false
-        - name: "株式会社佐藤計量器製作所"
-          name_en: "Sato Keiryoki Mfg. Co., Ltd."
-          has_partnership: false
-        - name: "株式会社品川測器製作所"
-          name_en: "Shinagawa Sokki Mfg.Co.,Ltd."
-          has_partnership: true
-        - name: "シンワ測定株式会社"
-          name_en: "Shinwa Measurement Co., Ltd."
-          has_partnership: false
-        - name: "株式会社昭和測器"
-          name_en: "Showa Measuring Instruments Co.,LTD."
-          has_partnership: true
-        - name: "昭和測器株式会社"
-          name_en: "Showa Sokki Corporation"
-          has_partnership: true
-        - name: "東京計器株式会社"
-          name_en: "TOKYO KEIKI INC."
-          has_partnership: false
-        - name: "株式会社立花エレテック"
-          name_en: "Tachibana Eletech Co.,Ltd"
-          has_partnership: false
-        - name: "株式会社TJMデザイン"
-          name_en: "Tajima Design Co., Ltd."
-          has_partnership: false
-        - name: "山里産業株式会社"
-          name_en: "YAMARI INDUSTRIES, LIMITED"
-          has_partnership: true
-        - name: "ヤマヨ測定機株式会社"
-          name_en: "Yamayo Measuring Tools Co., Ltd."
-          has_partnership: false
-
-    - name: "油空圧・液体機器"
+          link: https://www.to-soku.co.jp/
+    - name: 切削工具
       companies:
-        - name: "株式会社スリーエス"
-          name_en: "3S Co., Ltd."
-          has_partnership: true
-        - name: "アスタム株式会社"
-          name_en: "Astam Inc."
+        - name: 日本特殊陶業株式会社
+          name_en: Ngk Spark Plug Co.,Ltd
           has_partnership: false
-        - name: "アズビル株式会社"
-          name_en: "Azbil Corporation"
+          link: https://www.ngkntk.co.jp/
+        - name: 株式会社日特スパークテックWKS
+          name_en: Nittoku Seisakusho Co., Ltd.
           has_partnership: false
-        - name: "BBKテクノロジーズ株式会社"
-          name_en: "BBK Technologies CO., LTD"
-          has_partnership: true
-        - name: "株式会社ベンカン機工"
-          name_en: "BENKAN KIKOH Corporation"
+          link: https://sparktec-wks.co.jp/publics/index/3/
+        - name: さくさく株式会社
+          name_en: SAKUSAKU CO.,Ltd
           has_partnership: false
-        - name: "日本コンテイ株式会社"
-          name_en: "CONTEY JAPAN Co., Ltd."
-          has_partnership: true
-        - name: "ダイナフロー株式会社"
-          name_en: "Dynaflo Co., Ltd."
-          has_partnership: false
-        - name: "アイム電機工業株式会社"
-          name_en: "Eim Electric Co., Ltd."
-          has_partnership: false
-        - name: "古藤工業株式会社"
-          name_en: "Furuto Industry Co., Ltd."
-          has_partnership: false
-        - name: "本多機工株式会社"
-          name_en: "HONDA KIKO CO., LTD."
-          has_partnership: true
-        - name: "本多機工株式会社"
-          name_en: "Honda Kiko CO.,LTD."
-          has_partnership: true
-        - name: "兵神機械工業株式会社"
-          name_en: "Hsn-Kikai Kogyo Co., Ltd"
-          has_partnership: false
-        - name: "株式会社工進"
-          name_en: "KOSHIN LTD"
-          has_partnership: true
-        - name: "金子産業株式会社"
-          name_en: "Kaneko Sangyo Co., Ltd."
-          has_partnership: false
-        - name: "株式会社関西電熱"
-          name_en: "Kansai Electric Heat Corp."
-          has_partnership: true
-        - name: "株式会社キッツ"
-          name_en: "Kitz Corporation"
-          has_partnership: false
-        - name: "甲南電機株式会社"
-          name_en: "Konan Electric Co., Ltd."
-          has_partnership: true
-        - name: "株式会社栗本鐵工所"
-          name_en: "Kurimoto, Ltd."
-          has_partnership: false
-        - name: "株式会社協和鉄工所"
-          name_en: "Kyowa Iron Works Co., Ltd."
-          has_partnership: true
-        - name: "有限会社前田工機研究所"
-          name_en: "MAEDA KOKI"
-          has_partnership: true
-        - name: "有限会社マスダ製作所"
-          name_en: "Masuda Manufacturing Co., Ltd."
-          has_partnership: true
-        - name: "株式会社ミハナ製作所"
-          name_en: "Mihana Seisakusho Co., Ltd."
-          has_partnership: false
-        - name: "三元バルブ製造株式会社"
-          name_en: "Mitsumoto Valve Mfg. Co.,Ltd"
-          has_partnership: true
-        - name: "株式会社ムサシノ製作所"
-          name_en: "Musashino Co., Ltd."
-          has_partnership: false
-        - name: "NACOL株式会社"
-          name_en: "NACOL Co., Ltd."
-          has_partnership: true
-        - name: "ネステック株式会社"
-          name_en: "NESSTECH INC."
-          has_partnership: false
-        - name: "新倉工業株式会社"
-          name_en: "NIIKURA KOGYO CO.、LTD."
-          has_partnership: true
-        - name: "株式会社中北製作所"
-          name_en: "Nakakita Seisakusho Co., Ltd."
-          has_partnership: false
-        - name: "日機装株式会社"
-          name_en: "Nikkiso Co., Ltd."
-          has_partnership: false
-        - name: "日本ダイヤバルブ株式会社"
-          name_en: "Nippon Daiya Valve Co., Ltd."
-          has_partnership: true
-        - name: "株式会社オメガ ・ システム"
-          name_en: "Omega System Co., Ltd."
-          has_partnership: false
-        - name: "株式会社利昭工業"
-          name_en: "RISYO VALVE WORKS CO., LTD."
-          has_partnership: true
-        - name: "株式会社リケン"
-          name_en: "Riken Corporation"
-          has_partnership: false
-        - name: "株式会社桑都製作所"
-          name_en: "SOTO SEISAKUSHO CO., LTD."
-          has_partnership: false
-        - name: "埼玉精機株式会社"
-          name_en: "Saitama Seiki Co., Ltd."
-          has_partnership: false
-        - name: "サンフレックス株式会社"
-          name_en: "Sanflex Corporation"
-          has_partnership: true
-        - name: "三興マテリアルサプライ株式会社"
-          name_en: "Sanko Inc."
-          has_partnership: false
-        - name: "株式会社サワダ製作所"
-          name_en: "Sawada Seisakusho Co.,Ltd."
-          has_partnership: false
-        - name: "スペロセイキ株式会社"
-          name_en: "Supero Seiki Co., Ltd"
-          has_partnership: false
-        - name: "株式会社TAIYO"
-          name_en: "TAIYO, Ltd."
-          has_partnership: false
-        - name: "株式会社東邦製作所"
-          name_en: "Toho Manufacturing Co., Ltd."
-          has_partnership: true
-        - name: "東京測定器材株式会社"
-          name_en: "Tokyo Sokuteikizai Co.,Ltd."
-          has_partnership: true
-        - name: "東洋バルヴ株式会社"
-          name_en: "Toyo Valve Co., Ltd."
-          has_partnership: false
-        - name: "株式会社植田製作所"
-          name_en: "UEDA SEISAKUSHO Co.,Ltd."
-          has_partnership: true
-        - name: "ワシノ機器株式会社"
-          name_en: "WASINO KIKI CO.,LTD."
-          has_partnership: true
-        - name: "山科精器株式会社"
-          name_en: "Yamashina Seiki Co., Ltd."
-          has_partnership: true
-        - name: "大和器材工業株式会社"
-          name_en: "Yamato Kizai Kogyo Co., Ltd."
-          has_partnership: true
-        - name: "株式会社ヨシタケ"
-          name_en: "Yoshitake Inc."
-          has_partnership: true
-        - name: "株式会社四葉機械製作所"
-          name_en: "Yotsuba Air Machine Manufacturing Co.,Ltd"
-          has_partnership: false
-
-    - name: "電気"
+          link: https://sakusakuec.com/
+    - name: 塗装
       companies:
-        - name: "アクト電機工業株式会社"
-          name_en: "ACT ELECTRIC INDUSTRY CO.,LTD"
-          has_partnership: true
-        - name: "アジア電子工業株式会社"
-          name_en: "ASIA ELECTRONICS IND.CO.,LTD."
-          has_partnership: true
-        - name: "朝日バグナル"
-          name_en: "Asahi Bagnall & Co., Ltd."
+        - name: 株式会社ホリコー
+          name_en: Horiko Co., Ltd.
           has_partnership: false
-        - name: "ジェントス株式会社"
-          name_en: "Gentos Co., Ltd."
-          has_partnership: false
-        - name: "北陽電機株式会社"
-          name_en: "Hokuyo Automatic Co.Ltd"
-          has_partnership: false
-        - name: "岩崎電気株式会社"
-          name_en: "Iwasaki Electric Co., Ltd."
-          has_partnership: false
-        - name: "株式会社高工社"
-          name_en: "KOKOSHA CO., LTD"
-          has_partnership: true
-        - name: "株式会社協和電機製作所"
-          name_en: "KYOWA ELECTRIC MFG. CO.,LTD."
-          has_partnership: false
-        - name: "株式会社共和電業"
-          name_en: "KYOWA ELECTRONIC INSTRUMENTS CO., LTD."
-          has_partnership: true
-        - name: "株式会社七星科学研究所"
-          name_en: "Nanaboshi Electric Mfg. Co., Ltd."
-          has_partnership: false
-        - name: "日動工業株式会社"
-          name_en: "Nichido Ind. Co., Ltd."
-          has_partnership: false
-        - name: "サツマ電機株式会社"
-          name_en: "SATUMA ELECTRIC MANUFACTURING CO., LTD."
-          has_partnership: true
-        - name: "三工電機株式会社"
-          name_en: "Sanko Electric Co., Ltd."
-          has_partnership: true
-        - name: "渡辺電機工業株式会社"
-          name_en: "Watanabe Electric Industry Co., Ltd."
-          has_partnership: true
-
-    - name: "安全具"
+          link: https://horiko.jp/
+    - name: 油空圧・液体機器
       companies:
-        - name: "富士グローブ株式会社"
-          name_en: "Fuji Glove Co., Ltd."
+        - name: 株式会社荏原製作所
+          name_en: Ebara Corporation
           has_partnership: false
-        - name: "藤井電工株式会社"
-          name_en: "Fujii Denko Co., Ltd."
+          link: https://www.ebara.com/
+        - name: 南国フレキ工業株式会社
+          name_en: Nangoku Flexible Hose Industry Co., Ltd
           has_partnership: false
-        - name: "興研株式会社"
-          name_en: "Koken Ltd."
+          link: https://www.nfk-jp.com/
+        - name: 日本ダイヤバルブ株式会社
+          name_en: Nippon Daiya Valve Co., Ltd.
           has_partnership: false
-        - name: "サンコー株式会社"
-          name_en: "Sanko Industries Co., Ltd."
+          link: http://www.ndv.co.jp/
+        - name: オックスジャッキ株式会社
+          name_en: Oxjack Co. Ltd.
           has_partnership: false
-        - name: "株式会社星光製作所"
-          name_en: "Seikou Factory Cop."
+          link: https://oxjack.co.jp/
+        - name: 株式会社TAIYO
+          name_en: Taiyo, Ltd.
           has_partnership: false
-        - name: "積水樹脂株式会社"
-          name_en: "Sekisui Jushi Co., Ltd."
+          link: http://www.taiyo-ltd.co.jp/
+        - name: 東洋ミック株式会社
+          name_en: Toyomic Co.,Ltd.
           has_partnership: false
-        - name: "株式会社重松製作所"
-          name_en: "Shigematsu & Co., Ltd."
+          link: https://toyomic.jp/
+        - name: 株式会社鶴見製作所
+          name_en: Tsurumi Manufacturing Co., Ltd.
           has_partnership: false
-        - name: "株式会社谷沢製作所"
-          name_en: "Tanizawa Seisakusho.,Ltd"
+          link: https://www.tsurumipump.co.jp/
+        - name: アルバック機工株式会社
+          name_en: Ulvac Kiko Inc.
           has_partnership: false
-
-    - name: "切削工具"
+          link: https://ulvac-kiko.com/
+        - name: 油研工業株式会社
+          name_en: Yuken Kogyo Co., Ltd
+          has_partnership: false
+          link: https://www.yuken.co.jp/
+    - name: ボルト・ナット
       companies:
-        - name: "株式会社アマダ"
-          name_en: "Amada Co., Ltd."
+        - name: 株式会社アキテック
+          name_en: Akitec Co., Ltd.
           has_partnership: false
-        - name: "株式会社ビックス"
-          name_en: "Bix Co., Ltd."
+          link: http://www.akitec.co.jp/
+        - name: 神鋼ボルト株式会社
+          name_en: Kobelco Bolt Co., Ltd.
+          has_partnership: false
+          link: https://www.shinkobolt.co.jp/
+        - name: 三星産業貿易株式会社
+          name_en: Mitsuboshi C.I. Co., Ltd.
+          has_partnership: false
+          link: https://www.mitsu-boshi.co.jp/wp/
+        - name: 並田機工株式会社
+          name_en: Namitakiko Co., Ltd.
+          has_partnership: false
+          link: https://namitakiko.co.jp/
+        - name: 月盛工業株式会社
+          name_en: Tsukimori Kogyo Co., Ltd.
+          has_partnership: false
+          link: https://tsukimori-kougyo.com/
+        - name: 株式会社ツルガ
+          name_en: Tsuruga Corporation
           has_partnership: true
-        - name: "ダイジェット工業株式会社"
-          name_en: "Dijet Industrial Co., Ltd"
+          link: https://www.tsurugacorp.co.jp/
+        - name: ユニタイト株式会社
+          name_en: Unytite Inc
           has_partnership: false
-        - name: "株式会社ミヤナガ"
-          name_en: "Miyanaga Co., Ltd"
-          has_partnership: false
-        - name: "株式会社不二越"
-          name_en: "Nachi-Fujikoshi Corp."
-          has_partnership: false
-        - name: "岡﨑精工株式会社"
-          name_en: "Okazaki Seiko Co.,Ltd."
-          has_partnership: false
-        - name: "オサカダツール株式会社"
-          name_en: "Osakada Tool Corp."
-          has_partnership: true
-        - name: "住友電工ハードメタル株式会社"
-          name_en: "Sumitomo Electric Hardmetal Corp."
-          has_partnership: false
-        - name: "タケダ機械株式会社"
-          name_en: "TAKEDA MACHINERY CO., LTD."
-          has_partnership: false
-
-    - name: "溶接関連"
+          link: http://unytite.com/
+    - name: 安全具
       companies:
-        - name: "株式会社旭ウエルデックス"
-          name_en: "Asahi Weldex Co., Ltd."
-          has_partnership: true
-        - name: "株式会社ダイヘン"
-          name_en: "Daihen Co., Ltd."
+        - name: 3M
+          name_en: 3M Japan Group
           has_partnership: false
-        - name: "小池酸素工業株式会社"
-          name_en: "Koike Sanso Kogyo Co., Ltd."
-          has_partnership: false
-        - name: "日酸TANAKA株式会社"
-          name_en: "Nissan Tanaka Corporation"
-          has_partnership: true
-
-    - name: "仮設機器"
+          link: https://www.3mcompany.jp/3M/ja_JP/company-jp/
+    - name: ケミカル品
       companies:
-        - name: "ブルマン株式会社"
-          name_en: "Bullman Co.,Ltd."
+        - name: 三井化学株式会社
+          name_en: Mitsui Chemicals, Inc.
           has_partnership: false
-        - name: "株式会社国元商会"
-          name_en: "Kunimoto Shokai Co., Ltd."
-          has_partnership: true
-        - name: "株式会社リキマン"
-          name_en: "Rikiman Corporation"
+          link: https://jp.mitsuichemicals.com/jp/index.htm
+        - name: 東洋フードケミカル株式会社
+          name_en: Toyo Food Chemical Co., Ltd.
           has_partnership: false
-
-    - name: "塗装"
+    - name: 電気
       companies:
-        - name: "アネスト岩田株式会社"
-          name_en: "Anest Iwata Corporation"
+        - name: 古河電工産業電線株式会社
+          name_en: Feic （Furukawa Electric Industrial Cable Co.,Ltd.）
           has_partnership: false
-        - name: "カモ井加工紙株式会社"
-          name_en: "Kamoi Kakoshi Co., Ltd."
-          has_partnership: true
-        - name: "関西ペイント株式会社"
-          name_en: "Kansai Paint Co., Ltd."
+          link: https://www.feic.co.jp/
+        - name: 株式会社高工社
+          name_en: KOKOSHA CO.,LTD
           has_partnership: false
-        - name: "菊水テープ株式会社"
-          name_en: "Kikusui Tape Co., Ltd."
-          has_partnership: true
-        - name: "株式会社明治機械製作所"
-          name_en: "Meiji Air Compressor Mfg.Co.,Ltd."
+          link: https://www.os-kokosha.co.jp/
+        - name: 株式会社フェニックス
+          name_en: Phenix Co., Ltd.
           has_partnership: false
-        - name: "仁礼工業株式会社"
-          name_en: "Nirei Industry Co.,Ltd"
-          has_partnership: true
-        - name: "日東電工株式会社"
-          name_en: "Nitto Denko Corporation"
-          has_partnership: false
-        - name: "オカモト株式会社"
-          name_en: "Okamoto Co., Ltd."
-          has_partnership: false
-        - name: "大塚刷毛製造株式会社"
-          name_en: "Otsuka Brush Manufacturing Co., Ltd."
-          has_partnership: false
-        - name: "神東塗料株式会社"
-          name_en: "Shinto Paint Co., Ltd."
-          has_partnership: false
-        - name: "株式会社寺岡製作所"
-          name_en: "TERAOKA SEISAKUSHO CO.,LTD."
-          has_partnership: true
-        - name: "株式会社タイホウ"
-          name_en: "Taiho Co., Ltd."
-          has_partnership: true
-
-    - name: "油圧・空圧機器"
+          link: https://www.phenix-mk.com/
+    - name: 橋梁・土木
       companies:
-        - name: "大和建工株式会社"
-          name_en: "Daiwa Kenko Inc"
+        - name: 東京製綱株式会社
+          name_en: Tokyo Rope Mfg. Co., Ltd.
           has_partnership: false
-        - name: "株式会社大阪ジャッキ製作所"
-          name_en: "Osaka Jack Co., Ltd."
-          has_partnership: false
-        - name: "株式会社スキル"
-          name_en: "Skil Corporation"
-          has_partnership: true
-
-    - name: "化学品"
+          link: http://www.tokyorope.co.jp/
+    - name: 環境機器
       companies:
-        - name: "アズワン株式会社"
-          name_en: "As One Corporation"
+        - name: 新日本レイキ株式会社
+          name_en: Shin Nihon Reiki Co., Ltd
           has_partnership: false
-        - name: "大都産業株式会社"
-          name_en: "Daito Sangyo Co., Ltd."
+          link: http://www.reiki-ct.co.jp/
+        - name: 株式会社スイデン
+          name_en: Suiden Co.,Ltd.
           has_partnership: false
-        - name: "株式会社イチネンケミカルズ"
-          name_en: "Ichinen Chemicals Co., Ltd."
-          has_partnership: false
-        - name: "イソライト工業株式会社"
-          name_en: "Isolite Insulating Products Co., Ltd"
-          has_partnership: false
-        - name: "日本グリース株式会社"
-          name_en: "Nippon Grease Co., Ltd."
-          has_partnership: false
-        - name: "ローバル株式会社"
-          name_en: "Roval Corporation"
-          has_partnership: false
-        - name: "信越化学工業株式会社"
-          name_en: "Shin-Etsu Chemical Co., Ltd."
-          has_partnership: false
-        - name: "株式会社タセト"
-          name_en: "Taseto Co., Ltd."
-          has_partnership: false
-        - name: "株式会社スリーボンド"
-          name_en: "ThreeBond Co.,Ltd."
-          has_partnership: false
-
-    - name: "環境機器"
+          link: https://www.suiden.com/
+    - name: 軸受（ベアリング）
       companies:
-        - name: "株式会社アコー"
-          name_en: "ACO Co., Ltd."
-          has_partnership: true
-        - name: "株式会社いけうち"
-          name_en: "H. IKEUCHI & CO., LTD."
+        - name: 日本精工株式会社
+          name_en: NSK Ltd.
           has_partnership: false
-        - name: "株式会社ムラコシ"
-          name_en: "Murakoshi Co., Ltd."
+          link: https://www.nsk.com/
+        - name: NTN株式会社
+          name_en: NTN Corporation
           has_partnership: false
-        - name: "日本フリーザー株式会社"
-          name_en: "Nihon Freezer Co., Ltd"
+          link: https://www.ntn.co.jp/japan/index.html
+        - name: TOHO株式会社
+          name_en: TOHO Corporation
           has_partnership: false
-        - name: "三立電器工業株式会社"
-          name_en: "Sanritsu Electric Industry Co., Ltd."
-          has_partnership: true
-        - name: "静岡製機株式会社"
-          name_en: "Shizuoka Seiki Co., Ltd."
-          has_partnership: false
-
-    - name: "ボルト・ナット"
+          link: http://www.toho-plummer.co.jp/
+    - name: 海外メーカー
       companies:
-        - name: "中央鐵工株式会社"
-          name_en: "Chuo Iron Works Co., Ltd."
+        - name: AK WELDING
+          name_en: Ak Welding
           has_partnership: true
-        - name: "東亜ボルト株式会社"
-          name_en: "Dongah Co., Ltd."
-          has_partnership: true
-        - name: "株式会社冨士精密"
-          name_en: "Fuji Seimitsu Co., Ltd."
+          link: https://www.ak-welding.com/
+        - name: ATA COMPANY
+          name_en: ATA Company
           has_partnership: false
-        - name: "濱中ナット販売株式会社"
-          name_en: "Hamanaka Nut Hanbai, Ltd"
+          link: https://www.atagroup.com/sgspro/
+        - name: CHASE CORPORATION
+          name_en: Chase Corporation
           has_partnership: false
-        - name: "ハードロック工業株式会社"
-          name_en: "Hardlock Industry Co., Ltd."
-          has_partnership: true
-        - name: "光精工株式会社"
-          name_en: "Hikari Seiko Co., Ltd."
+          link: https://chasecorp.com/HumiSeal/
+        - name: エナパック株式会社
+          name_en: Enerpac Co., Ltd
           has_partnership: false
-        - name: "株式会社 旭ノ本金属工業所"
-          name_en: "Hinomoto Metal Industry Co., Ltd."
+          link: https://www.enerpac.co.jp/
+        - name: GUANGDONG OLIVIA CHEMICAL INDUSTRY CO., LTD.
+          name_en: Guangdong Olivia Chemical Industry Co., Ltd.
           has_partnership: false
-        - name: "株式会社ヒラノファステック"
-          name_en: "Hirano Fastec Co., Ltd."
+          link: http://www.gdolivia.com/
+        - name: JCS HI-TORQUE LIMITED
+          name_en: JCS Hi-Torque Limited
           has_partnership: false
-        - name: "茨木ナミテイ株式会社"
-          name_en: "I.Namitei Co.,Ltd."
+          link: https://www.jcshi-torque.co.uk/
+        - name: KEYENCE CORPORATION
+          name_en: Keyence Corporation
           has_partnership: false
-        - name: "紀州ファスナー株式会社"
-          name_en: "Kishu Fastener Co., Ltd."
+          link: https://www.keyence.com/
+        - name: KUKKO WERKZEUGFABRIK
+          name_en: Kukko Werkzeugfabrik
           has_partnership: false
-        - name: "金剛鋲螺株式会社"
-          name_en: "Kongo Byora Co., Ltd."
+          link: https://www.kukko.com/ja/
+        - name: M&H INDUSTRY VIET NAM COMPANY LIMITED
+          name_en: M&H Industry Viet Nam Company Limited
           has_partnership: false
-        - name: "株式会社ロブテックス"
-          name_en: "Lobtex Co., Ltd."
+        - name: NAMBANG CNA CO., LTD
+          name_en: Nambang CNA Co., Ltd.
           has_partnership: false
-        - name: "株式会社前田製作所"
-          name_en: "Maeda Manufacturing Co., Ltd."
+          link: https://www.nabakem.com/kr/index.php
+        - name: PANASONIC INDUSTRY CO., LTD.
+          name_en: Panasonic Industry Co., Ltd.
           has_partnership: false
-        - name: "増井鉄工株式会社"
-          name_en: "Masui Iron Works Co., Ltd"
+          link: https://industrial.panasonic.com/ww
+        - name: TQC SHEEN B.V
+          name_en: TQC Sheen B.V
           has_partnership: false
-        - name: "松金工業株式会社"
-          name_en: "Matsukin Kogyo Co., Ltd."
-          has_partnership: true
-        - name: "森鋼材株式会社"
-          name_en: "Mori Kouzai Co., Ltd."
-          has_partnership: true
-        - name: "日亜鋼業株式会社"
-          name_en: "NICHIA STEEL WORKS, LTD."
-          has_partnership: false
-        - name: "中海鋼業株式会社"
-          name_en: "Nakaumi Industries Co., Ltd."
-          has_partnership: true
-        - name: "高周波熱錬株式会社"
-          name_en: "Neturen Co., Ltd."
-          has_partnership: false
-        - name: "日本ケミカルスクリュー株式会社"
-          name_en: "Nippon Chemical Screw Co., Ltd."
-          has_partnership: true
-        - name: "日本ファスナー工業株式会社"
-          name_en: "Nippon Fastener Corporation"
-          has_partnership: false
-        - name: "日鉄ボルテン株式会社"
-          name_en: "Nippon Steel Bolten Corporation"
-          has_partnership: false
-        - name: "小川工業株式会社"
-          name_en: "Ogawa Industry Co., Ltd."
-          has_partnership: false
-        - name: "株式会社大谷工業"
-          name_en: "Otani Kogyo Co., Ltd."
-          has_partnership: true
-        - name: "サンコーテクノ株式会社"
-          name_en: "Sanko Techno Co., Ltd."
-          has_partnership: true
-        - name: "株式会社須藤製作所"
-          name_en: "Sudou. Co.,Ltd"
-          has_partnership: true
-        - name: "住友電気工業株式会社"
-          name_en: "Sumitomo Electric Industries, Ltd."
-          has_partnership: false
-        - name: "サンコーインダストリー株式会社"
-          name_en: "Sunco Industries Co., Ltd"
-          has_partnership: true
-        - name: "太陽ファスナー株式会社"
-          name_en: "Taiyo Fastener Co., Ltd."
-          has_partnership: false
-        - name: "株式会社竹中製作所"
-          name_en: "Takenaka Seisakusho Co., Ltd."
-          has_partnership: false
-        - name: "帝国製鋲株式会社"
-          name_en: "Teikoku Seibyo Co., Ltd"
-          has_partnership: true
-        - name: "東都発条株式会社"
-          name_en: "Tohto Spring Co., Ltd"
-          has_partnership: false
-        - name: "株式会社トーネジ"
-          name_en: "Toneji co., Ltd."
-          has_partnership: true
-        - name: "東和工業株式会社"
-          name_en: "Towa-Kogyo Co.,Ltd."
-          has_partnership: false
-        - name: "和光金属工業株式会社"
-          name_en: "Wako Kinzoku Industry Co., Ltd"
-          has_partnership: false
-        - name: "株式会社ヨット印ダイワ"
-          name_en: "Yacht Mark Daiwa Co., Ltd."
-          has_partnership: false
-
-    - name: "橋梁・土木"
-      companies:
-        - name: "セメダイン株式会社"
-          name_en: "Cemedine Co., Ltd."
-          has_partnership: false
-        - name: "秩父産業株式会社"
-          name_en: "Chichibu Industry Co., Ltd."
-          has_partnership: true
-        - name: "株式会社フレックスシステム"
-          name_en: "Flex System Co., Ltd."
-          has_partnership: true
-        - name: "株式会社イノアックコーポレーション"
-          name_en: "Inoac Corporation Co., Ltd."
-          has_partnership: false
-        - name: "ジャパンライフ株式会社"
-          name_en: "Japan Life Co., Ltd."
-          has_partnership: true
-        - name: "株式会社川金コアテック"
-          name_en: "Kawakin Core -Tech Co.,Ltd."
-          has_partnership: false
-        - name: "株式会社ケー・エフ・シー"
-          name_en: "Kfc Inc."
-          has_partnership: false
-        - name: "株式会社協栄製作所"
-          name_en: "Kyoei-Seisaku Co., Ltd."
-          has_partnership: false
-        - name: "株式会社明和製作所"
-          name_en: "MEIWA SEISAKUSHO, LTD."
-          has_partnership: false
-        - name: "メイコーエンジニヤリング株式会社"
-          name_en: "Meiko Engineering Co., Ltd."
-          has_partnership: false
-        - name: "株式会社三門"
-          name_en: "Mikado Co., Ltd."
-          has_partnership: false
-        - name: "中井商工株式会社"
-          name_en: "Nakai Shoko Co., Ltd."
-          has_partnership: true
-        - name: "ニッタテクノソリューションズ株式会社"
-          name_en: "Nitta Techno Solutions Co., Ltd."
-          has_partnership: false
-        - name: "株式会社ノックス"
-          name_en: "Nox Company Limited"
-          has_partnership: false
-        - name: "岡部株式会社"
-          name_en: "Okabe Co., Ltd."
-          has_partnership: false
-        - name: "岡三機工株式会社"
-          name_en: "Okasan Co.,Ltd"
-          has_partnership: true
-        - name: "積水化学工業株式会社"
-          name_en: "Sekisui Chemical Co., Ltd."
-          has_partnership: false
-        - name: "シバタ工業株式会社"
-          name_en: "Shibata Industrial Co.,Ltd."
-          has_partnership: false
-        - name: "株式会社シブヤ"
-          name_en: "Shibuya Co., Ltd."
-          has_partnership: false
-        - name: "シーカ・ジャパン株式会社"
-          name_en: "Sika Japan Ltd."
-          has_partnership: false
-        - name: "有限会社構造金具開発"
-          name_en: "Structural Hardware Development Co., Ltd."
-          has_partnership: true
-        - name: "太平洋マテリアル株式会社"
-          name_en: "Taiheiyo Materials Corporation"
-          has_partnership: true
-        - name: "東陽建設工機株式会社"
-          name_en: "Toyo Kensetsu Kohki Co., Ltd."
-          has_partnership: true
-        - name: "ユニカ株式会社"
-          name_en: "Unika Co., Ltd."
-          has_partnership: false
-        - name: "ユニット株式会社"
-          name_en: "Unit Co., Ltd."
-          has_partnership: false
-
-    - name: "軸受（ベアリング）"
-      companies:
-        - name: "片山チエン株式会社"
-          name_en: "Katayama Chain Co., Ltd."
-          has_partnership: false
-        - name: "オイレス工業株式会社"
-          name_en: "OILES Corporation"
-          has_partnership: false
-
-    - name: "ゴム製品"
-      companies:
-        - name: "株式会社ハチケン"
-          name_en: "Hachiken Co., Ltd."
-          has_partnership: false
-        - name: "内外ゴム株式会社"
-          name_en: "Naigai Rubber Industry Co.,Ltd"
-          has_partnership: true
-        - name: "能登ゴム産業株式会社"
-          name_en: "Noto Rubber Industry Co., Ltd."
-          has_partnership: false
-        - name: "株式会社シープロン化成"
-          name_en: "Seapron Kasei Co., Ltd."
-          has_partnership: false
-        - name: "株式会社十川ゴム"
-          name_en: "Togawa Rubber Co.,Ltd."
-          has_partnership: false
-
-    - name: "金属加工品"
-      companies:
-        - name: "中央工産株式会社"
-          name_en: "Chuo Kosan Co., Ltd"
-          has_partnership: true
-        - name: "北勢工業株式会社"
-          name_en: "Hokusei Industry Co., Ltd."
-          has_partnership: true
-        - name: "日本ウイチタ株式会社"
-          name_en: "Japan Wichita Co., Ltd."
-          has_partnership: true
-        - name: "協和ステンレス株式会社"
-          name_en: "Kyowa Stainless Co., Ltd."
-          has_partnership: false
-        - name: "松井チェーン工業株式会社"
-          name_en: "Matsui Chain Industry Co., Ltd."
-          has_partnership: true
-        - name: "サンユーテック株式会社"
-          name_en: "Sanyutec Co., Ltd."
-          has_partnership: false
-        - name: "タキゲン製造株式会社"
-          name_en: "Takigen Mfg Co., Ltd."
-          has_partnership: false
-        - name: "WINOA IKK JAPAN 株式会社"
-          name_en: "Winoa Ikk Japan Co., Ltd."
-          has_partnership: true
-
-    - name: "海外メーカー"
-      companies:
-        - name: "ARKON FLOW SYSTEMS, LTD"
-          name_en: "Arkon Flow Systems, Ltd"
-          has_partnership: true
-        - name: "DONG IL Creamics Co."
-          name_en: "DONG IL Creamics Co."
-          has_partnership: false
-        - name: "DEFELSKO CORPORATION"
-          name_en: "Defelsko Corporation"
-          has_partnership: false
-        - name: "Dong Ah Bolt"
-          name_en: "Dong Ah Bolt"
-          has_partnership: true
-        - name: "Elcometer株式会社"
-          name_en: "Elcometer Inc."
-          has_partnership: true
-        - name: "GRACO INC."
-          name_en: "Graco Inc."
-          has_partnership: false
-        - name: "ISHO VIETNAM CO.,LTD"
-          name_en: "Isho Vietnam Co.,Ltd"
-          has_partnership: false
-        - name: "JUNG Lifting and Transport Technology GmbH"
-          name_en: "JUNG Lifting and Transport Technology GmbH"
-          has_partnership: true
-        - name: "KPF"
-          name_en: "KPF"
-          has_partnership: true
-        - name: "KAESUNG TECHNOLOGIES, INC."
-          name_en: "Kaesung Technologies, Inc."
-          has_partnership: false
-        - name: "KAI FANG PHOTOELECTRIC CO., LTD."
-          name_en: "Kai Fang Photoelectric Co., Ltd."
-          has_partnership: false
-        - name: "KITO VAN LEUSDEN"
-          name_en: "Kito Van Leusden"
-          has_partnership: false
-        - name: "KOIKE SANSO KOGYO CO., LTD."
-          name_en: "Koike Sanso Kogyo Co., Ltd."
-          has_partnership: false
-        - name: "KOYO SINGAPORE BEARING (PTE) LTD"
-          name_en: "Koyo Singapore Bearing (Pte) Ltd"
-          has_partnership: false
-        - name: "LARIUS"
-          name_en: "LARIUS"
-          has_partnership: true
-        - name: "MACNAUGHT LTD"
-          name_en: "Macnaught Ltd"
-          has_partnership: false
-        - name: "NFK VIETNAM Co., Ltd."
-          name_en: "NFK VIETNAM Co., Ltd."
-          has_partnership: true
-        - name: "PT. TERAOKA SEISAKUSHO INDONESIA"
-          name_en: "PT. TERAOKA SEISAKUSHO INDONESIA"
-          has_partnership: true
-        - name: "ROGERS CORPORATION"
-          name_en: "Rogers Corporation"
-          has_partnership: false
-        - name: "SONG HO INDUSTRIAL CO., LTD."
-          name_en: "SONG HO INDUSTRIAL CO., LTD."
-          has_partnership: true
-        - name: "SHINWON MACHINERY CO., LTD."
-          name_en: "Shinwon Machinery Co.,Ltd."
-          has_partnership: false
-        - name: "SKIDMORE-WILHELM"
-          name_en: "Skidmore-Wilhelm"
-          has_partnership: true
-        - name: "TONE VIETNAM CO.,LTD."
-          name_en: "TONE VIETNAM CO.,LTD."
-          has_partnership: true
-        - name: "THREAD INDUSTRIES (VIETNAM) LTD."
-          name_en: "Thread Industries (Vietnam) Ltd."
-          has_partnership: true
-        - name: "UNIT TEST SCIENTIFIC SDN BHD"
-          name_en: "Unit Test Scientific Sdn Bhd"
-          has_partnership: false
-        - name: "WAKO VIETNAM CO., LTD."
-          name_en: "Wako Viet Nam Co.,Ltd."
-          has_partnership: false
-        - name: "YUJIN MACHINERY LTD."
-          name_en: "Yujin Machinery Ltd."
-          has_partnership: false
+          link: www.tqc.eu

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { getCompanyInfo } from '@/lib/content-loader'
+import OrganizationChat from '@/components/OrganizationChat'
 
 export default async function AboutPage() {
   const company = await getCompanyInfo()
@@ -111,30 +112,6 @@ export default async function AboutPage() {
             </div>
           </div>
 
-          {/* 恒栄バングラデシュ */}
-          <div className="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-            <div className="bg-gradient-to-br from-orange-600 to-orange-700 p-8">
-              <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">恒栄バングラデシュ</h3>
-              <p className="text-orange-100 text-lg">(Kouei Japan Trading Co., Ltd. Bangladesh Office)</p>
-              <p className="text-orange-200 text-sm mt-2">バングラデシュ事務所 - ダッカ</p>
-            </div>
-            <div className="p-8">
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                バングラデシュの繊維・製造業市場での事業拡大を目指す新興拠点です。
-              </p>
-              <Link href="/about/bangladesh" className="inline-flex items-center text-orange-600 hover:text-orange-700 font-medium text-lg">
-                詳細を見る
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
         </div>
 
         {/* グループ概要セクション */}
@@ -435,6 +412,9 @@ export default async function AboutPage() {
           </div>
         </div>
       </footer>
+
+      {/* 組織案内AIチャット */}
+      <OrganizationChat />
     </div>
   )
 }
