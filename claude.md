@@ -9,7 +9,8 @@
 - **Frontend**: Next.js 14 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS v3
-- **CMS**: YAML-based file system
+- **CMS**: YAML-based file system (CSV連携対応)
+- **AI**: Anthropic Claude API (組織案内チャットボット)
 - **Deployment**: Vercel
 - **AI Assistant**: Claude Code
 
@@ -21,14 +22,25 @@ kouei-website/
 │   ├── sales/page.tsx     # 販売事業ページ
 │   ├── manufacturers/page.tsx # 取扱メーカーページ
 │   ├── about/page.tsx     # 会社概要ページ
-│   └── contact/page.tsx   # お問い合わせページ
+│   ├── contact/page.tsx   # お問い合わせページ
+│   └── api/               # API Routes
+│       ├── contact/       # お問い合わせAPI
+│       └── organization-ai/ # 組織案内AI API
+├── components/            # React コンポーネント
+│   └── OrganizationChat.tsx # 組織案内チャットUI
 ├── content/               # YAML CMS データ
 │   ├── company-info.yaml
-│   ├── manufacturers.yaml
-│   ├── organizations.yaml    # 組織詳細データ
-│   ├── overseas-sales.yaml
+│   ├── manufacturers.yaml    # CSV連携（68社、14カテゴリ）
+│   ├── organizations.yaml    # 組織詳細データ（3拠点）
+│   ├── overseas-sales.yaml   # CSV連携（63カ国、851社）
 │   ├── sales-countries.yaml
 │   └── topics.yaml
+├── data/                  # CSVデータソース（Webflow CMS）
+│   ├── Makers_from_webflow_20251206.csv
+│   └── Countries_from_webflow_20251206.csv
+├── scripts/               # データ変換スクリプト
+│   ├── convert_csv_to_yaml.js      # メーカーCSV→YAML
+│   └── convert_countries_to_yaml.js # 国CSV→YAML
 ├── lib/                   # ユーティリティ
 │   └── content-loader.ts  # YAML データローダー
 ├── styles/                # グローバルスタイル
@@ -282,20 +294,28 @@ vercel --prod
 ## 実装済み機能
 
 ### 完了した機能 ✅
-- [x] **組織詳細ページ（全4拠点完了）**
+- [x] **組織詳細ページ（3拠点）**
   - [x] ベトナム拠点詳細ページ (/about/vietnam)
   - [x] ミャンマー支店詳細ページ (/about/myanmar)
   - [x] 日本本社詳細ページ (/about/japan)
-  - [x] バングラデシュ事務所詳細ページ (/about/bangladesh)
 - [x] **YAML-based組織管理システム**
-  - [x] organizations.yaml による4組織の詳細データ管理
+  - [x] organizations.yaml による3組織の詳細データ管理
   - [x] TypeScript型定義による型安全性確保
   - [x] 動的ページ生成とデータバインディング
 - [x] **各組織カラーテーマ**
   - [x] ベトナム: 緑色テーマ
   - [x] ミャンマー: 紫色テーマ
   - [x] 日本本社: 青色テーマ
-  - [x] バングラデシュ: オレンジ色テーマ
+- [x] **組織案内AIチャットボット**
+  - [x] Claude API統合による自然言語対応
+  - [x] 3拠点（ベトナム・ミャンマー・日本）の詳細案内
+  - [x] リアルタイムチャットUI
+  - [x] フローティングチャットボタン
+- [x] **CSV連携データ管理システム**
+  - [x] Webflow CMSからCSVエクスポート
+  - [x] 自動変換スクリプト（CSV→YAML）
+  - [x] メーカーデータ管理（68社、14カテゴリ）
+  - [x] 海外販売先データ管理（63カ国、851社）
 
 ## 今後の拡張予定
 
@@ -325,21 +345,16 @@ vercel --prod
   - パートナーメーカー: TONE、KITO、EXEN等7社
   - 展示会サポート実績: METALEX VIETNAM 2023
   - Instagram連携: @kouei_vietnam
-  
+
 - **ミャンマー支店** (/about/myanmar)
   - 設立: 2017年5月26日、資本金50,000 USD
   - 取引条件: USD・MMK支払い、CIF/DDP対応
   - Facebook連携: Kouei Trading Myanmar
-  
+
 - **日本本社** (/about/japan)
   - 法人情報: 法人番号、適格請求書番号、古物商許可証
   - 主要銀行: みずほ銀行、りそな銀行
   - 関連会社: 株式会社コニー
-  
-- **バングラデシュ事務所** (/about/bangladesh)
-  - 販売実績: 現地企業様約10社
-  - 取引条件: L/C取引対応、CIF/CIP条件
-  - インフラ案件特化: 橋梁・土木・港湾
 
 ### YAML管理による利点
 - **データ整合性**: 型安全なTypeScriptインターフェース
@@ -349,12 +364,62 @@ vercel --prod
 
 ---
 
-**最終更新**: 2024年9月
+**最終更新**: 2025年12月
 **管理者**: Claude Code AI Assistant
 **プロジェクト**: KOUEI Trading Corporate Website
 
+## CSV連携システム
+
+### データソース管理
+- **Webflow CMS**: マスターデータ管理
+- **CSVエクスポート**: 定期的にデータを更新
+- **自動変換**: スクリプトでYAMLに変換
+
+### 変換スクリプト使用方法
+
+#### メーカーデータ更新
+```bash
+# CSVをdata/ディレクトリに配置
+node scripts/convert_csv_to_yaml.js
+# → content/manufacturers.yaml が更新される
+```
+
+#### 海外販売先データ更新
+```bash
+# CSVをdata/ディレクトリに配置
+node scripts/convert_countries_to_yaml.js
+# → content/overseas-sales.yaml が更新される
+```
+
+### データ統計（最終更新: 2025年12月）
+- **メーカー**: 68社、14カテゴリ
+- **海外販売先**: 63カ国、6地域、851社
+
+## 組織案内AI
+
+### 機能概要
+- **AIモデル**: Claude 3.5 Sonnet
+- **対応拠点**: ベトナム、ミャンマー、日本本社
+- **データソース**: organizations.yaml
+- **UI**: フローティングチャットボタン
+
+### 使用方法
+1. `.env.local` に APIキーを設定
+   ```
+   ANTHROPIC_API_KEY=your_api_key_here
+   ```
+2. 開発サーバー起動
+3. ページ右下のチャットボタンをクリック
+
+### 質問例
+- 「ベトナム拠点について教えてください」
+- 「ミャンマー支店の連絡先を知りたい」
+- 「日本本社の事業内容は？」
+
 ## 重要な実装ノート
-- 全4組織の詳細ページ実装完了
+- 全3組織の詳細ページ実装完了（バングラデシュ拠点は削除）
 - YAML-based組織管理システム構築済み
 - 各組織カラーテーマによる視覚的区別
 - レスポンシブデザイン完全対応
+- CSV連携による自動データ更新システム
+- AI組織案内機能統合
