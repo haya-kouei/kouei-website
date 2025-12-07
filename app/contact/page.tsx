@@ -245,11 +245,6 @@ export default function ContactPage() {
                   <h4 className="font-medium text-green-800">Kouei Myanmar Branch</h4>
                   <p className="text-sm text-green-700">ミャンマー ヤンゴン</p>
                 </div>
-                
-                <div className="bg-orange-50 border border-orange-200 p-4 rounded-lg">
-                  <h4 className="font-medium text-orange-800">Kouei Bangladesh Office</h4>
-                  <p className="text-sm text-orange-700">バングラデシュ ダッカ</p>
-                </div>
               </div>
             </div>
           </div>
