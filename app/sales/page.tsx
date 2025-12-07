@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getSalesCountries } from '@/lib/content-loader'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export default async function SalesPage() {
   const salesData = await getSalesCountries()
@@ -266,39 +267,6 @@ export default async function SalesPage() {
           </div>
         </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">取引実績サマリー</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-lg country-card text-center">
-              <div className="stat-number">
-                {salesData.reduce((total, region) => 
-                  total + region.countries.reduce((regionTotal, country) => 
-                    regionTotal + country.companies, 0
-                  ), 0
-                )}
-              </div>
-              <p className="text-gray-600 font-medium">総取引企業数</p>
-            </div>
-            
-            <div className="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-lg country-card text-center">
-              <div className="stat-number">
-                {salesData.reduce((total, region) => total + region.countries.length, 0)}
-              </div>
-              <p className="text-gray-600 font-medium">展開国数</p>
-            </div>
-            
-            <div className="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-lg country-card text-center">
-              <div className="stat-number">{salesData.length}</div>
-              <p className="text-gray-600 font-medium">主要地域</p>
-            </div>
-            
-            <div className="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-lg country-card text-center">
-              <div className="stat-number">30+</div>
-              <p className="text-gray-600 font-medium">年の実績</p>
-            </div>
-          </div>
-        </section>
-
         {/* CTA セクション */}
         <section className="text-center bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-lg p-12 text-white">
           <h2 className="text-3xl font-bold mb-4">お見積りのご依頼</h2>
@@ -312,55 +280,7 @@ export default async function SalesPage() {
         </section>
       </main>
 
-      {/* フッター */}
-      <footer className="footer-bg text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="brand-logo text-2xl text-cyan-400 mb-4">KOUEI</div>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                株式会社恒栄トレーディング<br />
-                グローバルな商品取引を通じて<br />
-                世界の発展に貢献
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4 text-cyan-400">事業内容</h4>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li><Link href="/sales" className="hover:text-cyan-400 transition-colors">販売事業</Link></li>
-                <li><Link href="/manufacturers" className="hover:text-cyan-400 transition-colors">取扱メーカー</Link></li>
-                <li>鉄鋼製品・機械工具</li>
-                <li>設備・プラント機器</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4 text-cyan-400">グローバルオフィス</h4>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li>日本本社</li>
-                <li>ベトナム拠点</li>
-                <li>ミャンマー拠点</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4 text-cyan-400">お問い合わせ</h4>
-              <div className="text-gray-300 text-sm space-y-1">
-                <p>Email: kouei.contact@kjt.co.jp</p>
-                <Link href="/contact" className="inline-block mt-3 text-cyan-400 hover:text-cyan-300 transition-colors">
-                  お問い合わせフォーム →
-                </Link>
-              </div>
-            </div>
-          </div>
-          
-          <hr className="border-gray-600 mb-6" />
-          <div className="text-center text-gray-400 text-sm">
-            <p>&copy; 2024 株式会社恒栄トレーディング All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

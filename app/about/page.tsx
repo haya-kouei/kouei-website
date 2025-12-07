@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getCompanyInfo } from '@/lib/content-loader'
 import OrganizationChat from '@/components/OrganizationChat'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export default async function AboutPage() {
   const company = await getCompanyInfo()
@@ -118,59 +119,64 @@ export default async function AboutPage() {
 
         </div>
 
-        {/* グループ概要セクション */}
-        <section className="bg-gray-50 rounded-lg p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">KOUEIグループについて</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">グループビジョン</h3>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                {company.vision}
-              </p>
-              
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">グループミッション</h3>
-              <p className="text-gray-700 leading-relaxed">
-                {company.mission}
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">グループ実績</h3>
-              <div className="space-y-4">
-                <div className="bg-white p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-cyan-600">700+</div>
-                  <p className="text-gray-600">取引企業数</p>
+        {/* トピックスセクション */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">トピックス</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-6">
+              <div className="flex items-start space-x-6">
+                <div className="flex-shrink-0 w-32 text-left">
+                  <span className="text-lg font-medium text-gray-700">2023-04-26</span>
                 </div>
-                <div className="bg-white p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-cyan-600">50+</div>
-                  <p className="text-gray-600">展開国数</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-cyan-600">30+</div>
-                  <p className="text-gray-600">年の実績</p>
+                <div className="flex-1">
+                  <p className="text-gray-800">恒栄トレーディング（バングラデシュ事務所）を設立</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* 沿革セクション */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">沿革</h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              {company.history.map((event, index) => (
-                <div key={index} className="flex items-start space-x-6">
-                  <div className="flex-shrink-0 w-20 text-right">
-                    <span className="text-xl font-bold text-cyan-600">{event.year}</span>
-                  </div>
-                  <div className="flex-shrink-0 w-4 h-4 bg-cyan-500 rounded-full mt-1"></div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">{event.event}</h3>
-                    <p className="text-gray-600">{event.description}</p>
-                  </div>
+              <div className="flex items-start space-x-6">
+                <div className="flex-shrink-0 w-32 text-left">
+                  <span className="text-lg font-medium text-gray-700">2019-02-15</span>
                 </div>
-              ))}
+                <div className="flex-1">
+                  <p className="text-gray-800">Kouei Vietnam Trading Co., Ltd. ホーチミン本社オフィス移転</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-6">
+                <div className="flex-shrink-0 w-32 text-left">
+                  <span className="text-lg font-medium text-gray-700">2017-11-24</span>
+                </div>
+                <div className="flex-1">
+                  <p className="text-gray-800">TONE VIETNAM社とベトナム代理店契約を締結</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-6">
+                <div className="flex-shrink-0 w-32 text-left">
+                  <span className="text-lg font-medium text-gray-700">2017-05-26</span>
+                </div>
+                <div className="flex-1">
+                  <p className="text-gray-800">恒栄トレーディング（ミャンマー支店）を設立</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-6">
+                <div className="flex-shrink-0 w-32 text-left">
+                  <span className="text-lg font-medium text-gray-700">2016-05-20</span>
+                </div>
+                <div className="flex-1">
+                  <p className="text-gray-800">株式会社恒栄トレーディング（Kouei Japan Trading Co., Ltd.）を設立</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-6">
+                <div className="flex-shrink-0 w-32 text-left">
+                  <span className="text-lg font-medium text-gray-700">2016-03-28</span>
+                </div>
+                <div className="flex-1">
+                  <p className="text-gray-800">Kouei Vietnam Trading Co., Ltd. (ベトナムホーチミン市)を設立</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -366,56 +372,7 @@ export default async function AboutPage() {
           </Link>
         </section>
       </main>
-
-      {/* フッター */}
-      <footer className="footer-bg text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="brand-logo text-2xl text-cyan-400 mb-4">KOUEI</div>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                株式会社恒栄トレーディング<br />
-                グローバルな商品取引を通じて<br />
-                世界の発展に貢献
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4 text-cyan-400">事業内容</h4>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li><Link href="/sales" className="hover:text-cyan-400 transition-colors">販売事業</Link></li>
-                <li><Link href="/manufacturers" className="hover:text-cyan-400 transition-colors">取扱メーカー</Link></li>
-                <li>鉄鋼製品・機械工具</li>
-                <li>設備・プラント機器</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4 text-cyan-400">グローバルオフィス</h4>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li>日本本社</li>
-                <li>ベトナム拠点</li>
-                <li>ミャンマー拠点</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4 text-cyan-400">お問い合わせ</h4>
-              <div className="text-gray-300 text-sm space-y-1">
-                <p>Email: kouei.contact@kjt.co.jp</p>
-                <Link href="/contact" className="inline-block mt-3 text-cyan-400 hover:text-cyan-300 transition-colors">
-                  お問い合わせフォーム →
-                </Link>
-              </div>
-            </div>
-          </div>
-          
-          <hr className="border-gray-600 mb-6" />
-          <div className="text-center text-gray-400 text-sm">
-            <p>&copy; 2024 株式会社恒栄トレーディング All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       {/* 組織案内AIチャット */}
       <OrganizationChat />

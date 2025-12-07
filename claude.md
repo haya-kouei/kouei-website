@@ -27,6 +27,8 @@ kouei-website/
 │       ├── contact/       # お問い合わせAPI
 │       └── organization-ai/ # 組織案内AI API
 ├── components/            # React コンポーネント
+│   ├── Header.tsx         # 共通ヘッダーコンポーネント
+│   ├── Footer.tsx         # 共通フッターコンポーネント
 │   └── OrganizationChat.tsx # 組織案内チャットUI
 ├── content/               # YAML CMS データ
 │   ├── company-info.yaml
@@ -157,9 +159,65 @@ organizations:
 }
 ```
 
+## 共通コンポーネント
+
+### Header コンポーネント
+**ファイル**: `components/Header.tsx`
+
+**特徴**:
+- 全8ページで共通使用
+- ロゴ画像とナビゲーションリンク
+- 現在ページのハイライト機能
+- レスポンシブ対応（モバイルではナビ非表示）
+
+**使用方法**:
+```tsx
+import Header from '@/components/Header'
+
+<Header currentPage="sales" />
+// currentPage: 'home' | 'sales' | 'manufacturers' | 'about' | 'contact'
+```
+
+**適用ページ**:
+- トップページ (home)
+- 販売事業 (sales)
+- 取扱メーカー (manufacturers)
+- 会社概要 (about)
+- お問い合わせ (contact)
+- 日本本社 (about)
+- ベトナム拠点 (about)
+- ミャンマー支店 (about)
+
+### Footer コンポーネント
+**ファイル**: `components/Footer.tsx`
+
+**特徴**:
+- 全8ページで共通使用
+- 3カラムレイアウト（事業内容、グローバルオフィス、お問い合わせ）
+- メールアイコン付きお問い合わせ情報
+- Copyright表記（2025年）
+
+**使用方法**:
+```tsx
+import Footer from '@/components/Footer'
+
+<Footer />
+```
+
+**内容**:
+- 事業内容リンク（販売事業、取扱メーカー）
+- グローバルオフィス一覧
+- お問い合わせ先（kouei.contact@kjt.co.jp）
+- お問い合わせフォームリンク
+
+**メリット**:
+- 1ファイル編集で全ページに即座に反映
+- デザイン統一性の確保
+- メンテナンス性の向上
+
 ## 頻出パターン・コンポーネント
 
-### 1. ページヘッダー
+### 1. ページヘッダー（非推奨：共通Headerコンポーネントを使用）
 ```tsx
 {/* ヘッダー */}
 <header className="bg-gray-50 shadow-sm">
@@ -329,7 +387,12 @@ vercel --prod
   - [x] ホバーエフェクト（ブランドカラー #0095d2）
   - [x] 取引先バッジ表示（オレンジ色タグ）
   - [x] レスポンシブ対応（xl:5列, lg:4列, md:3列, sm:2列）
-  - [x] 全358社のデータ管理（表示68社、非表示290社）
+  - [x] 全358社のデータ管理（表示292社、非表示66社）
+- [x] **共通コンポーネントシステム**
+  - [x] Header コンポーネント（全8ページ共通）
+  - [x] Footer コンポーネント（全8ページ共通）
+  - [x] 現在ページハイライト機能
+  - [x] 1ファイル編集で全ページ一括更新
 
 ## 今後の拡張予定
 
@@ -445,6 +508,11 @@ node scripts/convert_countries_to_yaml.js
   - display: true/false による表示/非表示管理
   - カード型レイアウトから5列シンプルリストに変更
   - 作業工具・荷役運搬機器・測定機器の表示順序を現行サイトに合わせて調整
+- **共通コンポーネント実装（2025年12月7日）**
+  - Header/Footerコンポーネントを全8ページで共通化
+  - 1ファイル編集で全ページに自動反映
+  - デザイン統一性とメンテナンス性の大幅向上
+  - aboutページのKOUEIグループについてセクション削除（重複コンテンツ除去）
 
 ## 取扱メーカーページ実装詳細
 

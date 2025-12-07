@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -251,11 +252,7 @@ export default function ContactPage() {
         </div>
       </main>
 
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2024 恒栄トレーディング株式会社 All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

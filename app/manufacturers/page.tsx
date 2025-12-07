@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getManufacturers } from '@/lib/content-loader'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export default async function ManufacturersPage() {
   const manufacturers = await getManufacturers()
@@ -70,55 +71,7 @@ export default async function ManufacturersPage() {
 
       </main>
 
-      {/* フッター */}
-      <footer className="footer-bg text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="brand-logo text-2xl text-cyan-400 mb-4">KOUEI</div>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                株式会社恒栄トレーディング<br />
-                グローバルな商品取引を通じて<br />
-                世界の発展に貢献
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4 text-cyan-400">事業内容</h4>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li><Link href="/sales" className="hover:text-cyan-400 transition-colors">販売事業</Link></li>
-                <li><Link href="/manufacturers" className="hover:text-cyan-400 transition-colors">取扱メーカー</Link></li>
-                <li>鉄鋼製品・機械工具</li>
-                <li>設備・プラント機器</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4 text-cyan-400">グローバルオフィス</h4>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li>日本本社</li>
-                <li>ベトナム拠点</li>
-                <li>ミャンマー拠点</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4 text-cyan-400">お問い合わせ</h4>
-              <div className="text-gray-300 text-sm space-y-1">
-                <p>Email: kouei.contact@kjt.co.jp</p>
-                <Link href="/contact" className="inline-block mt-3 text-cyan-400 hover:text-cyan-300 transition-colors">
-                  お問い合わせフォーム →
-                </Link>
-              </div>
-            </div>
-          </div>
-          
-          <hr className="border-gray-600 mb-6" />
-          <div className="text-center text-gray-400 text-sm">
-            <p>&copy; 2024 株式会社恒栄トレーディング All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
