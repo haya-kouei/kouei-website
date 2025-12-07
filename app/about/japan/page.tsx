@@ -26,66 +26,50 @@ export default async function JapanPage() {
       </div>
 
       <main className="container mx-auto px-4 py-12">
+        {/* Vision & Mission セクション */}
+        {(japan.vision || japan.mission) && (
+          <section className="mb-12 bg-white">
+            <div className="text-center mb-8">
+              {japan.vision && (
+                <div className="mb-6">
+                  <h2 className="text-lg font-semibold text-cyan-600 mb-3">Vision</h2>
+                  <p className="text-xl text-gray-800 leading-relaxed">{japan.vision}</p>
+                </div>
+              )}
+              {japan.mission && (
+                <div>
+                  <h2 className="text-lg font-semibold text-cyan-600 mb-3">Mission</h2>
+                  <p className="text-xl text-gray-800 leading-relaxed">{japan.mission}</p>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+
         {/* 企業概要セクション */}
         <section className="mb-12">
-          <div className="bg-blue-50 rounded-lg p-8">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">企業概要</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">株式会社恒栄トレーディング (Kouei Japan Trading Co., Ltd.)</h2>
+          <div className="bg-white rounded-lg p-8">
+            <p className="text-sm text-gray-700 leading-relaxed">
               {japan.description}
             </p>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white p-4 rounded-lg">
-                <h3 className="text-sm font-medium text-blue-600 mb-2">設立</h3>
-                <p className="text-gray-800 text-lg font-semibold">{japan.overview.established}</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg">
-                <h3 className="text-sm font-medium text-blue-600 mb-2">代表者</h3>
-                <p className="text-gray-800 text-lg font-semibold">{japan.overview.representative}</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg">
-                <h3 className="text-sm font-medium text-blue-600 mb-2">従業員数</h3>
-                <p className="text-gray-800 text-lg font-semibold">{japan.overview.employees}名</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg">
-                <h3 className="text-sm font-medium text-blue-600 mb-2">資本金</h3>
-                <p className="text-gray-800 text-lg font-semibold">{japan.overview.capital}</p>
-              </div>
-            </div>
           </div>
         </section>
 
-        {/* 業務内容セクション */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">業務内容</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {japan.business_activities.map((activity, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-                <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4">
-                  <h3 className="text-lg font-bold text-white">{activity.title}</h3>
-                </div>
-                <div className="p-6">
-                  <p className="text-gray-600 leading-relaxed">{activity.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* 強みセクション */}
+        {/* 弊社の強みセクション */}
         {japan.strengths && (
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">KOUEI の強み</h2>
+            <h2 className="text-xl font-bold text-gray-800 mb-8 text-center">弊社の強み</h2>
             <div className="bg-blue-50 rounded-lg p-8">
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {japan.strengths.map((strength, index) => (
                   <div key={index} className="flex items-start">
-                    <span className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 mr-4">
+                    <span className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
                       <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
-                    <p className="text-gray-700 leading-relaxed">{strength}</p>
+                    <p className="text-sm text-gray-700 leading-relaxed">{strength}</p>
                   </div>
                 ))}
               </div>
@@ -93,93 +77,113 @@ export default async function JapanPage() {
           </section>
         )}
 
-        {/* 法人情報セクション */}
-        {japan.company_info && (
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">法人情報</h2>
-            <div className="bg-gray-50 rounded-lg p-8">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white p-4 rounded-lg">
-                  <h3 className="text-sm font-medium text-blue-600 mb-2">法人番号</h3>
-                  <p className="text-gray-800 text-lg font-semibold">{japan.company_info.corporate_number}</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg">
-                  <h3 className="text-sm font-medium text-blue-600 mb-2">適格請求書発行事業者登録番号</h3>
-                  <p className="text-gray-800 text-lg font-semibold">{japan.company_info.qualified_invoice_number}</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg md:col-span-2">
-                  <h3 className="text-sm font-medium text-blue-600 mb-2">古物商許可証</h3>
-                  <p className="text-gray-800 text-lg font-semibold">{japan.company_info.antique_dealer_license}</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg">
-                  <h3 className="text-sm font-medium text-blue-600 mb-2">主要銀行</h3>
-                  <div className="space-y-1">
-                    {japan.company_info.main_banks.map((bank, index) => (
-                      <p key={index} className="text-gray-800">{bank}</p>
-                    ))}
-                  </div>
-                </div>
-                <div className="bg-white p-4 rounded-lg">
-                  <h3 className="text-sm font-medium text-blue-600 mb-2">関連会社</h3>
-                  <div className="space-y-1">
-                    {japan.company_info.related_companies.map((company, index) => (
-                      <p key={index} className="text-gray-800">{company}</p>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* 連絡先情報セクション */}
+        {/* 会社概要セクション */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">連絡先情報</h2>
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-100">
-            <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-6">
-              <h3 className="text-2xl font-semibold text-white text-center">{japan.contact_info.headquarters.name}</h3>
-            </div>
-            <div className="p-8">
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-sm font-medium text-blue-600 mb-2">所在地</h4>
-                  <p className="text-gray-800 text-lg leading-relaxed">
-                    {japan.contact_info.headquarters.address}
-                  </p>
-                </div>
-                
-                <div>
-                  <h4 className="text-sm font-medium text-blue-600 mb-2">Email</h4>
-                  <p className="text-gray-800 text-lg">
+          <h2 className="text-xl font-bold text-gray-800 mb-8 text-center">会社概要</h2>
+          <div className="bg-white rounded-lg overflow-hidden border border-gray-200">
+            <table className="w-full">
+              <tbody className="divide-y divide-gray-200">
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-3 text-gray-600 text-sm bg-gray-50 w-1/3">会社名</td>
+                  <td className="px-6 py-3 text-gray-800 text-sm">
+                    {japan.name}<br />
+                    <span className="text-xs text-gray-600">（ 英文名：{japan.name_en} ）</span>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-3 text-gray-600 text-sm bg-gray-50">代表取締役 社長</td>
+                  <td className="px-6 py-3 text-gray-800 text-sm">{japan.overview.representative}</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-3 text-gray-600 text-sm bg-gray-50">資本金</td>
+                  <td className="px-6 py-3 text-gray-800 text-sm">{japan.overview.capital}</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-3 text-gray-600 text-sm bg-gray-50">設立日</td>
+                  <td className="px-6 py-3 text-gray-800 text-sm">{japan.overview.established}</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-3 text-gray-600 text-sm bg-gray-50">全体人数（海外拠点含む）</td>
+                  <td className="px-6 py-3 text-gray-800 text-sm">{japan.overview.employees}人</td>
+                </tr>
+                {japan.company_info && (
+                  <>
+                    <tr className="hover:bg-gray-50 transition-colors">
+                      <td className="px-6 py-3 text-gray-600 text-sm bg-gray-50">法人番号</td>
+                      <td className="px-6 py-3 text-gray-800 text-sm">{japan.company_info.corporate_number}</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50 transition-colors">
+                      <td className="px-6 py-3 text-gray-600 text-sm bg-gray-50">適格請求書発行事業者登録番号</td>
+                      <td className="px-6 py-3 text-gray-800 text-sm">{japan.company_info.qualified_invoice_number}</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50 transition-colors">
+                      <td className="px-6 py-3 text-gray-600 text-sm bg-gray-50">古物商許可証</td>
+                      <td className="px-6 py-3 text-gray-800 text-sm">{japan.company_info.antique_dealer_license}</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50 transition-colors">
+                      <td className="px-6 py-3 text-gray-600 text-sm bg-gray-50">主要銀行</td>
+                      <td className="px-6 py-3 text-gray-800 text-sm">
+                        {japan.company_info.main_banks.join('　')}
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-gray-50 transition-colors">
+                      <td className="px-6 py-3 text-gray-600 text-sm bg-gray-50">関連会社</td>
+                      <td className="px-6 py-3 text-gray-800 text-sm">
+                        {japan.company_info.related_companies.join('、')}
+                      </td>
+                    </tr>
+                  </>
+                )}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* 住所セクション */}
+        <section className="mb-12">
+          <h2 className="text-xl font-bold text-gray-800 mb-8 text-center">住所</h2>
+
+          {/* Google Map */}
+          <div className="bg-white rounded-lg overflow-hidden border border-gray-200 mb-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.8887648!2d135.6987!3d34.5438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60013b0e8c8c8c8d%3A0x1!2z44CSNjM5LTAyMjMg5aWI6Imv55yM6aaZ6Iqd5biC55yf576O44O25LiYMe-8jTEz4oiSMzU!5e0!3m2!1sja!2sjp!4v1234567890!5m2!1sja!2sjp"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          {/* 住所情報テーブル */}
+          <div className="bg-white rounded-lg overflow-hidden border border-gray-200">
+            <table className="w-full">
+              <tbody className="divide-y divide-gray-200">
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-3 text-gray-600 text-sm bg-gray-50 w-1/3">住所</td>
+                  <td className="px-6 py-3 text-gray-800 text-sm">{japan.contact_info.headquarters.address}</td>
+                </tr>
+                {japan.contact_info.headquarters.website && (
+                  <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="px-6 py-3 text-gray-600 text-sm bg-gray-50">ウェブサイト</td>
+                    <td className="px-6 py-3 text-gray-800 text-sm">
+                      <a href={japan.contact_info.headquarters.website} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 transition-colors underline">
+                        {japan.contact_info.headquarters.website}
+                      </a>
+                    </td>
+                  </tr>
+                )}
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-3 text-gray-600 text-sm bg-gray-50">連絡先</td>
+                  <td className="px-6 py-3 text-gray-800 text-sm">
                     <a href={`mailto:${japan.contact_info.headquarters.email}`} className="text-blue-600 hover:text-blue-700 transition-colors">
                       {japan.contact_info.headquarters.email}
                     </a>
-                  </p>
-                </div>
-
-                {japan.contact_info.headquarters.website && (
-                  <div>
-                    <h4 className="text-sm font-medium text-blue-600 mb-2">ウェブサイト</h4>
-                    <p className="text-gray-800 text-lg">
-                      <a href={japan.contact_info.headquarters.website} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 transition-colors">
-                        {japan.contact_info.headquarters.website}
-                      </a>
-                    </p>
-                  </div>
-                )}
-                
-                <div>
-                  <h4 className="text-sm font-medium text-blue-600 mb-2">対応言語</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {japan.contact_info.headquarters.languages.map((language, index) => (
-                      <span key={index} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
-                        {language}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
 

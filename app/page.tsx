@@ -23,83 +23,33 @@ export default async function Home() {
       <Header currentPage="home" />
 
       {/* メインビジュアル */}
-      <section className="relative bg-gradient-to-br from-gray-50 to-white min-h-[40vh] flex items-center justify-center overflow-hidden">
-        {/* アニメーション背景 */}
-        <div className="absolute inset-0">
-          {/* 動く円形グラデーション */}
-          <div
-            className="absolute inset-0"
+      <section className="relative w-full flex items-center justify-center bg-white">
+        {/* 背景画像 */}
+        <div className="relative overflow-hidden" style={{ width: '100%', maxHeight: '80vh' }}>
+          <img
+            src="/main-image.jpg"
+            alt="KOUEI Background"
+            className="block w-full"
             style={{
-              backgroundImage: `
-                radial-gradient(circle at 20% 50%, rgba(0, 149, 210, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(0, 149, 210, 0.06) 0%, transparent 50%),
-                radial-gradient(circle at 50% 30%, rgba(0, 149, 210, 0.05) 0%, transparent 40%)
-              `,
-              animation: 'pulseBackground 6s ease-in-out infinite'
+              clipPath: 'inset(0% 0 15% 0)'
             }}
           />
-          {/* 動くグリッド */}
-          <div
-            className="absolute inset-0 opacity-30"
-            style={{
-              backgroundImage: `
-                repeating-linear-gradient(
-                  0deg,
-                  transparent,
-                  transparent 40px,
-                  rgba(0, 149, 210, 0.08) 40px,
-                  rgba(0, 149, 210, 0.08) 41px
-                ),
-                repeating-linear-gradient(
-                  90deg,
-                  transparent,
-                  transparent 40px,
-                  rgba(0, 149, 210, 0.08) 40px,
-                  rgba(0, 149, 210, 0.08) 41px
-                )
-              `,
-              animation: 'slideGrid 15s linear infinite'
-            }}
-          />
-          {/* 動く点 */}
-          <div
-            className="absolute w-3 h-3 bg-kouei-blue rounded-full opacity-40"
-            style={{
-              top: '30%',
-              left: '20%',
-              animation: 'float 8s ease-in-out infinite'
-            }}
-          />
-          <div
-            className="absolute w-2 h-2 bg-kouei-blue rounded-full opacity-30"
-            style={{
-              top: '60%',
-              left: '70%',
-              animation: 'float 6s ease-in-out infinite 1s'
-            }}
-          />
-          <div
-            className="absolute w-2.5 h-2.5 bg-kouei-blue-light rounded-full opacity-35"
-            style={{
-              top: '45%',
-              left: '85%',
-              animation: 'float 7s ease-in-out infinite 2s'
-            }}
-          />
-        </div>
-
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-3xl md:text-4xl font-normal text-gray-800 mb-6 leading-tight">
-            KOUEI は鉄鋼製品・機械工具・設備の商社です。
-          </h1>
-          <h2 className="text-lg md:text-xl font-bold text-kouei-blue">
-            グローバル調達と販売を通じて世界の発展に貢献します。
-          </h2>
+          {/* テキストオーバーレイ */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center px-4">
+              <h1 className="text-3xl md:text-4xl font-normal text-kouei-blue mb-6 leading-tight">
+                KOUEI は鉄鋼製品・機械工具・設備の商社です。
+              </h1>
+              <h2 className="text-lg md:text-xl font-normal text-kouei-blue">
+                グローバル調達と販売を通じて世界の発展に貢献します。
+              </h2>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* バナーセクション */}
-      <section className="py-12 bg-white">
+      <section className="pt-0 pb-[20px] bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-6 items-start">
             {/* Request Quotation バナー */}
@@ -130,7 +80,7 @@ export default async function Home() {
 
       {/* 海外販売先 */}
       {overseasSales && (
-        <section className="py-16 bg-white">
+        <section className="pt-[30px] pb-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-1">{overseasSales.header.title}</h2>

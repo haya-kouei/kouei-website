@@ -1,228 +1,139 @@
-import Link from 'next/link'
+import Image from 'next/image'
 import { getOrganization } from '@/lib/content-loader'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export default async function VietnamPage() {
   const vietnam = await getOrganization('vietnam')
-  
+
   if (!vietnam) {
     return <div>組織情報が見つかりません</div>
   }
-  
+
   return (
     <div className="min-h-screen bg-white">
       <Header currentPage="about" />
 
-      {/* ヘッダー画像 */}
-      <div className="h-48 bg-gradient-to-r from-green-100 to-green-200 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-        <div className="container mx-auto px-4 h-full flex items-center relative z-10">
-          <div>
-            <h1 className="text-4xl font-bold text-gray-800 mb-2">{vietnam.name}</h1>
-            <p className="text-lg text-gray-700">{vietnam.name_en}</p>
-          </div>
-        </div>
-      </div>
-
-      <main className="container mx-auto px-4 py-12">
-        {/* 企業概要セクション */}
+      <main className="container mx-auto px-4 py-12 max-w-6xl">
+        {/* タイトルセクション */}
         <section className="mb-12">
-          <div className="bg-green-50 rounded-lg p-8">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">企業概要</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              {vietnam.description}
-            </p>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white p-4 rounded-lg">
-                <h3 className="text-sm font-medium text-green-600 mb-2">設立</h3>
-                <p className="text-gray-800 text-lg font-semibold">{vietnam.overview.established}</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg">
-                <h3 className="text-sm font-medium text-green-600 mb-2">代表者</h3>
-                <p className="text-gray-800 text-lg font-semibold">{vietnam.overview.representative}</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg">
-                <h3 className="text-sm font-medium text-green-600 mb-2">従業員数</h3>
-                <p className="text-gray-800 text-lg font-semibold">{vietnam.overview.employees}名</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg">
-                <h3 className="text-sm font-medium text-green-600 mb-2">営業エリア</h3>
-                <p className="text-gray-800 text-lg font-semibold">{vietnam.overview.coverage}</p>
-              </div>
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">
+            {vietnam.name}（ {vietnam.name_en} ）
+          </h1>
+        </section>
+
+        {/* 概要セクション - 2カラムレイアウト */}
+        <section className="mb-12">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-6">
+                {vietnam.description}
+              </p>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                ホーチミンの拠点からベトナム全域を営業しています。
+              </p>
+            </div>
+            <div className="relative aspect-[4/3] w-full">
+              <Image
+                src="/vietnam-team.jpg"
+                alt="KOUEI Vietnam Team"
+                fill
+                className="object-cover rounded-lg"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </div>
         </section>
 
         {/* 業務内容セクション */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">業務内容</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {vietnam.business_activities.map((activity, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-                <div className="bg-gradient-to-r from-green-500 to-green-600 p-4">
-                  <h3 className="text-lg font-bold text-white">{activity.title}</h3>
-                </div>
-                <div className="p-6">
-                  <p className="text-gray-600 leading-relaxed">{activity.description}</p>
-                </div>
-              </div>
-            ))}
+          <h2 className="text-xl font-bold text-gray-900 mb-6">業務内容</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <ul className="space-y-2">
+              {vietnam.business_activities.slice(0, 3).map((activity, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-sm text-gray-700">• {activity.title}。</span>
+                </li>
+              ))}
+            </ul>
+            <ul className="space-y-2">
+              {vietnam.business_activities.slice(3).map((activity, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-sm text-gray-700">• {activity.title}。</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
-        {/* パートナーメーカーセクション */}
-        {vietnam.partner_manufacturers && (
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">日本メーカー製品の販売代理</h2>
-            <div className="bg-gray-50 rounded-lg p-8">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {vietnam.partner_manufacturers.map((manufacturer, index) => (
-                  <div key={index} className="bg-white p-4 rounded-lg text-center">
-                    <p className="text-gray-800 font-medium">{manufacturer}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* 展示会サポートセクション */}
-        {vietnam.exhibition_support && (
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">メーカー様の展示会サポート</h2>
-            <div className="space-y-6">
-              {vietnam.exhibition_support.map((support, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6">
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-xl font-bold text-white">{support.event}</h3>
-                      <span className="bg-white/20 text-white px-3 py-1 rounded text-sm">
-                        {support.year}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-gray-600 leading-relaxed">{support.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* 強みセクション */}
-        {vietnam.strengths && (
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">KOUEIベトナムの強み</h2>
-            <div className="bg-green-50 rounded-lg p-8">
-              <div className="space-y-4">
-                {vietnam.strengths.map((strength, index) => (
-                  <div key={index} className="flex items-start">
-                    <span className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 mr-4">
-                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </span>
-                    <p className="text-gray-700 leading-relaxed">{strength}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* 連絡先情報セクション */}
+        {/* 会社概要セクション */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">連絡先情報</h2>
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-100">
-            <div className="bg-gradient-to-r from-green-500 to-green-600 px-8 py-6">
-              <h3 className="text-2xl font-semibold text-white text-center">{vietnam.contact_info.headquarters.name}</h3>
-            </div>
-            <div className="p-8">
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-sm font-medium text-green-600 mb-2">所在地</h4>
-                  <p className="text-gray-800 text-lg leading-relaxed">
-                    {vietnam.contact_info.headquarters.address}
-                  </p>
-                </div>
-                
-                <div>
-                  <h4 className="text-sm font-medium text-green-600 mb-2">電話番号</h4>
-                  {Array.isArray(vietnam.contact_info.headquarters.phone) ? (
-                    <div className="space-y-1">
-                      {vietnam.contact_info.headquarters.phone.map((phone, index) => (
-                        <p key={index} className="text-gray-800 text-lg">{phone}</p>
-                      ))}
-                    </div>
-                  ) : (
-                    <p className="text-gray-800 text-lg">{vietnam.contact_info.headquarters.phone}</p>
-                  )}
-                </div>
-                
-                <div>
-                  <h4 className="text-sm font-medium text-green-600 mb-2">Email</h4>
-                  <p className="text-gray-800 text-lg">
-                    <a href={`mailto:${vietnam.contact_info.headquarters.email}`} className="text-green-600 hover:text-green-700 transition-colors">
+          <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">会社概要</h2>
+          <div className="border border-gray-200 rounded-lg overflow-hidden">
+            <table className="w-full">
+              <tbody className="divide-y divide-gray-200">
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-3 bg-gray-50 text-gray-600 text-sm w-1/4">会社名</td>
+                  <td className="px-6 py-3 text-gray-900 text-sm">{vietnam.name_en}</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-3 bg-gray-50 text-gray-600 text-sm">代表者</td>
+                  <td className="px-6 py-3 text-gray-900 text-sm">{vietnam.overview.representative}</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-3 bg-gray-50 text-gray-600 text-sm">設立日</td>
+                  <td className="px-6 py-3 text-gray-900 text-sm">{vietnam.overview.established}</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-3 bg-gray-50 text-gray-600 text-sm">社員数</td>
+                  <td className="px-6 py-3 text-gray-900 text-sm">{vietnam.overview.employees}人</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-3 bg-gray-50 text-gray-600 text-sm">電話番号</td>
+                  <td className="px-6 py-3 text-gray-900 text-sm">
+                    {Array.isArray(vietnam.contact_info.headquarters.phone) ? (
+                      vietnam.contact_info.headquarters.phone.join(' / ')
+                    ) : (
+                      vietnam.contact_info.headquarters.phone
+                    )} (英語・ベトナム語)
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-3 bg-gray-50 text-gray-600 text-sm">Email</td>
+                  <td className="px-6 py-3 text-sm">
+                    <a href={`mailto:${vietnam.contact_info.headquarters.email}`} className="text-blue-600 hover:underline">
                       {vietnam.contact_info.headquarters.email}
                     </a>
-                  </p>
-                </div>
-                
-                <div>
-                  <h4 className="text-sm font-medium text-green-600 mb-2">対応言語</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {vietnam.contact_info.headquarters.languages.map((language, index) => (
-                      <span key={index} className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
-                        {language}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* SNSセクション */}
-        {vietnam.social_media?.instagram && (
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">SNS</h2>
-            <div className="text-center">
-              <a 
-                href={`https://instagram.com/${vietnam.social_media.instagram.replace('@', '')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:scale-105 transition-transform"
-              >
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987s11.987-5.367 11.987-11.987C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.348-1.051-2.348-2.348s1.051-2.348 2.348-2.348 2.348 1.051 2.348 2.348-1.051 2.348-2.348 2.348zm7.718 0c-1.297 0-2.348-1.051-2.348-2.348s1.051-2.348 2.348-2.348 2.348 1.051 2.348 2.348-1.051 2.348-2.348 2.348z"/>
-                </svg>
-                Instagram: {vietnam.social_media.instagram}
-              </a>
-            </div>
-          </section>
-        )}
-
-        {/* CTA セクション */}
-        <section className="text-center bg-gradient-to-r from-green-500 to-green-600 rounded-lg p-12 text-white">
-          <h2 className="text-3xl font-bold mb-4">お問い合わせ</h2>
-          <p className="text-xl mb-8 text-green-100">ベトナムでの事業に関するご相談はお気軽にどうぞ</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="inline-block bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105"
-            >
-              お問い合わせフォーム
-            </Link>
-            <Link 
-              href="/about" 
-              className="inline-block bg-green-400 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-500 transition-colors transform hover:scale-105"
-            >
-              会社概要に戻る
-            </Link>
+                  </td>
+                </tr>
+                {vietnam.social_media?.instagram && (
+                  <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="px-6 py-3 bg-gray-50 text-gray-600 text-sm">SNS</td>
+                    <td className="px-6 py-3">
+                      <a
+                        href={`https://instagram.com/${vietnam.social_media.instagram.replace('@', '')}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2"
+                      >
+                        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="url(#instagram-gradient)">
+                          <defs>
+                            <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                              <stop offset="0%" style={{stopColor: '#f09433'}} />
+                              <stop offset="25%" style={{stopColor: '#e6683c'}} />
+                              <stop offset="50%" style={{stopColor: '#dc2743'}} />
+                              <stop offset="75%" style={{stopColor: '#cc2366'}} />
+                              <stop offset="100%" style={{stopColor: '#bc1888'}} />
+                            </linearGradient>
+                          </defs>
+                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
           </div>
         </section>
       </main>

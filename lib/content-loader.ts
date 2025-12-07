@@ -129,6 +129,8 @@ export interface OrganizationInfo {
   name: string
   name_en: string
   name_local: string
+  vision?: string
+  mission?: string
   description: string
   overview: OrganizationOverview
   business_activities: BusinessActivity[]
