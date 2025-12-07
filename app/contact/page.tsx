@@ -215,20 +215,20 @@ export default function ContactPage() {
             <div className="bg-gray-50 p-6 rounded-lg mb-8">
               <h3 className="text-lg font-semibold text-gray-800 mb-4">本社</h3>
               <div className="space-y-2 text-gray-700">
-                <p className="font-medium">恒栄トレーディング株式会社</p>
-                <p>〒100-0001</p>
-                <p>東京都千代田区丸の内1-1-1</p>
-                <p>丸の内ビル10F</p>
+                <p className="font-medium">株式会社恒栄トレーディング</p>
+                <p className="text-sm text-gray-600">KOUEI JAPAN TRADING CO., LTD.</p>
+                <p className="pt-2">〒639-0223</p>
+                <p>奈良県香芝市真美ヶ丘1-13−35 No.02</p>
                 <p className="pt-2">
-                  <strong>TEL:</strong> 03-1234-5678
+                  <strong>Email:</strong>
+                  <a href="mailto:kouei.contact@kjt.co.jp" className="text-blue-600 hover:text-blue-800 ml-1">
+                    kouei.contact@kjt.co.jp
+                  </a>
                 </p>
                 <p>
-                  <strong>FAX:</strong> 03-1234-5679
-                </p>
-                <p>
-                  <strong>Email:</strong> 
-                  <a href="mailto:info@kjt.co.jp" className="text-blue-600 hover:text-blue-800 ml-1">
-                    info@kjt.co.jp
+                  <strong>ウェブサイト:</strong>
+                  <a href="https://www.kjt.co.jp" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 ml-1">
+                    https://www.kjt.co.jp
                   </a>
                 </p>
               </div>

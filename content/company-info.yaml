@@ -1,9 +1,9 @@
 company:
-  name: "恒栄トレーディング株式会社"
+  name: "株式会社恒栄トレーディング"
   name_en: "KOUEI JAPAN TRADING CO., LTD."
   established: "2016年5月20日"
   capital: "10,000,000円"
-  employees: 32
+  employees: 27
   president: "代表取締役社長 小西 隼人"
   
   address:
@@ -62,7 +62,7 @@ company:
 
   history:
     - year: "2016年"
-      event: "恒栄トレーディング株式会社設立"
+      event: "株式会社恒栄トレーディング設立"
       description: "奈良県香芝市に本社を設立、鉄鋼製品・機械工具・プラント設備機器・建設土木機材の販売業務を開始"
     - year: "2017年"
       event: "海外展開開始"
