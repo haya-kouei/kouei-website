@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import Header from '@/components/Header'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -57,21 +58,7 @@ export default function ContactPage() {
   
   return (
     <div className="min-h-screen bg-white">
-      <header className="bg-blue-600 text-white">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex justify-between items-center">
-            <Link href="/" className="text-2xl font-bold hover:text-blue-200">
-              恒栄トレーディング株式会社
-            </Link>
-            <nav className="hidden md:flex space-x-6">
-              <Link href="/sales" className="hover:text-blue-200">販売事業</Link>
-              <Link href="/manufacturers" className="hover:text-blue-200">取扱メーカー</Link>
-              <Link href="/about" className="hover:text-blue-200">会社概要</Link>
-              <Link href="/contact" className="text-blue-200 font-semibold">お問い合わせ</Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header currentPage="contact" />
 
       <main className="container mx-auto px-4 py-12">
         <div className="mb-8">

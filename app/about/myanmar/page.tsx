@@ -1,29 +1,17 @@
 import Link from 'next/link'
 import { getOrganization } from '@/lib/content-loader'
+import Header from '@/components/Header'
 
 export default async function MyanmarPage() {
   const myanmar = await getOrganization('myanmar')
-  
+
   if (!myanmar) {
     return <div>組織情報が見つかりません</div>
   }
-  
+
   return (
     <div className="min-h-screen bg-white">
-      {/* ヘッダー */}
-      <header className="bg-gray-50 shadow-sm">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <Link href="/" className="brand-logo text-3xl">KOUEI</Link>
-            <nav className="hidden md:flex space-x-8">
-              <Link href="/sales" className="text-gray-700 hover:text-cyan-500 font-medium transition-colors">販売事業</Link>
-              <Link href="/manufacturers" className="text-gray-700 hover:text-cyan-500 font-medium transition-colors">取扱メーカー</Link>
-              <Link href="/about" className="text-gray-700 hover:text-cyan-500 font-medium transition-colors">会社概要</Link>
-              <Link href="/contact" className="text-gray-700 hover:text-cyan-500 font-medium transition-colors">お問い合わせ</Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header currentPage="about" />
 
       {/* ヘッダー画像 */}
       <div className="h-48 bg-gradient-to-r from-purple-100 to-purple-200 relative overflow-hidden">

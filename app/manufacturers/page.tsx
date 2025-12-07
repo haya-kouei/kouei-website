@@ -1,35 +1,13 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { getManufacturers } from '@/lib/content-loader'
+import Header from '@/components/Header'
 
 export default async function ManufacturersPage() {
   const manufacturers = await getManufacturers()
   
   return (
     <div className="min-h-screen bg-white">
-      {/* ヘッダー */}
-      <header className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <Link href="/">
-              <Image
-                src="/kouei-logo.png"
-                alt="KOUEI"
-                width={320}
-                height={90}
-                priority
-                className="w-auto"
-              />
-            </Link>
-            <nav className="hidden md:flex space-x-8">
-              <Link href="/sales" className="text-gray-700 hover:text-kouei-blue font-bold transition-colors">販売事業</Link>
-              <Link href="/manufacturers" className="text-kouei-blue hover:text-kouei-blue font-bold transition-colors">取扱メーカー</Link>
-              <Link href="/about" className="text-gray-700 hover:text-kouei-blue font-bold transition-colors">会社概要</Link>
-              <Link href="/contact" className="text-gray-700 hover:text-kouei-blue font-bold transition-colors">お問い合わせ</Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header currentPage="manufacturers" />
 
       {/* ヘッダー画像 */}
       <div className="h-48 bg-gradient-to-r from-amber-100 to-amber-200 relative overflow-hidden">
