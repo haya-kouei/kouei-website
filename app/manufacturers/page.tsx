@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { getManufacturers } from '@/lib/content-loader'
 
 export default async function ManufacturersPage() {
@@ -7,15 +8,24 @@ export default async function ManufacturersPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* ヘッダー */}
-      <header className="bg-gray-50 shadow-sm">
+      <header className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <Link href="/" className="brand-logo text-3xl">KOUEI</Link>
+            <Link href="/">
+              <Image
+                src="/kouei-logo.png"
+                alt="KOUEI"
+                width={320}
+                height={90}
+                priority
+                className="w-auto"
+              />
+            </Link>
             <nav className="hidden md:flex space-x-8">
-              <Link href="/sales" className="text-gray-700 hover:text-cyan-500 font-medium transition-colors">販売事業</Link>
-              <Link href="/manufacturers" className="text-cyan-500 hover:text-cyan-500 font-medium transition-colors">取扱メーカー</Link>
-              <Link href="/about" className="text-gray-700 hover:text-cyan-500 font-medium transition-colors">会社概要</Link>
-              <Link href="/contact" className="text-gray-700 hover:text-cyan-500 font-medium transition-colors">お問い合わせ</Link>
+              <Link href="/sales" className="text-gray-700 hover:text-kouei-blue font-bold transition-colors">販売事業</Link>
+              <Link href="/manufacturers" className="text-kouei-blue hover:text-kouei-blue font-bold transition-colors">取扱メーカー</Link>
+              <Link href="/about" className="text-gray-700 hover:text-kouei-blue font-bold transition-colors">会社概要</Link>
+              <Link href="/contact" className="text-gray-700 hover:text-kouei-blue font-bold transition-colors">お問い合わせ</Link>
             </nav>
           </div>
         </div>
@@ -32,32 +42,42 @@ export default async function ManufacturersPage() {
       <main className="container mx-auto px-4 py-12">
         {manufacturers.categories?.map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-800 mb-8">{category.name}</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {category.companies.map((company, companyIndex) => {
-                const CardWrapper = company.link ? 'a' : 'div';
-                const cardProps = company.link ? { href: company.link, target: '_blank', rel: 'noopener noreferrer' } : {};
-
-                return (
-                  <CardWrapper
-                    key={companyIndex}
-                    {...cardProps}
-                    className="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-left block"
-                  >
-                    <div className="flex items-start justify-between mb-3">
-                      <div className="flex-1">
-                        <h3 className="text-gray-900 font-bold text-base mb-1 leading-tight">{company.name}</h3>
-                        <p className="text-gray-500 text-xs leading-relaxed">{company.name_en}</p>
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">{category.name}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-5">
+              {category.companies.filter(company => company.display !== false).map((company, companyIndex) => (
+                <div key={companyIndex}>
+                  {company.link ? (
+                    <a
+                      href={company.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block group"
+                    >
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-xs font-bold text-gray-900 group-hover:text-kouei-blue leading-tight transition-colors duration-200">{company.name}</span>
+                        {company.has_partnership && (
+                          <span className="inline-block bg-orange-100 text-orange-600 text-[10px] px-1.5 py-0.5 rounded">
+                            取引
+                          </span>
+                        )}
                       </div>
-                      {company.has_partnership && (
-                        <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded font-medium ml-2 flex-shrink-0">
-                          取引
-                        </span>
-                      )}
-                    </div>
-                  </CardWrapper>
-                );
-              })}
+                      <div className="text-[11px] text-gray-400 group-hover:text-gray-600 leading-tight transition-colors duration-200">{company.name_en}</div>
+                    </a>
+                  ) : (
+                    <>
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-xs font-bold text-gray-900 leading-tight">{company.name}</span>
+                        {company.has_partnership && (
+                          <span className="inline-block bg-orange-100 text-orange-600 text-[10px] px-1.5 py-0.5 rounded">
+                            取引
+                          </span>
+                        )}
+                      </div>
+                      <div className="text-[11px] text-gray-400 leading-tight">{company.name_en}</div>
+                    </>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         ))}

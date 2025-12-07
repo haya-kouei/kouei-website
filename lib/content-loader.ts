@@ -30,6 +30,7 @@ export interface ManufacturerCompany {
   name_en: string
   has_partnership: boolean
   link?: string
+  display?: boolean
 }
 
 export interface ManufacturerCategory {
