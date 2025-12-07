@@ -116,7 +116,7 @@ export default function ContactPage() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kouei-blue"
                   />
                 </div>
                 
@@ -131,7 +131,7 @@ export default function ContactPage() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kouei-blue"
                   />
                 </div>
               </div>
@@ -147,7 +147,7 @@ export default function ContactPage() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kouei-blue"
                   />
                 </div>
                 
@@ -161,7 +161,7 @@ export default function ContactPage() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kouei-blue"
                   />
                 </div>
               </div>
@@ -203,20 +203,10 @@ export default function ContactPage() {
                 />
               </div>
 
-              <div className="text-sm text-gray-600 bg-gray-50 p-4 rounded-lg">
-                <p className="mb-2">
-                  <strong>個人情報の取り扱いについて</strong>
-                </p>
-                <p>
-                  お預かりした個人情報は、お問い合わせの回答およびサービス向上の目的のみに使用し、
-                  第三者への提供は行いません。詳細は当社のプライバシーポリシーをご確認ください。
-                </p>
-              </div>
-
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+                className="w-full bg-kouei-blue text-white py-3 px-4 rounded-md hover:bg-kouei-blue-light focus:outline-none focus:ring-2 focus:ring-kouei-blue disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
               >
                 {isSubmitting ? '送信中...' : '送信する'}
               </button>
@@ -233,32 +223,21 @@ export default function ContactPage() {
                 <p className="text-sm text-gray-600">KOUEI JAPAN TRADING CO., LTD.</p>
                 <p className="pt-2">〒639-0223</p>
                 <p>奈良県香芝市真美ヶ丘1-13−35 No.02</p>
-                <p className="pt-2">
-                  <strong>Email:</strong>
-                  <a href="mailto:kouei.contact@kjt.co.jp" className="text-blue-600 hover:text-blue-800 ml-1">
+                <div className="flex items-center gap-2 pt-2">
+                  <svg className="w-5 h-5 text-gray-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <a href="mailto:kouei.contact@kjt.co.jp" className="text-kouei-blue hover:text-kouei-blue-light">
                     kouei.contact@kjt.co.jp
                   </a>
-                </p>
-                <p>
-                  <strong>ウェブサイト:</strong>
-                  <a href="https://www.kjt.co.jp" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 ml-1">
+                </div>
+                <div className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-gray-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                  <a href="https://www.kjt.co.jp" target="_blank" rel="noopener noreferrer" className="text-kouei-blue hover:text-kouei-blue-light">
                     https://www.kjt.co.jp
                   </a>
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">グローバルオフィス</h3>
-              <div className="space-y-3">
-                <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg">
-                  <h4 className="font-medium text-blue-800">Kouei Vietnam Trading</h4>
-                  <p className="text-sm text-blue-700">ベトナム ホーチミン市</p>
-                </div>
-                
-                <div className="bg-green-50 border border-green-200 p-4 rounded-lg">
-                  <h4 className="font-medium text-green-800">Kouei Myanmar Branch</h4>
-                  <p className="text-sm text-green-700">ミャンマー ヤンゴン</p>
                 </div>
               </div>
             </div>

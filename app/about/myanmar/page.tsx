@@ -98,7 +98,7 @@ export default async function MyanmarPage() {
                 <tr className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-3 bg-gray-50 text-gray-600 text-sm">Email</td>
                   <td className="px-6 py-3 text-sm">
-                    <a href={`mailto:${myanmar.contact_info.headquarters.email}`} className="text-blue-600 hover:underline">
+                    <a href={`mailto:${myanmar.contact_info.headquarters.email}`} className="text-kouei-blue hover:underline">
                       {myanmar.contact_info.headquarters.email}
                     </a>
                   </td>

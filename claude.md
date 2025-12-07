@@ -713,17 +713,67 @@ cp data/main_images/image_supplier.jpg public/supplier-bg.jpg
 
 ### ファイル変更一覧
 - `app/page.tsx`: トップページのメインビジュアルとスペーシング調整
-- `app/about/vietnam/page.tsx`: デザイン刷新、フォントサイズ縮小、背景画像追加
-- `app/about/myanmar/page.tsx`: デザイン刷新、フォントサイズ縮小、背景画像置き換え
-- `app/about/japan/page.tsx`: フォントサイズ縮小、背景画像追加
-- `app/contact/page.tsx`: 背景画像追加
+- `app/about/vietnam/page.tsx`: デザイン刷新、フォントサイズ縮小、背景画像追加、koueiカラー統一
+- `app/about/myanmar/page.tsx`: デザイン刷新、フォントサイズ縮小、背景画像置き換え、koueiカラー統一
+- `app/about/japan/page.tsx`: フォントサイズ縮小、背景画像追加、koueiカラー統一
+- `app/contact/page.tsx`: 背景画像追加、アイコン追加、セクション削除、koueiカラー統一
 - `app/manufacturers/page.tsx`: 背景画像追加
+- `components/Footer.tsx`: koueiカラー統一
 - `public/main-image.jpg`: トップページ・日本ページ背景画像（235KB）
 - `public/vietnam-bg.png`: ベトナムページ背景画像（1.2MB）
 - `public/myanmar-bg.jpg`: ミャンマーページ背景画像（485KB）
 - `public/contact-bg.jpg`: お問い合わせページ背景画像（389KB）
 - `public/supplier-bg.jpg`: 取扱メーカーページ背景画像（263KB）
 - `CLAUDE.md`: ドキュメント更新
+
+### ブランドカラー統一実装（2025年12月8日 追加実装）
+
+サイト全体の青色系カラーをkoueiブランドカラー (#0095d2) に統一しました。
+
+#### カスタムカラー定義
+- **kouei-blue**: `#0095d2` (メインブランドカラー)
+- **kouei-blue-light**: `#6AA8E1` (ホバー・アクセント用)
+
+#### 変更箇所
+
+**お問い合わせページ (/contact)**
+- Emailアイコン・ウェブサイトアイコン: テキストラベルからSVGアイコンに変更
+- フォーム入力フォーカスリング: `focus:ring-blue-500` → `focus:ring-kouei-blue`
+- 送信ボタン: `bg-blue-600 hover:bg-blue-700` → `bg-kouei-blue hover:bg-kouei-blue-light`
+- リンク: `text-blue-600 hover:text-blue-800` → `text-kouei-blue hover:text-kouei-blue-light`
+- グローバルオフィスセクション削除
+- 個人情報の取り扱いセクション削除
+
+**フッター (components/Footer.tsx)**
+- 全見出し: `text-kouei-blue-light` → `text-kouei-blue`
+- 全リンクホバー: `hover:text-kouei-blue-light` → `hover:text-kouei-blue`
+
+**日本本社ページ (/about/japan)**
+- Vision/Mission見出し: `text-cyan-600` → `text-kouei-blue`
+- 弊社の強みチェックマーク: `bg-blue-500` → `bg-kouei-blue`
+- 弊社の強み背景: `bg-blue-50` → `bg-cyan-50`
+- テーブルリンク: `text-blue-600 hover:text-blue-700` → `text-kouei-blue hover:text-kouei-blue-light`
+- CTAセクショングラデーション: `from-blue-500 to-blue-600` → `from-kouei-blue to-kouei-blue-light`
+- CTAボタン: `text-blue-600` → `text-kouei-blue`
+- 二次ボタン: `bg-blue-400 hover:bg-blue-500` → `bg-kouei-blue-light hover:bg-kouei-blue`
+
+**ベトナム拠点ページ (/about/vietnam)**
+- Emailリンク: `text-blue-600` → `text-kouei-blue`
+
+**ミャンマー支店ページ (/about/myanmar)**
+- Emailリンク: `text-blue-600` → `text-kouei-blue`
+
+#### 技術的実装
+すべての青色系カラーを以下のパターンで統一:
+- 通常状態: `kouei-blue` (#0095d2)
+- ホバー状態: `kouei-blue-light` (#6AA8E1)
+- フォーカスリング: `ring-kouei-blue`
+
+#### メリット
+- ブランドアイデンティティの統一
+- デザインの一貫性向上
+- カラーコードの中央管理（tailwind.config.js）
+- メンテナンス性の向上
 
 ### 今後の改善検討事項
 - [ ] ベトナムページのチーム写真追加 (`/public/vietnam-team.jpg`)

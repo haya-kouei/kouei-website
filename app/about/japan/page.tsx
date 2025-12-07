@@ -39,13 +39,13 @@ export default async function JapanPage() {
             <div className="text-center mb-8">
               {japan.vision && (
                 <div className="mb-6">
-                  <h2 className="text-lg font-semibold text-cyan-600 mb-3">Vision</h2>
+                  <h2 className="text-lg font-semibold text-kouei-blue mb-3">Vision</h2>
                   <p className="text-xl text-gray-800 leading-relaxed">{japan.vision}</p>
                 </div>
               )}
               {japan.mission && (
                 <div>
-                  <h2 className="text-lg font-semibold text-cyan-600 mb-3">Mission</h2>
+                  <h2 className="text-lg font-semibold text-kouei-blue mb-3">Mission</h2>
                   <p className="text-xl text-gray-800 leading-relaxed">{japan.mission}</p>
                 </div>
               )}
@@ -67,11 +67,11 @@ export default async function JapanPage() {
         {japan.strengths && (
           <section className="mb-12">
             <h2 className="text-xl font-bold text-gray-800 mb-8 text-center">弊社の強み</h2>
-            <div className="bg-blue-50 rounded-lg p-8">
+            <div className="bg-cyan-50 rounded-lg p-8">
               <div className="space-y-3">
                 {japan.strengths.map((strength, index) => (
                   <div key={index} className="flex items-start">
-                    <span className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
+                    <span className="w-5 h-5 bg-kouei-blue rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
                       <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
@@ -175,7 +175,7 @@ export default async function JapanPage() {
                   <tr className="hover:bg-gray-50 transition-colors">
                     <td className="px-6 py-3 text-gray-600 text-sm bg-gray-50">ウェブサイト</td>
                     <td className="px-6 py-3 text-gray-800 text-sm">
-                      <a href={japan.contact_info.headquarters.website} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 transition-colors underline">
+                      <a href={japan.contact_info.headquarters.website} target="_blank" rel="noopener noreferrer" className="text-kouei-blue hover:text-kouei-blue-light transition-colors underline">
                         {japan.contact_info.headquarters.website}
                       </a>
                     </td>
@@ -184,7 +184,7 @@ export default async function JapanPage() {
                 <tr className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-3 text-gray-600 text-sm bg-gray-50">連絡先</td>
                   <td className="px-6 py-3 text-gray-800 text-sm">
-                    <a href={`mailto:${japan.contact_info.headquarters.email}`} className="text-blue-600 hover:text-blue-700 transition-colors">
+                    <a href={`mailto:${japan.contact_info.headquarters.email}`} className="text-kouei-blue hover:text-kouei-blue-light transition-colors">
                       {japan.contact_info.headquarters.email}
                     </a>
                   </td>
@@ -195,19 +195,19 @@ export default async function JapanPage() {
         </section>
 
         {/* CTA セクション */}
-        <section className="text-center bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-12 text-white">
+        <section className="text-center bg-gradient-to-r from-kouei-blue to-kouei-blue-light rounded-lg p-12 text-white">
           <h2 className="text-3xl font-bold mb-4">お問い合わせ</h2>
-          <p className="text-xl mb-8 text-blue-100">商品取引・事業提携に関するご相談はお気軽にどうぞ</p>
+          <p className="text-xl mb-8 text-cyan-100">商品取引・事業提携に関するご相談はお気軽にどうぞ</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105"
+            <Link
+              href="/contact"
+              className="inline-block bg-white text-kouei-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105"
             >
               お問い合わせフォーム
             </Link>
-            <Link 
-              href="/about" 
-              className="inline-block bg-blue-400 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 transition-colors transform hover:scale-105"
+            <Link
+              href="/about"
+              className="inline-block bg-kouei-blue-light text-white px-8 py-4 rounded-lg font-semibold hover:bg-kouei-blue transition-colors transform hover:scale-105"
             >
               会社概要に戻る
             </Link>

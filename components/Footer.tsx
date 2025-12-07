@@ -6,17 +6,17 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h4 className="font-bold mb-4 text-kouei-blue-light">事業内容</h4>
+            <h4 className="font-bold mb-4 text-kouei-blue">事業内容</h4>
             <ul className="space-y-2 text-gray-300 text-sm">
-              <li><Link href="/sales" className="hover:text-kouei-blue-light transition-colors">販売事業</Link></li>
-              <li><Link href="/manufacturers" className="hover:text-kouei-blue-light transition-colors">取扱メーカー</Link></li>
+              <li><Link href="/sales" className="hover:text-kouei-blue transition-colors">販売事業</Link></li>
+              <li><Link href="/manufacturers" className="hover:text-kouei-blue transition-colors">取扱メーカー</Link></li>
               <li>鉄鋼製品・機械工具</li>
               <li>設備・プラント機器</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold mb-4 text-kouei-blue-light">グローバルオフィス</h4>
+            <h4 className="font-bold mb-4 text-kouei-blue">グローバルオフィス</h4>
             <ul className="space-y-2 text-gray-300 text-sm">
               <li>日本本社</li>
               <li>ベトナム拠点</li>
@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-4 text-kouei-blue-light">お問い合わせ</h4>
+            <h4 className="font-bold mb-4 text-kouei-blue">お問い合わせ</h4>
             <div className="text-gray-300 text-sm space-y-1">
               <div className="flex items-center gap-2">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -33,7 +33,7 @@ export default function Footer() {
                 </svg>
                 <span>kouei.contact@kjt.co.jp</span>
               </div>
-              <Link href="/contact" className="inline-block mt-3 text-kouei-blue-light hover:opacity-80 transition-opacity">
+              <Link href="/contact" className="inline-block mt-3 text-kouei-blue hover:opacity-80 transition-opacity">
                 お問い合わせフォーム →
               </Link>
             </div>
