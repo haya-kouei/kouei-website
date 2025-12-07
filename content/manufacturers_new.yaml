@@ -2,110 +2,35 @@ manufacturers:
   categories:
     - name: 作業工具
       companies:
-        - name: 株式会社ダイア
-          name_en: DAIA CORPORATION
-          has_partnership: true
-          link: https://www.daia-net.co.jp/
-          display: true
         - name: 株式会社エクセン
           name_en: Exen Corporation
           has_partnership: true
           link: https://www.exen.co.jp/
-          display: true
-        - name: 株式会社イチネンアクセス
-          name_en: ICHINEN AXESS Corporation
-          has_partnership: true
-          link: https://www.axes-s.com/ja/
-          display: true
-        - name: 株式会社IKK
-          name_en: IKK CO., LTD.
-          has_partnership: true
-          link: https://www.diamond-ikk.com/
-          display: true
-        - name: 株式会社関西工具製作所
-          name_en: Kansai Kogu Manufacturing Co Ltd.
-          has_partnership: true
-          link: https://kansaikogu.com/
-          display: true
-        - name: マックス株式会社
-          name_en: MAX Co.,Ltd
-          has_partnership: false
-          link: https://www.max-ltd.co.jp/
-          display: true
-        - name: 株式会社マキタ
-          name_en: Makita Corporation
-          has_partnership: false
-          link: https://www.makita.co.jp/
-          display: true
-        - name: 株式会社丸信工業社
-          name_en: Marushin Kougyousha Co., Ltd
-          has_partnership: false
-          link: http://www.marushin-lion.co.jp/
-          display: true
-        - name: 株式会社松田精機
-          name_en: Matsuda Seiki Co., Ltd.
-          has_partnership: false
-          link: http://www.matsudaseiki.co.jp/
-          display: true
-        - name: 三笠産業株式会社
-          name_en: Mikasa Industry Co., Ltd.
-          has_partnership: false
-          link: https://www.mikasas.jp/
-          display: true
-        - name: 宮川工業株式会社
-          name_en: Miyakawa Industry Co., Ltd.
-          has_partnership: true
-          link: https://www.miyakawa.com/
-          display: true
-        - name: 株式会社中谷機械製作所
-          name_en: Nakatani Co. Ltd.
-          has_partnership: true
-          link: https://nks-nakatani.co.jp/
-          display: true
-        - name: 日東工器株式会社
-          name_en: Nitto Kohki Co., Ltd.
-          has_partnership: false
-          link: https://www.nitto-kohki.co.jp/
-          display: true
-        - name: 株式会社オグラ
-          name_en: Ogura & Co., Ltd
-          has_partnership: false
-          link: https://ogura-web.com/
-          display: true
-        - name: 株式会社東日製作所
-          name_en: Tohnichi Manufacturing Co., Ltd.
-          has_partnership: false
-          link: https://www.tohnichi.co.jp/
-          display: true
-        - name: TONE株式会社
-          name_en: Tone Co., Ltd.
-          has_partnership: true
-          link: https://www.tonetool.co.jp/
-          display: true
-        - name: トップ工業株式会社
-          name_en: Top Kogyo Company, Ltd.
-          has_partnership: false
-          link: https://www.toptools.co.jp/
-          display: true
-        - name: トラスコ中山株式会社
-          name_en: Trusco Nakayama Co., Ltd.
-          has_partnership: true
-          link: https://www.trusco.co.jp/
-          display: true
-        - name: 株式会社ユタニ
-          name_en: Yutani Corporation
-          has_partnership: true
-          link: https://yutani.co.jp/
-          display: true
+          display: false
         - name: 不二空機株式会社
           name_en: Fuji Tools
           has_partnership: false
           link: https://www.fujitools.jp/
           display: false
+        - name: 株式会社イチネンアクセス
+          name_en: ICHINEN AXESS Corporation
+          has_partnership: true
+          link: https://www.axes-s.com/ja/
+          display: false
+        - name: 株式会社IKK
+          name_en: IKK CO., LTD.
+          has_partnership: true
+          link: https://www.diamond-ikk.com/
+          display: false
         - name: ジロー株式会社
           name_en: Jiro Co., Ltd.
           has_partnership: true
           link: https://www.jiro-kk.co.jp/
+          display: false
+        - name: 株式会社関西工具製作所
+          name_en: Kansai Kogu Manufacturing Co Ltd.
+          has_partnership: true
+          link: https://kansaikogu.com/
           display: false
         - name: KAWASAKI MACHINERY CO., LTD.
           name_en: Kawasaki Machinery Co.,Ltd.
@@ -127,15 +52,80 @@ manufacturers:
           has_partnership: false
           link: https://www.kuken.co.jp/
           display: false
+        - name: 株式会社マキタ
+          name_en: Makita Corporation
+          has_partnership: false
+          link: https://www.makita.co.jp/
+          display: false
+        - name: 株式会社丸信工業社
+          name_en: Marushin Kougyousha Co., Ltd
+          has_partnership: false
+          link: http://www.marushin-lion.co.jp/
+          display: false
+        - name: 株式会社松田精機
+          name_en: Matsuda Seiki Co., Ltd.
+          has_partnership: false
+          link: http://www.matsudaseiki.co.jp/
+          display: false
+        - name: マックス株式会社
+          name_en: MAX Co.,Ltd
+          has_partnership: false
+          link: https://www.max-ltd.co.jp/
+          display: false
+        - name: 三笠産業株式会社
+          name_en: Mikasa Industry Co., Ltd.
+          has_partnership: false
+          link: https://www.mikasas.jp/
+          display: false
+        - name: 宮川工業株式会社
+          name_en: Miyakawa Industry Co., Ltd.
+          has_partnership: true
+          link: https://www.miyakawa.com/
+          display: false
+        - name: 株式会社中谷機械製作所
+          name_en: Nakatani Co. Ltd.
+          has_partnership: true
+          link: https://nks-nakatani.co.jp/
+          display: false
+        - name: 日東工器株式会社
+          name_en: Nitto Kohki Co., Ltd.
+          has_partnership: false
+          link: https://www.nitto-kohki.co.jp/
+          display: false
         - name: オーエッチ工業株式会社
           name_en: O.H.Industrial Co.,Ltd.
           has_partnership: false
           link: https://www.ohnet.co.jp/
           display: false
+        - name: 株式会社オグラ
+          name_en: Ogura & Co., Ltd
+          has_partnership: false
+          link: https://ogura-web.com/
+          display: false
+        - name: 株式会社東日製作所
+          name_en: Tohnichi Manufacturing Co., Ltd.
+          has_partnership: false
+          link: https://www.tohnichi.co.jp/
+          display: false
         - name: 東空販売株式会社
           name_en: Toku Pneumatic Co.,Ltd.
           has_partnership: false
           link: https://www.toku-net.co.jp/
+          display: false
+        - name: TONE株式会社
+          name_en: Tone Co., Ltd.
+          has_partnership: true
+          link: https://www.tonetool.co.jp/
+          display: false
+        - name: トップ工業株式会社
+          name_en: Top Kogyo Company, Ltd.
+          has_partnership: false
+          link: https://www.toptools.co.jp/
+          display: false
+        - name: トラスコ中山株式会社
+          name_en: Trusco Nakayama Co., Ltd.
+          has_partnership: true
+          link: https://www.trusco.co.jp/
           display: false
         - name: 株式会社山本製作所
           name_en: Yamamoto Seisaku Co.,Ltd.
@@ -147,127 +137,137 @@ manufacturers:
           has_partnership: false
           link: https://www.yokota-kogyo.co.jp/
           display: false
+        - name: 株式会社ユタニ
+          name_en: Yutani Corporation
+          has_partnership: true
+          link: https://yutani.co.jp/
+          display: false
+        - name: 株式会社ダイア
+          name_en: DAIA CORPORATION
+          has_partnership: true
+          link: https://www.daia-net.co.jp/
+          display: false
     - name: 荷役運搬機器
       companies:
-        - name: 株式会社菱小
-          name_en: Hishiko Co., Ltd.
-          has_partnership: false
-          link: https://www.hishiko.co.jp/
-          display: true
         - name: イーグル・クランプ株式会社
           name_en: Eagle Clamp Co., Ltd.
           has_partnership: true
           link: https://www.eagleclamp.co.jp/
-          display: true
+          display: false
         - name: 象印チエンブロツク株式会社
           name_en: Elephant Chain Block Co., Ltd.
           has_partnership: false
           link: https://www.elephant.co.jp/
-          display: true
+          display: false
         - name: 遠藤工業株式会社
           name_en: Endo Kogyo Co., Ltd.
           has_partnership: true
           link: http://www.endo-kogyo.co.jp/japanese/index.html
-          display: true
-        - name: ハンマーキャスター株式会社
-          name_en: Hammer Caster Co., Ltd.
-          has_partnership: false
-          link: https://www.hammer-caster.co.jp/
-          display: true
-        - name: 日本クランプ株式会社
-          name_en: Japan Clamp
-          has_partnership: false
-          link: http://jclamp.co.jp/
-          display: true
-        - name: カネテック株式会社
-          name_en: Kanetec Co., Ltd.
-          has_partnership: true
-          link: http://www.kanetec.co.jp/
-          display: true
-        - name: カツヤマキカイ株式会社
-          name_en: Katsuyama Kikai, Ltd.
-          has_partnership: false
-          link: https://www.katsuyama.co.jp/
-          display: true
-        - name: 株式会社キトー
-          name_en: Kito Corporation
-          has_partnership: false
-          link: https://kito.com/jp/
-          display: true
-        - name: コンドーテック株式会社
-          name_en: Kondotec Inc.
-          has_partnership: true
-          link: https://www.kondotec.co.jp/
-          display: true
-        - name: 株式会社今野製作所
-          name_en: Konno Corporation
-          has_partnership: true
-          link: https://eagle-jack.jp/
-          display: true
-        - name: 三木ネツレン株式会社
-          name_en: Miki Netsuren Industrial Co., Ltd.
-          has_partnership: false
-          link: https://www.neturen.co.jp/
-          display: true
-        - name: 三鈴工機株式会社
-          name_en: Misuzu Koki Co., Ltd.
-          has_partnership: false
-          link: https://www.misuzukoki.jp/
-          display: true
-        - name: 株式会社をくだ屋技研
-          name_en: Okudaya Giken Co.,Ltd
-          has_partnership: true
-          link: http://www.opk.co.jp
-          display: true
-        - name: 株式会社三栄精機製作所
-          name_en: SAN-EI SEIKI SEISAKUSHO CO., LTD.
-          has_partnership: false
-          link: https://sanei-air.com/
-          display: true
-        - name: 株式会社双和製作所
-          name_en: Sowa Seisakusyo Co., Ltd.
-          has_partnership: false
-          link: http://sowaseisakusyo.sakura.ne.jp/
-          display: true
-        - name: 株式会社スーパーツール
-          name_en: Super Tool Co., Ltd.
-          has_partnership: false
-          link: https://www.supertool.co.jp/index.php
-          display: true
-        - name: 株式会社テザック
-          name_en: Tesac Corporation
-          has_partnership: false
-          link: https://www.tesac.co.jp/
-          display: true
-        - name: 東光産業株式会社
-          name_en: Toko Sangyo Co., Ltd.
-          has_partnership: true
-          link: https://www.to-ko-sangyo.co.jp/
-          display: true
-        - name: 東正車輌株式会社
-          name_en: Tosei Vehicle Co., Ltd.
-          has_partnership: false
-          link: http://www.tosei-s.co.jp/
-          display: true
+          display: false
         - name: 福山鍛鋼造機株式会社
           name_en: F.T. Industries Co.,Ltd.
           has_partnership: false
           link: http://www.ft-ind.co.jp/
+          display: false
+        - name: ハンマーキャスター株式会社
+          name_en: Hammer Caster Co., Ltd.
+          has_partnership: false
+          link: https://www.hammer-caster.co.jp/
+          display: false
+        - name: 株式会社菱小
+          name_en: Hishiko Co., Ltd.
+          has_partnership: false
+          link: https://www.hishiko.co.jp/
+          display: false
+        - name: カネテック株式会社
+          name_en: Kanetec Co., Ltd.
+          has_partnership: true
+          link: http://www.kanetec.co.jp/
+          display: false
+        - name: カツヤマキカイ株式会社
+          name_en: Katsuyama Kikai, Ltd.
+          has_partnership: false
+          link: https://www.katsuyama.co.jp/
+          display: false
+        - name: 株式会社キトー
+          name_en: Kito Corporation
+          has_partnership: false
+          link: https://kito.com/jp/
+          display: false
+        - name: コンドーテック株式会社
+          name_en: Kondotec Inc.
+          has_partnership: true
+          link: https://www.kondotec.co.jp/
+          display: false
+        - name: 株式会社今野製作所
+          name_en: Konno Corporation
+          has_partnership: true
+          link: https://eagle-jack.jp/
+          display: false
+        - name: 三木ネツレン株式会社
+          name_en: Miki Netsuren Industrial Co., Ltd.
+          has_partnership: false
+          link: https://www.neturen.co.jp/
+          display: false
+        - name: 三鈴工機株式会社
+          name_en: Misuzu Koki Co., Ltd.
+          has_partnership: false
+          link: https://www.misuzukoki.jp/
           display: false
         - name: 浪速鉃工株式会社
           name_en: Naniwa Iron Works Co., Ltd.
           has_partnership: false
           link: https://www.naniwa-iron.com/
           display: false
+        - name: 日本クランプ株式会社
+          name_en: Japan Clamp
+          has_partnership: false
+          link: http://jclamp.co.jp/
+          display: false
         - name: 株式会社おくだ屋技研
           name_en: Okudaya Giken CO., LTD.
           has_partnership: false
           link: https://www.opk.co.jp/
           display: false
+        - name: 株式会社をくだ屋技研
+          name_en: Okudaya Giken Co.,Ltd
+          has_partnership: true
+          link: http://www.opk.co.jp
+          display: false
+        - name: 株式会社三栄精機製作所
+          name_en: SAN-EI SEIKI SEISAKUSHO CO., LTD.
+          has_partnership: false
+          link: https://sanei-air.com/
+          display: false
+        - name: 株式会社双和製作所
+          name_en: Sowa Seisakusyo Co., Ltd.
+          has_partnership: false
+          link: http://sowaseisakusyo.sakura.ne.jp/
+          display: false
+        - name: 株式会社スーパーツール
+          name_en: Super Tool Co., Ltd.
+          has_partnership: false
+          link: https://www.supertool.co.jp/index.php
+          display: false
         - name: 大洋製器工業株式会社
           name_en: Taiyo Seiki Kogyo Co., Ltd.
           has_partnership: false
           link: https://www.taiyoseiki.co.jp/
+          display: false
+        - name: 株式会社テザック
+          name_en: Tesac Corporation
+          has_partnership: false
+          link: https://www.tesac.co.jp/
+          display: false
+        - name: 東光産業株式会社
+          name_en: Toko Sangyo Co., Ltd.
+          has_partnership: true
+          link: https://www.to-ko-sangyo.co.jp/
+          display: false
+        - name: 東正車輌株式会社
+          name_en: Tosei Vehicle Co., Ltd.
+          has_partnership: false
+          link: http://www.tosei-s.co.jp/
           display: false
         - name: 東洋工機株式会社
           name_en: Toyo Machinery & Metal Co., Ltd.
@@ -290,165 +290,165 @@ manufacturers:
           name_en: DEICY Corporation
           has_partnership: true
           link: https://www.deicy.co.jp/company/
-          display: true
+          display: false
         - name: フジツール株式会社
           name_en: Fuji Tool Co., Ltd.
           has_partnership: false
           link: https://www.fujitool.co.jp/
-          display: true
+          display: false
         - name: 長谷川電機工業株式会社
           name_en: Hasegawa Electric Co., Ltd
           has_partnership: false
           link: https://www.hasegawa-elec.co.jp/
-          display: true
+          display: false
+        - name: ジャパンプローブ株式会社
+          name_en: JAPAN PROBE CO., LTD.
+          has_partnership: false
+          link: https://www.jp-probe.com/
+          display: false
+        - name: ジャパンプローブ株式会社
+          name_en: Japan Probe Co, Ltd
+          has_partnership: true
+          link: https://www.jp-probe.com/
+          display: false
         - name: 株式会社検査技術研究所
           name_en: Inspection Technology Research Institute Co., Ltd.
           has_partnership: true
           link: https://www.probe-kgk.com/
-          display: true
-        - name: ジャパンプローブ株式会社
-          name_en: JAPAN PROBE CO., LTD.
-          has_partnership: true
-          link: https://www.jp-probe.com/
-          display: true
-        - name: 株式会社木幡計器製作所
-          name_en: KOBATA GAUGE MFG. CO., LTD.
-          has_partnership: true
-          link: https://kobata.co.jp/
-          display: true
+          display: false
         - name: 株式会社ケツト科学研究所
           name_en: Kett Electric Laboratory Co., Ltd.
           has_partnership: true
           link: https://www.kett.co.jp/
-          display: true
-        - name: ライン精機株式会社
-          name_en: Line Seiki Co., Ltd.
-          has_partnership: false
-          link: https://www.line.co.jp/
-          display: true
-        - name: 美鈴印刷紙工株式会社
-          name_en: Misuz Insatsu Sikou co.,ltd
+          display: false
+        - name: 株式会社木幡計器製作所
+          name_en: KOBATA GAUGE MFG. CO., LTD.
           has_partnership: true
-          link: http://www.misuz.co.jp/
-          display: true
-        - name: 株式会社ミツトヨ
-          name_en: Mitutoyo Corporation
-          has_partnership: false
-          link: https://www.mitutoyo.co.jp/
-          display: true
-        - name: ムラテックKDS株式会社
-          name_en: Muratec-Kds Corp.
-          has_partnership: false
-          link: https://muratec-kds.jp/
-          display: true
-        - name: 長野計器株式会社
-          name_en: Nagano Keiki Co., Ltd.
-          has_partnership: false
-          link: https://www.naganokeiki.co.jp/
-          display: true
-        - name: 新潟精機株式会社
-          name_en: Niigata Seiki Co.,Ltd.
-          has_partnership: false
-          link: https://www.niigataseiki.co.jp/
-          display: true
-        - name: 日本金属電鋳株式会社
-          name_en: Nippon Kinzoku Co., Ltd.
-          has_partnership: false
-          display: true
-        - name: 株式会社大菱計器製作所
-          name_en: Obishi Keiki Seisakusho Co., Ltd.
-          has_partnership: false
-          link: https://www.obishi.co.jp/
-          display: true
-        - name: 株式会社尾崎製作所
-          name_en: Ozaki Mfg. Co., Ltd.
-          has_partnership: false
-          link: http://www.peacockozaki.jp/
-          display: true
-        - name: 菱電湘南エレクトロニクス株式会社
-          name_en: Ryoden Shonan Electronics Co., Ltd.
-          has_partnership: false
-          link: http://www.rsec.co.jp/
-          display: true
-        - name: 株式会社サンコウ電子研究所
-          name_en: Sanko Electronic Laboratory Co., Ltd.
-          has_partnership: false
-          link: https://www.sanko-denshi.co.jp/
-          display: true
-        - name: サンワサプライ株式会社
-          name_en: Sanwa Supply Co., Ltd.
-          has_partnership: false
-          link: https://www.sanwa.co.jp/product/peripheral/measurement/index.html?pan_list=1
-          display: true
-        - name: 株式会社佐藤計量器製作所
-          name_en: Sato Keiryoki Mfg. Co., Ltd.
-          has_partnership: false
-          link: https://www.sksato.co.jp/
-          display: true
-        - name: 株式会社品川測器製作所
-          name_en: Shinagawa Sokki Mfg.Co.,Ltd.
-          has_partnership: true
-          link: https://www.shinagawasokki.co.jp/
-          display: true
-        - name: シンワ測定株式会社
-          name_en: Shinwa Measurement Co., Ltd.
-          has_partnership: false
-          link: https://www.shinwasokutei.co.jp/
-          display: true
-        - name: 株式会社昭和測器
-          name_en: Showa Measuring Instruments Co.,LTD.
-          has_partnership: true
-          link: http://www.showa-sokki.co.jp
-          display: true
-        - name: 昭和測器株式会社
-          name_en: Showa Sokki Corporation
-          has_partnership: true
-          link: http://www.showasokki.co.jp/
-          display: true
-        - name: 東京計器株式会社
-          name_en: TOKYO KEIKI INC.
-          has_partnership: false
-          link: https://www.tokyokeiki.jp/
-          display: true
-        - name: 株式会社立花エレテック
-          name_en: Tachibana Eletech Co.,Ltd
-          has_partnership: false
-          link: https://www.tachibana.co.jp/
-          display: true
-        - name: 株式会社TJMデザイン
-          name_en: Tajima Design Co., Ltd.
-          has_partnership: false
-          link: https://jpn.tajimatool.co.jp/
-          display: true
-        - name: 山里産業株式会社
-          name_en: YAMARI INDUSTRIES, LIMITED
-          has_partnership: true
-          link: https://yamari.co.jp/
-          display: true
-        - name: ヤマヨ測定機株式会社
-          name_en: Yamayo Measuring Tools Co., Ltd.
-          has_partnership: false
-          link: https://www.yamayo.co.jp/index.htm
-          display: true
+          link: https://kobata.co.jp/
+          display: false
         - name: 理化工業株式会社
           name_en: RKC Instrument Inc.
           has_partnership: false
           link: https://www.rkcinst.co.jp/
+          display: false
+        - name: ライン精機株式会社
+          name_en: Line Seiki Co., Ltd.
+          has_partnership: false
+          link: https://www.line.co.jp/
+          display: false
+        - name: 美鈴印刷紙工株式会社
+          name_en: Misuz Insatsu Sikou co.,ltd
+          has_partnership: true
+          link: http://www.misuz.co.jp/
+          display: false
+        - name: 株式会社ミツトヨ
+          name_en: Mitutoyo Corporation
+          has_partnership: false
+          link: https://www.mitutoyo.co.jp/
+          display: false
+        - name: ムラテックKDS株式会社
+          name_en: Muratec-Kds Corp.
+          has_partnership: false
+          link: https://muratec-kds.jp/
+          display: false
+        - name: 長野計器株式会社
+          name_en: Nagano Keiki Co., Ltd.
+          has_partnership: false
+          link: https://www.naganokeiki.co.jp/
+          display: false
+        - name: 新潟精機株式会社
+          name_en: Niigata Seiki Co.,Ltd.
+          has_partnership: false
+          link: https://www.niigataseiki.co.jp/
+          display: false
+        - name: 日本金属電鋳株式会社
+          name_en: Nippon Kinzoku Co., Ltd.
+          has_partnership: false
+          display: false
+        - name: 株式会社大菱計器製作所
+          name_en: Obishi Keiki Seisakusho Co., Ltd.
+          has_partnership: false
+          link: https://www.obishi.co.jp/
           display: false
         - name: オガワ精機株式会社
           name_en: Ogawa Seiki Co., Ltd.
           has_partnership: false
           link: http://www.ogawaseiki.jpn.org/
           display: false
+        - name: 株式会社尾崎製作所
+          name_en: Ozaki Mfg. Co., Ltd.
+          has_partnership: false
+          link: http://www.peacockozaki.jp/
+          display: false
+        - name: 菱電湘南エレクトロニクス株式会社
+          name_en: Ryoden Shonan Electronics Co., Ltd.
+          has_partnership: false
+          link: http://www.rsec.co.jp/
+          display: false
+        - name: 株式会社サンコウ電子研究所
+          name_en: Sanko Electronic Laboratory Co., Ltd.
+          has_partnership: false
+          link: https://www.sanko-denshi.co.jp/
+          display: false
+        - name: サンワサプライ株式会社
+          name_en: Sanwa Supply Co., Ltd.
+          has_partnership: false
+          link: https://www.sanwa.co.jp/product/peripheral/measurement/index.html?pan_list=1
+          display: false
+        - name: 株式会社佐藤計量器製作所
+          name_en: Sato Keiryoki Mfg. Co., Ltd.
+          has_partnership: false
+          link: https://www.sksato.co.jp/
+          display: false
+        - name: 山里産業株式会社
+          name_en: YAMARI INDUSTRIES, LIMITED
+          has_partnership: true
+          link: https://yamari.co.jp/
+          display: false
+        - name: 株式会社品川測器製作所
+          name_en: Shinagawa Sokki Mfg.Co.,Ltd.
+          has_partnership: true
+          link: https://www.shinagawasokki.co.jp/
+          display: false
+        - name: シンワ測定株式会社
+          name_en: Shinwa Measurement Co., Ltd.
+          has_partnership: false
+          link: https://www.shinwasokutei.co.jp/
+          display: false
+        - name: 株式会社昭和測器
+          name_en: Showa Measuring Instruments Co.,LTD.
+          has_partnership: true
+          link: http://www.showa-sokki.co.jp
+          display: false
+        - name: 昭和測器株式会社
+          name_en: Showa Sokki Corporation
+          has_partnership: true
+          link: http://www.showasokki.co.jp/
+          display: false
         - name: サンハヤト株式会社
           name_en: Sunhayato Corp.
           has_partnership: false
           link: https://www.sunhayato.co.jp/
           display: false
+        - name: 株式会社立花エレテック
+          name_en: Tachibana Eletech Co.,Ltd
+          has_partnership: false
+          link: https://www.tachibana.co.jp/
+          display: false
+        - name: 株式会社TJMデザイン
+          name_en: Tajima Design Co., Ltd.
+          has_partnership: false
+          link: https://jpn.tajimatool.co.jp/
+          display: false
         - name: 株式会社田中衡機工業所
           name_en: Tanaka Scale Works Co., Ltd.
           has_partnership: false
           link: https://www.tanaka-scale.co.jp/
+          display: false
+        - name: 東京計器株式会社
+          name_en: TOKYO KEIKI INC.
+          has_partnership: false
+          link: https://www.tokyokeiki.jp/
           display: false
         - name: 東京計装株式会社
           name_en: TOKYO KEISO CO., LTD.
@@ -459,6 +459,11 @@ manufacturers:
           name_en: Tokyo Sokushin Co., Ltd.
           has_partnership: false
           link: https://www.to-soku.co.jp/
+          display: false
+        - name: ヤマヨ測定機株式会社
+          name_en: Yamayo Measuring Tools Co., Ltd.
+          has_partnership: false
+          link: https://www.yamayo.co.jp/index.htm
           display: false
     - name: 油空圧・液体機器
       companies:

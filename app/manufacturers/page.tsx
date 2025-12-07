@@ -40,7 +40,9 @@ export default async function ManufacturersPage() {
       </div>
 
       <main className="container mx-auto px-4 py-12">
-        {manufacturers.categories?.map((category, categoryIndex) => (
+        {manufacturers.categories?.filter(category =>
+          category.companies.some(company => company.display !== false)
+        ).map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-12">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">{category.name}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-5">
