@@ -233,34 +233,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">営業時間</h3>
-              <div className="bg-white border border-gray-200 p-4 rounded-lg">
-                <p className="text-gray-700">
-                  <strong>平日:</strong> 9:00 - 18:00<br />
-                  <strong>土日祝:</strong> 休業
-                </p>
-                <p className="text-sm text-gray-600 mt-2">
-                  ※お問い合わせフォームからのご連絡は24時間受け付けております
-                </p>
-              </div>
-            </div>
-
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">アクセス</h3>
-              <div className="bg-white border border-gray-200 p-4 rounded-lg">
-                <p className="text-gray-700 mb-2">
-                  <strong>最寄り駅:</strong>
-                </p>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• JR東京駅 徒歩5分</li>
-                  <li>• 地下鉄丸ノ内線 東京駅 徒歩3分</li>
-                  <li>• 地下鉄千代田線 大手町駅 徒歩7分</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-8">
               <h3 className="text-lg font-semibold text-gray-800 mb-4">グローバルオフィス</h3>
               <div className="space-y-3">
                 <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg">
