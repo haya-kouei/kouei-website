@@ -6,7 +6,12 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'kouei-blue': '#0095d2',
+        'kouei-blue-light': '#6AA8E1',
+      },
+    },
   },
   plugins: [],
 }

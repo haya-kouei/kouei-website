@@ -33,22 +33,31 @@ export default async function ManufacturersPage() {
         {manufacturers.categories?.map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-12">
             <h2 className="text-2xl font-bold text-gray-800 mb-8">{category.name}</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {category.companies.map((company, companyIndex) => (
-                <div key={companyIndex} className="bg-white p-4 text-left">
-                  <div className="flex items-start justify-between mb-2">
-                    <div>
-                      <h3 className="text-gray-900 font-medium text-sm mb-1">{company.name}</h3>
-                      <p className="text-gray-500 text-xs">{company.name_en}</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {category.companies.map((company, companyIndex) => {
+                const CardWrapper = company.link ? 'a' : 'div';
+                const cardProps = company.link ? { href: company.link, target: '_blank', rel: 'noopener noreferrer' } : {};
+
+                return (
+                  <CardWrapper
+                    key={companyIndex}
+                    {...cardProps}
+                    className="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-left block"
+                  >
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="flex-1">
+                        <h3 className="text-gray-900 font-bold text-base mb-1 leading-tight">{company.name}</h3>
+                        <p className="text-gray-500 text-xs leading-relaxed">{company.name_en}</p>
+                      </div>
+                      {company.has_partnership && (
+                        <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded font-medium ml-2 flex-shrink-0">
+                          取引
+                        </span>
+                      )}
                     </div>
-                    {company.has_partnership && (
-                      <span className="bg-orange-400 text-white text-xs px-2 py-1 rounded font-medium">
-                        取引
-                      </span>
-                    )}
-                  </div>
-                </div>
-              ))}
+                  </CardWrapper>
+                );
+              })}
             </div>
           </div>
         ))}

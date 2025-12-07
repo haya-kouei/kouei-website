@@ -32,32 +32,6 @@ overseas_sales:
         - name: ラオス
           flag: 🇱🇦
           companies: 1
-    - name: 南アジア・オセアニア
-      countries:
-        - name: インド
-          flag: 🇮🇳
-          companies: 31
-        - name: オーストラリア
-          flag: 🇦🇺
-          companies: 14
-        - name: スリランカ
-          flag: 🇱🇰
-          companies: 6
-        - name: ニュージーランド
-          flag: 🇳🇿
-          companies: 1
-        - name: ネパール
-          flag: 🇳🇵
-          companies: 1
-        - name: パキスタン
-          flag: 🇵🇰
-          companies: 4
-        - name: パプアニューギニア
-          flag: 🇵🇬
-          companies: 1
-        - name: バングラデシュ
-          flag: 🇧🇩
-          companies: 10
     - name: 中東
       countries:
         - name: UAE
@@ -81,20 +55,25 @@ overseas_sales:
         - name: ヨルダン
           flag: 🇯🇴
           companies: 1
-    - name: 東アジア・中央アジア
+    - name: 南アジア
       countries:
-        - name: アゼルバイジャン
-          flag: 🇦🇿
+        - name: インド
+          flag: 🇮🇳
+          companies: 31
+        - name: スリランカ
+          flag: 🇱🇰
+          companies: 6
+        - name: ネパール
+          flag: 🇳🇵
           companies: 1
-        - name: ウズベキスタン
-          flag: 🇺🇿
-          companies: 1
-        - name: ジョージア
-          flag: 🇬🇪
-          companies: 1
-        - name: モンゴル
-          flag: 🇲🇳
-          companies: 1
+        - name: パキスタン
+          flag: 🇵🇰
+          companies: 4
+        - name: バングラデシュ
+          flag: 🇧🇩
+          companies: 10
+    - name: 東アジア
+      countries:
         - name: 韓国
           flag: 🇰🇷
           companies: 10
@@ -107,14 +86,59 @@ overseas_sales:
         - name: 中国
           flag: 🇨🇳
           companies: 5
-    - name: ヨーロッパ・南米
+        - name: モンゴル
+          flag: 🇲🇳
+          companies: 1
+    - name: 中央アジア
+      countries:
+        - name: アゼルバイジャン
+          flag: 🇦🇿
+          companies: 1
+        - name: ウズベキスタン
+          flag: 🇺🇿
+          companies: 1
+        - name: ジョージア
+          flag: 🇬🇪
+          companies: 1
+    - name: オセアニア
+      countries:
+        - name: オーストラリア
+          flag: 🇦🇺
+          companies: 14
+        - name: ニュージーランド
+          flag: 🇳🇿
+          companies: 1
+        - name: パプアニューギニア
+          flag: 🇵🇬
+          companies: 1
+    - name: 米国・北米・南米
+      countries:
+        - name: USA
+          flag: 🇺🇸
+          companies: 25
+        - name: カナダ
+          flag: 🇨🇦
+          companies: 7
+        - name: コロンビア
+          flag: 🇨🇴
+          companies: 4
+        - name: チリ
+          flag: 🇨🇱
+          companies: 1
+        - name: ブラジル
+          flag: 🇧🇷
+          companies: 2
+        - name: ペルー
+          flag: 🇵🇪
+          companies: 1
+        - name: メキシコ
+          flag: 🇲🇽
+          companies: 4
+    - name: ヨーロッパ
       countries:
         - name: UK
           flag: 🇬🇧
           companies: 8
-        - name: USA
-          flag: 🇺🇸
-          companies: 25
         - name: アイルランド
           flag: 🇮🇪
           companies: 1
@@ -127,32 +151,20 @@ overseas_sales:
         - name: オランダ
           flag: 🇳🇱
           companies: 3
-        - name: カナダ
-          flag: 🇨🇦
-          companies: 7
         - name: ギリシャ
           flag: 🇬🇷
           companies: 3
-        - name: コロンビア
-          flag: 🇨🇴
-          companies: 4
         - name: スウェーデン
           flag: 🇸🇪
           companies: 1
         - name: スペイン
           flag: 🇪🇸
           companies: 2
-        - name: チリ
-          flag: 🇨🇱
-          companies: 1
         - name: トルコ
           flag: 🇹🇷
           companies: 5
         - name: ハンガリー
           flag: 🇭🇺
-          companies: 2
-        - name: ブラジル
-          flag: 🇧🇷
           companies: 2
         - name: フランス
           flag: 🇫🇷
@@ -160,17 +172,11 @@ overseas_sales:
         - name: ブルガリア
           flag: 🇧🇬
           companies: 1
-        - name: ペルー
-          flag: 🇵🇪
-          companies: 1
         - name: ベルギー
           flag: 🇧🇪
           companies: 1
         - name: ポルトガル
           flag: 🇵🇹
-          companies: 4
-        - name: メキシコ
-          flag: 🇲🇽
           companies: 4
         - name: ラトビア
           flag: 🇱🇻
@@ -202,5 +208,5 @@ overseas_sales:
           flag: 🇳🇬
           companies: 6
         - name: 南アフリカ
-          flag: 🏳️
+          flag: 🇿🇦
           companies: 1

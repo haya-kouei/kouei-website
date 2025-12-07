@@ -1,105 +1,83 @@
 #!/usr/bin/env python3
+"""
+Convert CSV manufacturer data to YAML format
+Filters by Display=true and groups by Kinds and Kinds2 categories
+"""
+
 import csv
-import yaml
+import json
 from collections import defaultdict
+from pathlib import Path
 
-# CSVファイルを読み込む
-csv_file = 'data/Makers_from_webflow_20251206.csv'
-manufacturers_by_category = defaultdict(list)
+def convert_csv_to_yaml(csv_path, yaml_path):
+    # Read CSV file
+    manufacturers_by_category = defaultdict(list)
 
-with open(csv_file, 'r', encoding='utf-8') as f:
-    reader = csv.DictReader(f)
+    with open(csv_path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
 
-    for row in reader:
-        # Display=falseの場合はスキップ
-        if row['Display'].lower() != 'true':
-            continue
+        for row in reader:
+            # Filter: Only Display=true
+            if row['Display'].strip().lower() != 'true':
+                continue
 
-        maker_name = row['Maker Name']
-        maker_name_en = row['Maker Name (EN)']
-        has_partnership = row['Trade'] == '取引'
-        link = row['Link'] if row['Link'] else None
+            # Determine category (Kinds2 takes priority, then Kinds)
+            category = row['Kinds2'].strip() if row['Kinds2'].strip() else row['Kinds'].strip()
 
-        # KindsとKinds2を統合してカテゴリを決定
-        categories = []
-        if row['Kinds'] and row['Kinds'] not in ['取引', '']:
-            # URLでない場合のみカテゴリとして扱う
-            if not row['Kinds'].startswith('http'):
-                categories.append(row['Kinds'])
+            if not category:
+                print(f"Warning: No category for {row['Maker Name']}")
+                continue
 
-        if row['Kinds2'] and row['Kinds2'] not in ['取引', '']:
-            # URLでない場合のみカテゴリとして扱う
-            if not row['Kinds2'].startswith('http'):
-                categories.append(row['Kinds2'])
-
-        # カテゴリがない場合は「その他」
-        if not categories:
-            categories = ['その他']
-
-        # 油圧・空圧機器と油空圧・液体機器を統合
-        categories = [
-            '油空圧・液体機器' if cat in ['油圧・空圧機器', '油空圧・液体機器'] else cat
-            for cat in categories
-        ]
-
-        # 各カテゴリに追加
-        for category in categories:
+            # Create manufacturer entry
             manufacturer = {
-                'name': maker_name,
-                'name_en': maker_name_en,
-                'has_partnership': has_partnership
+                'name': row['Maker Name'].strip(),
+                'name_en': row['Maker Name (EN)'].strip(),
+                'link': row['Link'].strip() if row['Link'].strip() else '',
+                'has_partnership': row['Trade'].strip() == '取引'
             }
-            if link:
-                manufacturer['link'] = link
 
             manufacturers_by_category[category].append(manufacturer)
 
-# カテゴリ順序を定義
-category_order = [
-    '作業工具',
-    '荷役運搬機器',
-    '測定機器',
-    '切削工具',
-    '溶接関連',
-    '塗装',
-    '油空圧・液体機器',
-    'ボルト・ナット',
-    '安全具',
-    '仮設機器',
-    'ケミカル品',
-    '電気',
-    '橋梁・土木',
-    '環境機器',
-    '軸受（ベアリング）',
-    '海外メーカー',
-    'その他'
-]
-
-# YAML出力用のデータ構造
-output_data = {
-    'manufacturers': {
-        'categories': []
-    }
-}
-
-# カテゴリ順に並べる
-for category_name in category_order:
-    if category_name in manufacturers_by_category:
+    # Sort categories and manufacturers
+    categories = []
+    for category_name in sorted(manufacturers_by_category.keys()):
         companies = manufacturers_by_category[category_name]
-        # 会社名でソート
-        companies.sort(key=lambda x: x['name_en'])
+        # Sort companies by name
+        companies.sort(key=lambda x: x['name'])
 
-        output_data['manufacturers']['categories'].append({
+        categories.append({
             'name': category_name,
             'companies': companies
         })
 
-# YAMLファイルに出力
-output_file = 'content/manufacturers_new.yaml'
-with open(output_file, 'w', encoding='utf-8') as f:
-    yaml.dump(output_data, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
+    # Write YAML file manually
+    with open(yaml_path, 'w', encoding='utf-8') as f:
+        f.write('manufacturers:\n')
+        f.write('  categories:\n')
+        
+        for category in categories:
+            f.write(f'    - name: {category["name"]}\n')
+            f.write('      companies:\n')
+            
+            for company in category['companies']:
+                f.write(f'        - name: {company["name"]}\n')
+                f.write(f'          name_en: {company["name_en"]}\n')
+                f.write(f'          has_partnership: {str(company["has_partnership"]).lower()}\n')
+                if company['link']:
+                    f.write(f'          link: {company["link"]}\n')
 
-print(f"✅ YAMLファイルを生成しました: {output_file}")
-print(f"📊 カテゴリ数: {len(output_data['manufacturers']['categories'])}")
-total_companies = sum(len(cat['companies']) for cat in output_data['manufacturers']['categories'])
-print(f"📊 メーカー数: {total_companies}")
+    # Print summary
+    total_manufacturers = sum(len(cat['companies']) for cat in categories)
+    print(f"Successfully converted {total_manufacturers} manufacturers into {len(categories)} categories")
+    print(f"Output written to: {yaml_path}")
+
+    # Print category summary
+    print("\nCategories:")
+    for cat in categories:
+        print(f"  - {cat['name']}: {len(cat['companies'])} companies")
+
+if __name__ == '__main__':
+    csv_path = Path(__file__).parent.parent / 'data' / 'Makers_from_webflow_20251206.csv'
+    yaml_path = Path(__file__).parent.parent / 'content' / 'manufacturers.yaml'
+
+    convert_csv_to_yaml(csv_path, yaml_path)

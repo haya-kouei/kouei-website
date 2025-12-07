@@ -122,13 +122,45 @@ body {
 }
 
 @keyframes connectionFlow {
-  0%, 100% { 
-    opacity: 0.5; 
-    transform: translateY(-50%) scaleX(0.8); 
+  0%, 100% {
+    opacity: 0.5;
+    transform: translateY(-50%) scaleX(0.8);
   }
-  50% { 
-    opacity: 1; 
-    transform: translateY(-50%) scaleX(1.1); 
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) scaleX(1.1);
+  }
+}
+
+/* メインビジュアル背景アニメーション */
+@keyframes pulseBackground {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes slideGrid {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0.6;
   }
 }
 

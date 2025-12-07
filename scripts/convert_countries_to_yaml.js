@@ -68,6 +68,7 @@ const countryFlags = {
   'Romania': '🇷🇴',
   'Saudi Arabia': '🇸🇦',
   'Singapore': '🇸🇬',
+  'South Africa': '🇿🇦',
   'South Korea': '🇰🇷',
   'Spain': '🇪🇸',
   'Sri Lanka': '🇱🇰',

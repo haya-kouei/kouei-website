@@ -34,6 +34,22 @@ export default async function AboutPage() {
         </div>
       </div>
 
+      {/* 企業ビジョン */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 text-center">
+          <div className="mb-12">
+            <h3 className="text-sm font-medium text-cyan-500 mb-4 tracking-wider">Vision</h3>
+            <p className="text-2xl md:text-3xl text-gray-800 font-light mb-8">
+              アジアの製造現場において、最も役に立つ商社となる。
+            </p>
+            <h3 className="text-sm font-medium text-cyan-500 mb-4 tracking-wider">Mission</h3>
+            <p className="text-2xl md:text-3xl text-gray-800 font-light">
+              高品質な製品を提供し、アジアの発展に貢献する。
+            </p>
+          </div>
+        </div>
+      </section>
+
       <main className="container mx-auto px-4 py-12">
         {/* 組織選択メニュー */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
