@@ -61,13 +61,27 @@ export default function ContactPage() {
     <div className="min-h-screen bg-white">
       <Header currentPage="contact" />
 
-      <main className="container mx-auto px-4 py-12">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">お問い合わせ</h1>
-          <p className="text-lg text-gray-600">
-            ご質問やご相談がございましたら、お気軽にお問い合わせください
-          </p>
+      {/* ヘッダー画像 */}
+      <section className="relative w-full flex items-center justify-center bg-white">
+        <div className="relative overflow-hidden" style={{ width: '100%' }}>
+          <img
+            src="/contact-bg.jpg"
+            alt="KOUEI Contact Background"
+            className="block w-full"
+          />
+          {/* テキストオーバーレイ */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center px-4">
+              <h1 className="text-2xl md:text-4xl font-bold text-white mb-4">お問い合わせ</h1>
+              <p className="text-lg text-white">
+                ご質問やご相談がございましたら、お気軽にお問い合わせください
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <main className="container mx-auto px-4 py-12">
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>

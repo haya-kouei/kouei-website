@@ -15,15 +15,22 @@ export default async function JapanPage() {
       <Header currentPage="about" />
 
       {/* ヘッダー画像 */}
-      <div className="h-48 bg-gradient-to-r from-blue-100 to-blue-200 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-        <div className="container mx-auto px-4 h-full flex items-center relative z-10">
-          <div>
-            <h1 className="text-4xl font-bold text-gray-800 mb-2">{japan.name}</h1>
-            <p className="text-lg text-gray-700">{japan.name_en}</p>
+      <section className="relative w-full flex items-center justify-center bg-white">
+        <div className="relative overflow-hidden" style={{ width: '100%' }}>
+          <img
+            src="/main-image.jpg"
+            alt="KOUEI Japan Background"
+            className="block w-full"
+          />
+          {/* テキストオーバーレイ */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center px-4">
+              <h1 className="text-2xl font-bold text-kouei-blue mb-2">{japan.name}</h1>
+              <p className="text-lg text-kouei-blue">{japan.name_en}</p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <main className="container mx-auto px-4 py-12">
         {/* Vision & Mission セクション */}

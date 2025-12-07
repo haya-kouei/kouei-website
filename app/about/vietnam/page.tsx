@@ -14,14 +14,25 @@ export default async function VietnamPage() {
     <div className="min-h-screen bg-white">
       <Header currentPage="about" />
 
-      <main className="container mx-auto px-4 py-12 max-w-6xl">
-        {/* タイトルセクション */}
-        <section className="mb-12">
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">
-            {vietnam.name}（ {vietnam.name_en} ）
-          </h1>
-        </section>
+      {/* ヘッダー画像 */}
+      <section className="relative w-full flex items-center justify-center bg-white">
+        <div className="relative overflow-hidden" style={{ width: '100%' }}>
+          <img
+            src="/vietnam-bg.png"
+            alt="KOUEI Vietnam Background"
+            className="block w-full"
+          />
+          {/* テキストオーバーレイ */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center px-4">
+              <h1 className="text-2xl font-bold text-white mb-2">{vietnam.name}</h1>
+              <p className="text-lg text-white">{vietnam.name_en}</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <main className="container mx-auto px-4 py-12 max-w-6xl">
         {/* 概要セクション - 2カラムレイアウト */}
         <section className="mb-12">
           <div className="grid md:grid-cols-2 gap-8 items-start">

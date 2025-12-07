@@ -628,6 +628,77 @@ node scripts/convert_countries_to_yaml.js
   - 上部パディング: 30px (`pt-[30px]`)
   - 下部パディング: 64px (`pb-16`)
 
+### 全ページ背景画像実装（2025年12月8日 追加実装）
+
+#### 実装対象ページと画像
+全5ページにヘッダー背景画像を実装しました。すべての画像はオリジナルサイズを維持し、品質劣化なく表示されます。
+
+- **日本本社ページ** (/about/japan)
+  - 画像: `/public/main-image.jpg` (235KB)
+  - テキストオーバーレイ: 会社名（日本語・英語）
+
+- **ベトナム拠点ページ** (/about/vietnam)
+  - 画像: `/public/vietnam-bg.png` (1.2MB)
+  - テキストオーバーレイ: 会社名（日本語・英語）
+  - 白色テキスト表示
+
+- **ミャンマー支店ページ** (/about/myanmar)
+  - 画像: `/public/myanmar-bg.jpg` (485KB)
+  - テキストオーバーレイ: 会社名（日本語・英語）
+  - 白色テキスト表示
+  - 従来のヒーロー画像セクションを置き換え
+
+- **お問い合わせページ** (/contact)
+  - 画像: `/public/contact-bg.jpg` (389KB)
+  - テキストオーバーレイ: ページタイトルと説明文
+  - 白色テキスト表示
+
+- **取扱メーカーページ** (/manufacturers)
+  - 画像: `/public/supplier-bg.jpg` (263KB)
+  - テキストオーバーレイ: ページタイトル
+  - 白色テキスト表示
+
+#### 実装パターン
+すべてのページで統一された実装パターンを使用:
+
+```tsx
+{/* ヘッダー画像 */}
+<section className="relative w-full flex items-center justify-center bg-white">
+  <div className="relative overflow-hidden" style={{ width: '100%' }}>
+    <img
+      src="/[image-name].jpg"
+      alt="KOUEI [Page] Background"
+      className="block w-full"
+    />
+    {/* テキストオーバーレイ */}
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="text-center px-4">
+        <h1 className="text-2xl md:text-4xl font-bold text-white mb-4">
+          {pageTitle}
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+#### 技術的特徴
+- **画像品質**: 通常の `<img>` タグを使用し、Next.js Image最適化を回避
+- **サイズ指定なし**: width/height属性を設定せず、オリジナルサイズを維持
+- **レスポンシブ**: `w-full` でコンテナ幅100%、高さは自動調整
+- **オーバーレイ**: `absolute inset-0` で画像全体にテキストを中央配置
+- **統一デザイン**: 全ページで同じHTML構造とクラス名を使用
+
+#### ファイルコピー
+画像ソースから公開フォルダへのコピー:
+```bash
+cp data/main_images/image_vn001.png public/vietnam-bg.png
+cp data/main_images/image_myanmar001.jpg public/myanmar-bg.jpg
+cp data/main_images/image_contact.jpg public/contact-bg.jpg
+cp data/main_images/image_supplier.jpg public/supplier-bg.jpg
+# main_image.jpg は既にコピー済み
+```
+
 ### 技術的な実装詳細
 
 #### CSSクラス使用パターン
@@ -642,15 +713,21 @@ node scripts/convert_countries_to_yaml.js
 
 ### ファイル変更一覧
 - `app/page.tsx`: トップページのメインビジュアルとスペーシング調整
-- `app/about/vietnam/page.tsx`: デザイン刷新、フォントサイズ縮小
-- `app/about/myanmar/page.tsx`: デザイン刷新、フォントサイズ縮小
-- `app/about/japan/page.tsx`: フォントサイズ縮小
-- `public/main-image.jpg`: メインビジュアル背景画像追加
+- `app/about/vietnam/page.tsx`: デザイン刷新、フォントサイズ縮小、背景画像追加
+- `app/about/myanmar/page.tsx`: デザイン刷新、フォントサイズ縮小、背景画像置き換え
+- `app/about/japan/page.tsx`: フォントサイズ縮小、背景画像追加
+- `app/contact/page.tsx`: 背景画像追加
+- `app/manufacturers/page.tsx`: 背景画像追加
+- `public/main-image.jpg`: トップページ・日本ページ背景画像（235KB）
+- `public/vietnam-bg.png`: ベトナムページ背景画像（1.2MB）
+- `public/myanmar-bg.jpg`: ミャンマーページ背景画像（485KB）
+- `public/contact-bg.jpg`: お問い合わせページ背景画像（389KB）
+- `public/supplier-bg.jpg`: 取扱メーカーページ背景画像（263KB）
 - `CLAUDE.md`: ドキュメント更新
 
 ### 今後の改善検討事項
 - [ ] ベトナムページのチーム写真追加 (`/public/vietnam-team.jpg`)
-- [ ] ミャンマーページのヒーロー画像追加 (`/public/myanmar-hero.jpg`)
 - [ ] モバイル表示の最適化確認
 - [ ] ページ読み込みパフォーマンスの測定
+- [ ] 背景画像のalt属性多言語対応
 

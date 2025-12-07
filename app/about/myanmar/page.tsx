@@ -15,24 +15,26 @@ export default async function MyanmarPage() {
       <Header currentPage="about" />
 
       {/* ヒーロー画像 */}
-      <div className="relative w-full h-[300px] md:h-[400px]">
-        <Image
-          src="/myanmar-hero.jpg"
-          alt="Myanmar Street"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-      </div>
+      <section className="relative w-full flex items-center justify-center bg-white">
+        <div className="relative overflow-hidden" style={{ width: '100%' }}>
+          <img
+            src="/myanmar-bg.jpg"
+            alt="KOUEI Myanmar Background"
+            className="block w-full"
+          />
+          {/* テキストオーバーレイ */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center px-4">
+              <h1 className="text-2xl font-bold text-white mb-2">{myanmar.name}</h1>
+              <p className="text-lg text-white">{myanmar.name_en}</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <main className="container mx-auto px-4 py-12 max-w-6xl">
-        {/* タイトルセクション */}
+        {/* 概要セクション */}
         <section className="mb-12">
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">
-            {myanmar.name}
-          </h1>
-          <p className="text-lg text-gray-700 mb-6">{myanmar.name_en}</p>
           <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
             <p>恒栄トレーディング（日本）のミャンマー支店です。</p>
             <p>ミャンマーにおける橋梁・土木・港湾等のインフラ案件、現地工場様向けに、機械工具・工場設備・ボルト類の販売をしております。</p>
