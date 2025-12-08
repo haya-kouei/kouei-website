@@ -24,19 +24,11 @@ export default async function JapanPage() {
           />
           {/* テキストオーバーレイ */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center px-4">
+            <div className="text-center px-4 max-w-4xl">
               <h1 className="text-2xl font-bold text-kouei-blue mb-2">{japan.name}</h1>
-              <p className="text-lg text-kouei-blue">{japan.name_en}</p>
-            </div>
-          </div>
-        </div>
-      </section>
+              <p className="text-lg text-kouei-blue mb-8">{japan.name_en}</p>
 
-      <main className="container mx-auto px-4 py-12">
-        {/* Vision & Mission セクション */}
-        {(japan.vision || japan.mission) && (
-          <section className="mb-12 bg-white">
-            <div className="text-center mb-8">
+              {/* Vision & Mission */}
               {japan.vision && (
                 <div className="mb-6">
                   <h2 className="text-lg font-semibold text-kouei-blue mb-3">Vision</h2>
@@ -50,12 +42,13 @@ export default async function JapanPage() {
                 </div>
               )}
             </div>
-          </section>
-        )}
+          </div>
+        </div>
+      </section>
 
+      <main className="container mx-auto px-4 py-12">
         {/* 企業概要セクション */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">株式会社恒栄トレーディング (Kouei Japan Trading Co., Ltd.)</h2>
           <div className="bg-white rounded-lg p-8">
             <p className="text-sm text-gray-700 leading-relaxed">
               {japan.description}
@@ -66,7 +59,7 @@ export default async function JapanPage() {
         {/* 弊社の強みセクション */}
         {japan.strengths && (
           <section className="mb-12">
-            <h2 className="text-xl font-bold text-gray-800 mb-8 text-center">弊社の強み</h2>
+            <h2 className="text-xl font-bold text-gray-800 mb-8">弊社の強み</h2>
             <div className="bg-cyan-50 rounded-lg p-8">
               <div className="space-y-3">
                 {japan.strengths.map((strength, index) => (
@@ -86,7 +79,7 @@ export default async function JapanPage() {
 
         {/* 会社概要セクション */}
         <section className="mb-12">
-          <h2 className="text-xl font-bold text-gray-800 mb-8 text-center">会社概要</h2>
+          <h2 className="text-xl font-bold text-gray-800 mb-8">会社概要</h2>
           <div className="bg-white rounded-lg overflow-hidden border border-gray-200">
             <table className="w-full">
               <tbody className="divide-y divide-gray-200">
@@ -148,7 +141,7 @@ export default async function JapanPage() {
 
         {/* 住所セクション */}
         <section className="mb-12">
-          <h2 className="text-xl font-bold text-gray-800 mb-8 text-center">住所</h2>
+          <h2 className="text-xl font-bold text-gray-800 mb-8">住所</h2>
 
           {/* Google Map */}
           <div className="bg-white rounded-lg overflow-hidden border border-gray-200 mb-6">
@@ -191,26 +184,6 @@ export default async function JapanPage() {
                 </tr>
               </tbody>
             </table>
-          </div>
-        </section>
-
-        {/* CTA セクション */}
-        <section className="text-center bg-gradient-to-r from-kouei-blue to-kouei-blue-light rounded-lg p-12 text-white">
-          <h2 className="text-3xl font-bold mb-4">お問い合わせ</h2>
-          <p className="text-xl mb-8 text-cyan-100">商品取引・事業提携に関するご相談はお気軽にどうぞ</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-block bg-white text-kouei-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105"
-            >
-              お問い合わせフォーム
-            </Link>
-            <Link
-              href="/about"
-              className="inline-block bg-kouei-blue-light text-white px-8 py-4 rounded-lg font-semibold hover:bg-kouei-blue transition-colors transform hover:scale-105"
-            >
-              会社概要に戻る
-            </Link>
           </div>
         </section>
       </main>

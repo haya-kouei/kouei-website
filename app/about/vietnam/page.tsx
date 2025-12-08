@@ -46,7 +46,7 @@ export default async function VietnamPage() {
             </div>
             <div className="relative aspect-[4/3] w-full">
               <Image
-                src="/vietnam-team.jpg"
+                src="/vietnam-team.png"
                 alt="KOUEI Vietnam Team"
                 fill
                 className="object-cover rounded-lg"
@@ -79,7 +79,7 @@ export default async function VietnamPage() {
 
         {/* 会社概要セクション */}
         <section className="mb-12">
-          <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">会社概要</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-6">会社概要</h2>
           <div className="border border-gray-200 rounded-lg overflow-hidden">
             <table className="w-full">
               <tbody className="divide-y divide-gray-200">

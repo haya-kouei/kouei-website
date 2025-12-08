@@ -95,9 +95,9 @@ export default function Header({ currentPage = 'home' }: HeaderProps) {
 
             {/* 会社概要 - ドロップダウン */}
             <div className="relative group">
-              <Link href="/about" className={getLinkClassName('about')}>
+              <span className={`${getLinkClassName('about')} cursor-pointer`}>
                 会社概要
-              </Link>
+              </span>
 
               {/* ドロップダウンメニュー */}
               <div className="absolute top-full right-0 mt-2 w-96 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-200">

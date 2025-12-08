@@ -62,7 +62,7 @@ export default async function MyanmarPage() {
 
         {/* ミャンマー支店概要セクション */}
         <section className="mb-12">
-          <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">ミャンマー支店概要</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-6">ミャンマー支店概要</h2>
           <div className="border border-gray-200 rounded-lg overflow-hidden">
             <table className="w-full">
               <tbody className="divide-y divide-gray-200">
